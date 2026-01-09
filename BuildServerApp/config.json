@@ -1,0 +1,77 @@
+{
+  "Port": 3000,
+  "SvnRoot": "E:/DevHome/sj-workbench/sjhis",
+  "OutputDir": "e:/DevHome/sj-workbench/sjhis/build-output",
+  "Projects": [
+    {
+      "Name": "efacms_infrastructure",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/efacms_infrastructure",
+      "Group": "CIS",
+      "NodeModulesDir": "/Lwz-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": true,
+      "NodeVersion": "14.19.0"
+    },
+    {
+      "Name": "pre_examination_triage_upgrade",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/pre_examination_triage_upgrade",
+      "Group": "CIS",
+      "NodeModulesDir": "/Lwz-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": true,
+      "NodeVersion": "14.19.0"
+    },
+    {
+      "Name": "ecic_critical_illness_center",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/ecic_critical_illness_center",
+      "Group": "CIS",
+      "NodeModulesDir": "/Lwz-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": false,
+      "NodeVersion": "14.19.0"
+    },
+    {
+      "Name": "OutWestRecipe\u524D\u7AEF",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/OutWestRecipe\u524D\u7AEF",
+      "Group": "CIS",
+      "NodeModulesDir": "/Wx-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": false,
+      "NodeVersion": "16.20.2"
+    },
+    {
+      "Name": "LongOrder\u524D\u7AEF",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/LongOrder\u524D\u7AEF",
+      "Group": "CIS",
+      "NodeModulesDir": "/Wx-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": true,
+      "NodeVersion": "16.20.2"
+    },
+    {
+      "Name": "TempOrder\u524D\u7AEF",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/TempOrder\u524D\u7AEF",
+      "Group": "CIS",
+      "NodeModulesDir": "/Wx-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": true,
+      "NodeVersion": "16.20.2"
+    },
+    {
+      "Name": "OutTreatOrder\u524D\u7AEF",
+      "Path": "/0201\u95E8\u8BCA\u533B\u751F/OutTreatOrder\u524D\u7AEF",
+      "Group": "CIS",
+      "NodeModulesDir": "/Wx-NodeModules",
+      "BuildCmd": "npm run build",
+      "DistDir": "dist",
+      "IsPublish": true,
+      "NodeVersion": "16.17.0"
+    }
+  ]
+}

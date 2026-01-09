@@ -1,0 +1,16 @@
+{
+  "name": "build-orchestration",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:all": "turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0"
+  },
+  "workspaces": [
+    "../0000急诊急救临床管理系统/front-end/efacms_infrastructure",
+    "../0002预检分诊管理系统/front-end/pre_examination_triage_upgrade",
+    "../0003专病中心管理系统/front-end/ecic_critical_illness_center"
+  ]
+}

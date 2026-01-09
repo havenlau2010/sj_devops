@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      # Uncomment the following lines if you need to run docker inside jenkins (e.g. building images)
+      # - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=true
+    user: root # Often needed in WSL to avoid permission issues with mounted volumes from Windows filesystem, though not ideal for production.

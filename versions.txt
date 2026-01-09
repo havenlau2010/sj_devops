@@ -1,0 +1,4 @@
+Node: v14.19.0
+NPM: 6.14.16
+Yarn: 1.22.22
+PNPM: Not Found

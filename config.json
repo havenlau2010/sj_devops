@@ -1,0 +1,24 @@
+{
+  "port": 3000,
+  "outputDir": "e:/DevHome/sj-workbench/sjhis/2217急诊分诊专病中心/build-output",
+  "projects": [
+    {
+      "name": "efacms_infrastructure",
+      "path": "../0000急诊急救临床管理系统/front-end/efacms_infrastructure",
+      "buildCmd": "npm run build",
+      "distDir": "dist"
+    },
+    {
+      "name": "pre_examination_triage_upgrade",
+      "path": "../0002预检分诊管理系统/front-end/pre_examination_triage_upgrade",
+      "buildCmd": "npm run build",
+      "distDir": "dist"
+    },
+    {
+      "name": "ecic_critical_illness_center",
+      "path": "../0003专病中心管理系统/front-end/ecic_critical_illness_center",
+      "buildCmd": "npm run build",
+      "distDir": "dist"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+﻿2026-01-09 15:26:05 - Starting Workflow...
+2026-01-09 15:26:05 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260109_152605.log
+2026-01-09 15:26:05 - Step 1: SVN Update (Skipped)
+2026-01-09 15:26:05 - Step 1.5: Verify node_modules
+2026-01-09 15:26:05 - node_modules already exists for pre_examination_triage_upgrade
+2026-01-09 15:26:05 - Step 2: Build
+2026-01-09 15:26:05 - Switching to Node.js 14.19.0 for pre_examination_triage_upgrade
+2026-01-09 15:26:07 - Project build records saved to database
+2026-01-09 15:26:07 - Build failures detected. Proceeding to copy successful builds...
+2026-01-09 15:26:07 - Step 3: Copy Artifacts
+2026-01-09 15:26:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/pre_examination_triage_upgrade\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\pre_examination_triage_upgrade
+2026-01-09 15:26:08 - Workflow Completed.
+2026-01-09 15:26:08 - Build failures detected!
+2026-01-09 15:26:08 - Error in pre_examination_triage_upgrade: -  Building for build...
+ ERROR  Error: Cannot find module 'vue-loader/package.json'
+Require stack:
+- E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\config\base.js
+- E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\Service.js
+- E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\bin\vue-cli-service.js
+Error: Cannot find module 'vue-loader/package.json'
+Require stack:
+- E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\config\base.js
+- E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\Service.js
+- E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\bin\vue-cli-service.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:746:27)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\config\base.js:70:21
+    at E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\Service.js:209:40
+    at Array.forEach (<anonymous>)
+    at Service.resolveChainableWebpackConfig (E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\Service.js:209:26)
+    at PluginAPI.resolveChainableWebpackConfig (E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\PluginAPI.js:128:25)
+    at module.exports (E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\commands\build\resolveAppConfig.js:2:22)
+    at build (E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\commands\build\index.js:124:50)
+    at E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\commands\build\index.js:72:13
+    at Service.run (E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\lib\Service.js:203:12)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Lwz-NodeModules\@vue\cli-service\bin\vue-cli-service.js:36:9)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! sj.cis.pre.examination.triage@0.0.1 build: `node build/get-cdn-config.js build && vue-cli-service build --mode build`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the sj.cis.pre.examination.triage@0.0.1 build script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     E:\DevHome\packages\npm\_logs\2026-01-09T07_26_07_895Z-debug.log
+
+2026-01-09 15:26:08 - Build failed for pre_examination_triage_upgrade with exit code 1

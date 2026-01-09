@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "UNMpJoKnlDI=",
+  "dgSpecHash": "SRT6gvQbVNg=",
   "success": true,
   "projectFilePath": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServerApp\\BuildServerApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.data.sqlite\\10.0.1\\microsoft.data.sqlite.10.0.1.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.1\\microsoft.data.sqlite.core.10.0.1.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
+  ],
   "logs": []
 }

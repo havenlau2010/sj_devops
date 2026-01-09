@@ -6,27 +6,48 @@ public partial class Form1 : Form
     private BuildManager _manager;
     private RichTextBox txtLogs;
     private DataGridView gridProjects;
+    private TabControl tabControl;
+    private BuildLogsForm logsForm;
 
     public Form1()
     {
         InitializeComponent();
-        SetupCustomUI();
+        SetupBasicUI(); // Initialize basic controls like txtLogs
         
-        // Copied from ../config.json to AppDirectory if needed, or we rely on it being there.
+        // Now manager can log to txtLogs
         _manager = new BuildManager("config.json", Log);
         _server = new HttpServer(_manager, Log);
         
+        SetupTabs(); // Now setup tabs that depend on _manager/database
         RefreshProjectList();
         
         // Auto-start server in background
         this.Shown += (s, e) => _server.Start(3000);
     }
 
-    private void SetupCustomUI()
+    private void SetupBasicUI()
     {
         this.Size = new Size(1000, 800);
         this.Text = "Build Tool";
 
+        tabControl = new TabControl { Dock = DockStyle.Fill };
+        this.Controls.Add(tabControl);
+    }
+
+    private void SetupTabs()
+    {
+        var tabProjects = new TabPage("项目管理");
+        SetupProjectManagementTab(tabProjects);
+        
+        var tabLogs = new TabPage("日志管理");
+        SetupLogsManagementTab(tabLogs);
+
+        tabControl.TabPages.Add(tabProjects);
+        tabControl.TabPages.Add(tabLogs);
+    }
+
+    private void SetupProjectManagementTab(TabPage tab)
+    {
         // Top Panel for Buttons
         var panelTop = new Panel { Dock = DockStyle.Top, Height = 50 };
         
@@ -73,17 +94,35 @@ public partial class Form1 : Form
         txtLogs = new RichTextBox { Dock = DockStyle.Fill };
         panelBottom.Controls.Add(txtLogs);
 
-        this.Controls.Add(gridProjects);
-        this.Controls.Add(panelTop);
-        this.Controls.Add(panelBottom);
-        
-        // Adjust docking order: Fill (Grid) must be added *first* in code if using purely Dock property? 
-        // Actually, controls added last are at the top of z-order and claim space first if docked.
-        // Let's re-add to ensure correct layout:
-        this.Controls.Clear();
-        this.Controls.Add(gridProjects); // Fill center
-        this.Controls.Add(panelBottom);  // Bottom
-        this.Controls.Add(panelTop);     // Top
+        tab.Controls.Add(gridProjects);
+        tab.Controls.Add(panelBottom);
+        tab.Controls.Add(panelTop);
+    }
+
+    private void SetupLogsManagementTab(TabPage tab)
+    {
+        // Get database instance from BuildManager
+        var databaseField = typeof(BuildManager).GetField("_database", 
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        var database = databaseField?.GetValue(_manager) as BuildDatabase;
+
+        if (database != null)
+        {
+            logsForm = new BuildLogsForm(database);
+            logsForm.Dock = DockStyle.Fill;
+            tab.Controls.Add(logsForm);
+        }
+        else
+        {
+            var lblError = new Label 
+            { 
+                Text = "数据库未初始化,无法显示日志管理功能", 
+                Dock = DockStyle.Fill,
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.Red
+            };
+            tab.Controls.Add(lblError);
+        }
     }
 
     private void RefreshProjectList()
@@ -97,6 +136,7 @@ public partial class Form1 : Form
 
     private void Log(string message)
     {
+        if (txtLogs == null) return;
         if (InvokeRequired)
         {
             Invoke(new Action<string>(Log), message);

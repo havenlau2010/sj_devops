@@ -7,6 +7,7 @@ public class BuildManager
 {
     private ServerConfig _config;
     private Action<string> _logAction;
+    private BuildDatabase _database;
 
     public BuildManager(string configPath, Action<string> logAction)
     {
@@ -28,8 +29,17 @@ public class BuildManager
             _logAction($"Error loading config: {ex.Message}");
         }
 
-
+        // Initialize database
+        try
+        {
+            _database = new BuildDatabase();
+            _logAction($"Database initialized at: {Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "builds.db")}");
         }
+        catch (Exception ex)
+        {
+            _logAction($"Warning: Failed to initialize database: {ex.Message}");
+        }
+    }
 
 
     public List<ProjectConfig> Projects => _config?.Projects ?? new List<ProjectConfig>();
@@ -62,16 +72,79 @@ public class BuildManager
 
         var result = new Dictionary<string, object>();
         var logs = new List<string>();
-
-        void Log(string msg)
+        
+        // Setup file logging
+        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+        string logsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
+        string buildsDir = Path.Combine(logsDir, "builds");
+        string errorsDir = Path.Combine(logsDir, "errors");
+        
+        Directory.CreateDirectory(buildsDir);
+        Directory.CreateDirectory(errorsDir);
+        
+        string buildLogPath = Path.Combine(buildsDir, $"build_{timestamp}.log");
+        string errorLogPath = Path.Combine(errorsDir, $"error_{timestamp}.log");
+        
+        StreamWriter buildLogWriter = null;
+        StreamWriter errorLogWriter = null;
+        bool hasErrors = false;
+        
+        // Database tracking
+        long buildRecordId = 0;
+        DateTime buildStartTime = DateTime.Now;
+        Stopwatch buildStopwatch = Stopwatch.StartNew();
+        int totalProjectsToBuild = _config.Projects.Count(p => p.IsPublish);
+        
+        try
         {
-            logs.Add($"{DateTime.Now:Tr}: {msg}");
+            // Create build record in database
+            if (_database != null)
+            {
+                try
+                {
+                    buildRecordId = _database.CreateBuildRecord(buildStartTime, totalProjectsToBuild);
+                    _logAction($"Build record created with ID: {buildRecordId}");
+                }
+                catch (Exception ex)
+                {
+                    _logAction($"Warning: Failed to create build record: {ex.Message}");
+                }
+            }
+            
+            buildLogWriter = new StreamWriter(buildLogPath, false, System.Text.Encoding.UTF8);
+            errorLogWriter = new StreamWriter(errorLogPath, false, System.Text.Encoding.UTF8);
+            
+            buildLogWriter.AutoFlush = true;
+            errorLogWriter.AutoFlush = true;
+        }
+        catch (Exception ex)
+        {
+            _logAction($"Warning: Failed to create log files: {ex.Message}");
+        }
+
+        void Log(string msg, bool isError = false)
+        {
+            string timestampedMsg = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {msg}";
+            logs.Add(timestampedMsg);
             _logAction(msg);
+            
+            try
+            {
+                buildLogWriter?.WriteLine(timestampedMsg);
+                if (isError)
+                {
+                    errorLogWriter?.WriteLine(timestampedMsg);
+                    hasErrors = true;
+                }
+            }
+            catch { }
         }
 
         try
         {
             Log("Starting Workflow...");
+            Log($"Build log: {buildLogPath}");
+
 
             // 1. SVN Update (DISABLED)
             Log("Step 1: SVN Update (Skipped)");
@@ -165,6 +238,39 @@ public class BuildManager
 
             var buildResults = await Task.WhenAll(buildTasks);
             result["build"] = buildResults;
+            
+            // Record project build results in database
+            if (_database != null && buildRecordId > 0)
+            {
+                try
+                {
+                    var publishProjects = _config.Projects.Where(p => p.IsPublish).ToList();
+                    for (int i = 0; i < buildResults.Length; i++)
+                    {
+                        var buildResult = buildResults[i];
+                        var project = publishProjects[i];
+                        
+                        string projectPath = project.Path.TrimStart('/', '\\');
+                        string errorMessage = buildResult.ExitCode != 0 ? buildResult.Stderr : null;
+                        
+                        _database.AddProjectBuildRecord(
+                            buildRecordId,
+                            project.Name,
+                            projectPath,
+                            buildResult.ExitCode == 0,
+                            buildResult.ExitCode,
+                            buildResult.Command,
+                            errorMessage,
+                            project.NodeVersion
+                        );
+                    }
+                    Log("Project build records saved to database");
+                }
+                catch (Exception ex)
+                {
+                    Log($"Warning: Failed to save project build records: {ex.Message}");
+                }
+            }
 
             if (buildResults.Any(r => r.ExitCode != 0))
             {
@@ -214,7 +320,14 @@ public class BuildManager
             }
 
             Log("Workflow Completed.");
-            result["success"] = !buildResults.Any(r => r.ExitCode != 0); // && !updateResults.Any(r => r.ExitCode != 0);
+            
+            bool workflowSuccess = !buildResults.Any(r => r.ExitCode != 0);
+            result["success"] = workflowSuccess;
+            
+            if (!workflowSuccess)
+            {
+                Log("Build failures detected!", true);
+            }
             
             // Aggregate Logs
             var fullLogBuilder = new System.Text.StringBuilder();
@@ -234,11 +347,19 @@ public class BuildManager
             fullLogBuilder.AppendLine("=== BUILD LOGS ===");
             for(int i=0; i<buildResults.Length; i++) {
                 var r = buildResults[i];
-                var p = _config.Projects[i];
+                var p = _config.Projects.Where(p => p.IsPublish).ToList()[i];
                 fullLogBuilder.AppendLine($"--- Project: {p.Name} ---");
                 fullLogBuilder.AppendLine($"> {r.Command}");
                 fullLogBuilder.AppendLine(r.Stdout);
-                if(!string.IsNullOrEmpty(r.Stderr)) fullLogBuilder.AppendLine($"[STDERR]: {r.Stderr}");
+                if(!string.IsNullOrEmpty(r.Stderr)) 
+                {
+                    fullLogBuilder.AppendLine($"[STDERR]: {r.Stderr}");
+                    Log($"Error in {p.Name}: {r.Stderr}", true);
+                }
+                if(r.ExitCode != 0)
+                {
+                    Log($"Build failed for {p.Name} with exit code {r.ExitCode}", true);
+                }
                 fullLogBuilder.AppendLine();
             }
             
@@ -247,9 +368,65 @@ public class BuildManager
         }
         catch (Exception ex)
         {
-            Log($"Workflow Failed: {ex.Message}");
+            Log($"Workflow Failed: {ex.Message}", true);
+            Log($"Stack trace: {ex.StackTrace}", true);
             result["success"] = false;
             result["error"] = ex.Message;
+        }
+        finally
+        {
+            // Update build record with final status
+            buildStopwatch.Stop();
+            if (_database != null && buildRecordId > 0)
+            {
+                try
+                {
+                    bool buildSuccess = result.ContainsKey("success") && (bool)result["success"];
+                    var buildResults = result.ContainsKey("build") ? (ProcessResult[])result["build"] : Array.Empty<ProcessResult>();
+                    
+                    int successfulProjects = buildResults.Count(r => r.ExitCode == 0);
+                    int failedProjects = buildResults.Count(r => r.ExitCode != 0);
+                    
+                    _database.UpdateBuildRecord(
+                        buildRecordId,
+                        buildSuccess,
+                        buildStopwatch.ElapsedMilliseconds,
+                        buildLogPath,
+                        hasErrors ? errorLogPath : null,
+                        successfulProjects,
+                        failedProjects
+                    );
+                    
+                    _logAction($"Build record updated. Duration: {buildStopwatch.ElapsedMilliseconds}ms, Success: {buildSuccess}");
+                }
+                catch (Exception ex)
+                {
+                    _logAction($"Warning: Failed to update build record: {ex.Message}");
+                }
+            }
+            
+            // Cleanup log files
+            try
+            {
+                buildLogWriter?.Close();
+                buildLogWriter?.Dispose();
+                
+                errorLogWriter?.Close();
+                errorLogWriter?.Dispose();
+                
+                // Delete error log if no errors occurred
+                if (!hasErrors && File.Exists(errorLogPath))
+                {
+                    File.Delete(errorLogPath);
+                }
+                
+                Log($"Logs saved to: {buildLogPath}");
+                if (hasErrors)
+                {
+                    Log($"Error log saved to: {errorLogPath}");
+                }
+            }
+            catch { }
         }
 
         result["logs"] = logs;

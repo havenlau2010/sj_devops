@@ -1,0 +1,42 @@
+﻿2026-01-12 14:28:31 - Starting Workflow...
+2026-01-12 14:28:31 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_142831\_summary.log
+2026-01-12 14:28:31 - Step 1: SVN Update (Skipped)
+2026-01-12 14:28:31 - Step 1.5: Verify node_modules
+2026-01-12 14:28:31 - node_modules already exists for efacms_infrastructure
+2026-01-12 14:28:31 - node_modules already exists for LongOrder前端
+2026-01-12 14:28:31 - node_modules already exists for TempOrder前端
+2026-01-12 14:28:31 - node_modules already exists for OutTreatOrder前端
+2026-01-12 14:28:31 - Step 2: Build
+2026-01-12 14:28:31 - [efacms_infrastructure] Using specific Node: D:\Apps\nvm\v14.19.0
+2026-01-12 14:28:31 - [LongOrder前端] Using specific Node: D:\Apps\nvm\v16.20.2
+2026-01-12 14:28:31 - [TempOrder前端] Using specific Node: D:\Apps\nvm\v16.20.2
+2026-01-12 14:28:31 - [OutTreatOrder前端] Using specific Node: D:\Apps\nvm\v16.20.2
+2026-01-12 14:29:07 - Step 3: Copy Artifacts
+2026-01-12 14:29:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/efacms_infrastructure\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\efacms_infrastructure
+2026-01-12 14:29:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\LongOrder前端
+2026-01-12 14:29:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\TempOrder前端
+2026-01-12 14:29:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\OutTreatOrder前端
+2026-01-12 14:29:07 - Workflow Completed.
+2026-01-12 14:29:07 - Error in efacms_infrastructure: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\efacms_infrastructure\cdn\sj\cis
+
+2026-01-12 14:29:07 - Error in LongOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\cdn\sj\cis
+
+2026-01-12 14:29:07 - Error in TempOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+2026-01-12 14:29:07 - Error in OutTreatOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\cdn\sj\cis
+

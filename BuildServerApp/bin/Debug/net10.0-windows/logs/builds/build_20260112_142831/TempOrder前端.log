@@ -1,0 +1,77 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端
+Time: 2026/1/12 14:28:31
+=========================================
+[OUT] 
+[OUT] > sj.cis.temp.order@1.0.0 build
+[OUT] > node build/get-cdn-config.js && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] Browserslist: caniuse-lite is outdated. Please run:
+[ERR]   npx update-browserslist-db@latest
+[ERR]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[OUT]  WARNING  Compiled with 3 warnings14:28:43
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+[OUT] This can impact web performance.
+[OUT] Assets: 
+[OUT]   static/js/./pages/cis/cis_temp_order.b0771601.js (1.21 MiB)
+[OUT]   static/js/./pages/cis/cis_temp_order_demo.a56c00c9.js (1.22 MiB)
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+[OUT] Entrypoints:
+[OUT]   ./pages/cis/cis_temp_order (1.23 MiB)
+[OUT]       static/css/./pages/cis/cis_temp_order.1b017d3b.css
+[OUT]       static/js/./pages/cis/cis_temp_order.b0771601.js
+[OUT]   ./pages/cis/cis_temp_order_demo (1.24 MiB)
+[OUT]       static/css/./pages/cis/cis_temp_order_demo.1b017d3b.css
+[OUT]       static/js/./pages/cis/cis_temp_order_demo.a56c00c9.js
+[OUT] 
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] webpack performance recommendations: 
+[OUT] You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+[OUT] For more info visit https://webpack.js.org/guides/code-splitting/
+[OUT] 
+[OUT]   File                                      Size             Gzipped
+[OUT] 
+[OUT]   dist\static\js\pages\cis\cis_temp_orde    1245.83 kb       213.87 kb
+[OUT]   r_demo.a56c00c9.js
+[OUT]   dist\static\js\pages\cis\cis_temp_orde    1235.03 kb       211.06 kb
+[OUT]   r.b0771601.js
+[OUT]   dist\static\js\index.ca3f2cec.js          16.82 kb         4.94 kb
+[OUT]   dist\static\css\pages\cis\cis_temp_ord    20.25 kb         3.29 kb
+[OUT]   er.1b017d3b.css
+[OUT]   dist\static\css\pages\cis\cis_temp_ord    20.25 kb         3.29 kb
+[OUT]   er_demo.1b017d3b.css
+[OUT] 
+[OUT]   Images and other types of assets omitted.
+[OUT] 
+[OUT]  DONE  Build complete. The dist directory is ready to be deployed.
+[OUT]  INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+[OUT]       
+[OUT] 
+[OUT] > sj.cis.temp.order@1.0.0 postbuild
+[OUT] > node build/afterbuild.js && node build/svn.info.js
+[OUT] 
+[OUT] 
+[OUT] 项目部署成功！
+[OUT] 
+[OUT] 维护：wyd
+[OUT] 
+[OUT] 名称：sj.cis.temp.order
+[OUT] 
+[OUT] 版本：1.0.0
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\TempOrder前端\dist\pages\cis\cis_temp_order.b0771601.js
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\TempOrder前端\dist\pages\cis\cis_temp_order_demo.a56c00c9.js
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\TempOrder前端\cdn\sj\cis\sj.cis.temp.order-1.0.0.js
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\TempOrder前端\cdn\sj\cis\sj.cis.temp.order-unpacked-1.0.0.js

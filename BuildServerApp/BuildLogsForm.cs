@@ -272,6 +272,7 @@ public partial class BuildLogsForm : UserControl
             
             var displayRecords = records.Select(r => new
             {
+                r.Id, // Include ID for selection
                 r.ProjectName,
                 SuccessText = r.Success ? "✓ 成功" : "✗ 失败",
                 r.ExitCode,
@@ -282,6 +283,8 @@ public partial class BuildLogsForm : UserControl
             }).ToList();
             
             _gridProjects.DataSource = displayRecords;
+            _gridProjects.MouseDown -= GridProjects_MouseDown; // Remove existing to avoid dupes if any
+            _gridProjects.MouseDown += GridProjects_MouseDown;
         }
         catch (Exception ex)
         {
@@ -289,50 +292,113 @@ public partial class BuildLogsForm : UserControl
         }
     }
 
+    private void GridProjects_MouseDown(object sender, MouseEventArgs e)
+    {
+        if (e.Button == MouseButtons.Right)
+        {
+            var hitTest = _gridProjects.HitTest(e.X, e.Y);
+            if (hitTest.RowIndex >= 0)
+            {
+                _gridProjects.ClearSelection();
+                _gridProjects.Rows[hitTest.RowIndex].Selected = true;
+                
+                var row = _gridProjects.Rows[hitTest.RowIndex];
+                if (row.DataBoundItem == null) return;
+                
+                // Need Id from the data item (using Reflection because anonymous type)
+                // Wait, LoadProjectRecords projects into an anonymous type that DOES include r.Id?
+                // Yes: r.Id is mapped to Id (implicit naming) if I didn't change it. 
+                // Let's check LoadProjectRecords...
+                // It does r.Id, so it has Id property.
+                
+                var ctxMenu = new ContextMenuStrip();
+                var item = ctxMenu.Items.Add("查看项目日志");
+                item.Click += (s, ev) => 
+                {
+                    try {
+                        long projRecId = (long)row.DataBoundItem.GetType().GetProperty("Id").GetValue(row.DataBoundItem);
+                        string projectName = (string)row.DataBoundItem.GetType().GetProperty("ProjectName").GetValue(row.DataBoundItem);
+                        LoadProjectLog(projRecId, projectName);
+                    } catch (Exception ex) {
+                         MessageBox.Show($"无法获取项目ID: {ex.Message}");
+                    }
+                };
+                ctxMenu.Show(_gridProjects, e.Location);
+            }
+        }
+    }
+
     private void BtnLoadBuildLog_Click(object sender, EventArgs e)
     {
         if (_gridBuilds.SelectedRows.Count == 0) return;
         
-        var logPath = _gridBuilds.SelectedRows[0].Cells["LogFilePath"].Value?.ToString();
-        LoadLogFile(logPath, "构建日志");
+        long buildId = Convert.ToInt64(_gridBuilds.SelectedRows[0].Cells["Id"].Value);
+        LoadBuildLogFromDb(buildId, "构建日志");
     }
 
     private void BtnLoadErrorLog_Click(object sender, EventArgs e)
     {
-        if (_gridBuilds.SelectedRows.Count == 0) return;
-        
-        var errorLogPath = _gridBuilds.SelectedRows[0].Cells["ErrorLogFilePath"].Value?.ToString();
-        LoadLogFile(errorLogPath, "错误日志");
+         MessageBox.Show("错误日志暂不支持DB读取，请查看构建日志详情。", "提示");
+         // Error log is usually subset of build log anyway.
     }
 
-    private void LoadLogFile(string logPath, string logType)
+    private void LoadBuildLogFromDb(long buildId, string logType)
     {
         try
         {
-            if (string.IsNullOrEmpty(logPath))
-            {
-                MessageBox.Show($"{logType}路径为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            
-            if (!File.Exists(logPath))
-            {
-                MessageBox.Show($"{logType}文件不存在: {logPath}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
             _txtLog.Clear();
-            _txtLog.Text = $"正在加载 {logType}...\n";
+            _txtLog.Text = $"正在从数据库加载 {logType}...\n";
             
-            string content = File.ReadAllText(logPath, System.Text.Encoding.UTF8);
+            string content = _database.GetBuildLogContent(buildId);
+            
+            if (string.IsNullOrEmpty(content))
+            {
+                // Fallback to file if DB content is empty (for old records)
+                var logPath = _gridBuilds.SelectedRows[0].Cells["LogFilePath"].Value?.ToString();
+                 if (!string.IsNullOrEmpty(logPath) && File.Exists(logPath))
+                 {
+                     _txtLog.Text += "数据库中无内容，尝试加载本地文件...\n";
+                     content = File.ReadAllText(logPath, System.Text.Encoding.UTF8);
+                 }
+                 else
+                 {
+                     _txtLog.Text = "无日志内容 (数据库和本地文件均未找到)";
+                     return;
+                 }
+            }
+            
             _txtLog.Text = content;
-            
-            _lblStatus.Text = $"已加载 {logType}: {Path.GetFileName(logPath)}";
+            _lblStatus.Text = $"已加载 {logType} (ID: {buildId})";
             _lblStatus.ForeColor = Color.Green;
         }
         catch (Exception ex)
         {
             MessageBox.Show($"加载{logType}失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    private void LoadProjectLog(long projectRecordId, string projectName)
+    {
+        try
+        {
+            _txtLog.Clear();
+            _txtLog.Text = $"正在从数据库加载项目日志: {projectName}...\n";
+            
+            string content = _database.GetProjectBuildLogContent(projectRecordId);
+            
+            if (string.IsNullOrEmpty(content))
+            {
+                 _txtLog.Text = "该项目无日志记录 (可能为旧数据)";
+                 return;
+            }
+            
+            _txtLog.Text = content;
+            _lblStatus.Text = $"已加载项目日志: {projectName}";
+            _lblStatus.ForeColor = Color.Green;
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"加载项目日志失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

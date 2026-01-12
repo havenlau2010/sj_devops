@@ -120,6 +120,7 @@ public class BuildManager
 
         var result = new Dictionary<string, object>();
         var logs = new List<string>();
+        var fullLogBuilder = new System.Text.StringBuilder();
         
         // Setup file logging
         string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
@@ -320,39 +321,7 @@ public class BuildManager
             // Reconstruct logic is simple now since we didn't group
             result["build"] = buildResults;
             
-            // Record project build results in database
-            if (_database != null && buildRecordId > 0)
-            {
-                try
-                {
-                    // var publishProjects = ... already defined above
-                    for (int i = 0; i < buildResults.Length; i++)
-                    {
-
-                        var buildResult = buildResults[i];
-                        var project = publishProjects[i];
-                        
-                        string projectPath = project.Path.TrimStart('/', '\\');
-                        string errorMessage = buildResult.ExitCode != 0 ? buildResult.Stderr : null;
-                        
-                        _database.AddProjectBuildRecord(
-                            buildRecordId,
-                            project.Name,
-                            projectPath,
-                            buildResult.ExitCode == 0,
-                            buildResult.ExitCode,
-                            buildResult.Command,
-                            errorMessage,
-                            project.NodeVersion
-                        );
-                    }
-                    Log("Project build records saved to database");
-                }
-                catch (Exception ex)
-                {
-                    Log($"Warning: Failed to save project build records: {ex.Message}");
-                }
-            }
+            // Database logging is handled below in the "Aggregate Logs" section to include full log content.
 
             if (buildResults.Any(r => r.ExitCode != 0))
             {
@@ -412,7 +381,7 @@ public class BuildManager
             }
             
             // Aggregate Logs
-            var fullLogBuilder = new System.Text.StringBuilder();
+            // fullLogBuilder is already initialized at top
             /*
             fullLogBuilder.AppendLine("=== SVN UPDATE LOGS ===");
             for(int i=0; i<updateResults.Length; i++) {
@@ -448,6 +417,9 @@ public class BuildManager
                 {
                     try
                     {
+                         // Construct full log for the project
+                        string projectLogContent = $"[CMD] {r.Command}\n[EXIT] {r.ExitCode}\n[STDOUT]\n{r.Stdout}\n[STDERR]\n{r.Stderr}";
+
                         _database.AddProjectBuildRecord(
                             buildRecordId,
                             p.Name,
@@ -456,7 +428,8 @@ public class BuildManager
                             r.ExitCode,
                             r.Command,
                             string.IsNullOrEmpty(r.Stderr) ? null : r.Stderr,
-                            p.NodeVersion
+                            p.NodeVersion,
+                            projectLogContent
                         );
                     }
                     catch (Exception ex)
@@ -477,6 +450,8 @@ public class BuildManager
             Log($"Stack trace: {ex.StackTrace}", true);
             result["success"] = false;
             result["error"] = ex.Message;
+            fullLogBuilder.AppendLine($"\nFATAL ERROR: {ex.Message}");
+            fullLogBuilder.AppendLine(ex.StackTrace);
         }
         finally
         {
@@ -499,7 +474,8 @@ public class BuildManager
                         buildLogPath,
                         hasErrors ? errorLogPath : null,
                         successfulProjects,
-                        failedProjects
+                        failedProjects,
+                        fullLogBuilder.ToString()
                     );
                     
                     _logAction($"Build record updated. Duration: {buildStopwatch.ElapsedMilliseconds}ms, Success: {buildSuccess}");

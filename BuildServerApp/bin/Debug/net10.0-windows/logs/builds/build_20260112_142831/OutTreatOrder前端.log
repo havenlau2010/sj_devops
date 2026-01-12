@@ -1,0 +1,51 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端
+Time: 2026/1/12 14:28:31
+=========================================
+[OUT] 
+[OUT] > sj.cis.out.treat.order@0.1.2 build
+[OUT] > node build/get-cdn-config.js build && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] Browserslist: caniuse-lite is outdated. Please run:
+[ERR]   npx update-browserslist-db@latest
+[ERR]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[OUT]  DONE  Compiled successfully in 7860ms14:28:42
+[OUT] 
+[OUT]   File                                      Size             Gzipped
+[OUT] 
+[OUT]   dist\static\js\pages\cis\cis_out_treat    214.04 kb        62.65 kb
+[OUT]   _order.4a7e4ef7.js
+[OUT]   dist\static\js\index.7c8ae3f8.js          6.14 kb          2.68 kb
+[OUT]   dist\static\css\pages\cis\cis_out_trea    9.31 kb          1.92 kb
+[OUT]   t_order.9d25d98b.css
+[OUT] 
+[OUT]   Images and other types of assets omitted.
+[OUT] 
+[OUT]  DONE  Build complete. The dist directory is ready to be deployed.
+[OUT]  INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+[OUT]       
+[OUT] 
+[OUT] > sj.cis.out.treat.order@0.1.2 postbuild
+[OUT] > node build/afterbuild.js && node build/svn.info.js
+[OUT] 
+[OUT] cis_out_treat_order.html
+[OUT] ./dist/static/css/pages/cis/cis_out_treat_order.9d25d98b.css
+[OUT] ./dist/static/js/index.7c8ae3f8.js
+[OUT] ./dist/static/js/index.7c8ae3f8.js.map
+[OUT] ./dist/static/js/pages/cis/cis_out_treat_order.4a7e4ef7.js
+[OUT] ./dist/static/js/pages/cis/cis_out_treat_order.4a7e4ef7.js.map
+[OUT] [32m
+[OUT] 项目部署成功！[39m
+[OUT] [32m
+[OUT] 维护：王映东[39m
+[OUT] [32m
+[OUT] 名称：sj.cis.out.treat.order[39m
+[OUT] [32m
+[OUT] 版本：0.1.2[39m
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\dist\pages\cis\cis_out_treat_order.4a7e4ef7.js
+[ERR] [SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\cdn\sj\cis

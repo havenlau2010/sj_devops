@@ -37,7 +37,8 @@ public class BuildDatabase : IDisposable
                 ErrorLogFilePath TEXT,
                 TotalProjects INTEGER NOT NULL,
                 SuccessfulProjects INTEGER NOT NULL,
-                FailedProjects INTEGER NOT NULL
+                FailedProjects INTEGER NOT NULL,
+                LogContent TEXT
             );
 
             CREATE TABLE IF NOT EXISTS ProjectBuildRecords (
@@ -50,6 +51,7 @@ public class BuildDatabase : IDisposable
                 BuildCommand TEXT NOT NULL,
                 ErrorMessage TEXT,
                 NodeVersion TEXT,
+                LogContent TEXT,
                 FOREIGN KEY (BuildRecordId) REFERENCES BuildRecords(Id)
             );
 
@@ -75,6 +77,28 @@ public class BuildDatabase : IDisposable
             CREATE INDEX IF NOT EXISTS idx_project_build_record ON ProjectBuildRecords(BuildRecordId);
         ";
         command.ExecuteNonQuery();
+
+        // Migration: Check if LogContent exists in BuildRecords, if not add it
+        try {
+            var migCmd = connection.CreateCommand();
+            migCmd.CommandText = "SELECT LogContent FROM BuildRecords LIMIT 1";
+            migCmd.ExecuteNonQuery();
+        } catch {
+            var addColCmd = connection.CreateCommand();
+            addColCmd.CommandText = "ALTER TABLE BuildRecords ADD COLUMN LogContent TEXT";
+            addColCmd.ExecuteNonQuery();
+        }
+
+        // Migration: Check if LogContent exists in ProjectBuildRecords, if not add it
+        try {
+            var migCmd2 = connection.CreateCommand();
+            migCmd2.CommandText = "SELECT LogContent FROM ProjectBuildRecords LIMIT 1";
+            migCmd2.ExecuteNonQuery();
+        } catch {
+            var addColCmd2 = connection.CreateCommand();
+            addColCmd2.CommandText = "ALTER TABLE ProjectBuildRecords ADD COLUMN LogContent TEXT";
+            addColCmd2.ExecuteNonQuery();
+        }
     }
 
     /// <summary>
@@ -99,10 +123,10 @@ public class BuildDatabase : IDisposable
     }
 
     /// <summary>
-    /// Update build record with final status
+    /// Update build record with final status including log content
     /// </summary>
     public void UpdateBuildRecord(long buildRecordId, bool success, long durationMs, 
-        string? logFilePath, string? errorLogFilePath, int successfulProjects, int failedProjects)
+        string? logFilePath, string? errorLogFilePath, int successfulProjects, int failedProjects, string? logContent)
     {
         using var connection = new SqliteConnection(_connectionString);
         connection.Open();
@@ -115,7 +139,8 @@ public class BuildDatabase : IDisposable
                 LogFilePath = $logFilePath,
                 ErrorLogFilePath = $errorLogFilePath,
                 SuccessfulProjects = $successfulProjects,
-                FailedProjects = $failedProjects
+                FailedProjects = $failedProjects,
+                LogContent = $logContent
             WHERE Id = $id
         ";
         command.Parameters.AddWithValue("$id", buildRecordId);
@@ -125,15 +150,16 @@ public class BuildDatabase : IDisposable
         command.Parameters.AddWithValue("$errorLogFilePath", errorLogFilePath ?? (object)DBNull.Value);
         command.Parameters.AddWithValue("$successfulProjects", successfulProjects);
         command.Parameters.AddWithValue("$failedProjects", failedProjects);
+        command.Parameters.AddWithValue("$logContent", logContent ?? (object)DBNull.Value);
 
         command.ExecuteNonQuery();
     }
 
     /// <summary>
-    /// Add a project build record
+    /// Add a project build record with log content
     /// </summary>
     public void AddProjectBuildRecord(long buildRecordId, string projectName, string projectPath,
-        bool success, int exitCode, string buildCommand, string? errorMessage, string? nodeVersion)
+        bool success, int exitCode, string buildCommand, string? errorMessage, string? nodeVersion, string? logContent)
     {
         using var connection = new SqliteConnection(_connectionString);
         connection.Open();
@@ -141,8 +167,8 @@ public class BuildDatabase : IDisposable
         var command = connection.CreateCommand();
         command.CommandText = @"
             INSERT INTO ProjectBuildRecords 
-            (BuildRecordId, ProjectName, ProjectPath, Success, ExitCode, BuildCommand, ErrorMessage, NodeVersion)
-            VALUES ($buildRecordId, $projectName, $projectPath, $success, $exitCode, $buildCommand, $errorMessage, $nodeVersion)
+            (BuildRecordId, ProjectName, ProjectPath, Success, ExitCode, BuildCommand, ErrorMessage, NodeVersion, LogContent)
+            VALUES ($buildRecordId, $projectName, $projectPath, $success, $exitCode, $buildCommand, $errorMessage, $nodeVersion, $logContent)
         ";
         command.Parameters.AddWithValue("$buildRecordId", buildRecordId);
         command.Parameters.AddWithValue("$projectName", projectName);
@@ -152,12 +178,13 @@ public class BuildDatabase : IDisposable
         command.Parameters.AddWithValue("$buildCommand", buildCommand);
         command.Parameters.AddWithValue("$errorMessage", errorMessage ?? (object)DBNull.Value);
         command.Parameters.AddWithValue("$nodeVersion", nodeVersion ?? (object)DBNull.Value);
+        command.Parameters.AddWithValue("$logContent", logContent ?? (object)DBNull.Value);
 
         command.ExecuteNonQuery();
     }
 
     /// <summary>
-    /// Get recent build records
+    /// Get recent build records (metadata only)
     /// </summary>
     public List<BuildRecordInfo> GetRecentBuilds(int limit = 50)
     {
@@ -167,6 +194,7 @@ public class BuildDatabase : IDisposable
         connection.Open();
 
         var command = connection.CreateCommand();
+        // Exclude LogContent for performance in list view
         command.CommandText = @"
             SELECT Id, BuildTime, Success, Duration, LogFilePath, ErrorLogFilePath, 
                    TotalProjects, SuccessfulProjects, FailedProjects
@@ -197,7 +225,7 @@ public class BuildDatabase : IDisposable
     }
 
     /// <summary>
-    /// Get project build records for a specific build
+    /// Get project build records for a specific build (metadata only)
     /// </summary>
     public List<ProjectBuildRecordInfo> GetProjectBuildRecords(long buildRecordId)
     {
@@ -207,6 +235,7 @@ public class BuildDatabase : IDisposable
         connection.Open();
 
         var command = connection.CreateCommand();
+        // Exclude LogContent for performance
         command.CommandText = @"
             SELECT Id, ProjectName, ProjectPath, Success, ExitCode, BuildCommand, ErrorMessage, NodeVersion
             FROM ProjectBuildRecords
@@ -232,6 +261,34 @@ public class BuildDatabase : IDisposable
         }
 
         return records;
+    }
+
+    /// <summary>
+    /// Get full log content for a build
+    /// </summary>
+    public string? GetBuildLogContent(long buildRecordId)
+    {
+        using var connection = new SqliteConnection(_connectionString);
+        connection.Open();
+        var command = connection.CreateCommand();
+        command.CommandText = "SELECT LogContent FROM BuildRecords WHERE Id = $id";
+        command.Parameters.AddWithValue("$id", buildRecordId);
+        var result = command.ExecuteScalar();
+        return result is DBNull ? null : result as string;
+    }
+
+    /// <summary>
+    /// Get full log content for a project build
+    /// </summary>
+    public string? GetProjectBuildLogContent(long projectBuildRecordId)
+    {
+        using var connection = new SqliteConnection(_connectionString);
+        connection.Open();
+        var command = connection.CreateCommand();
+        command.CommandText = "SELECT LogContent FROM ProjectBuildRecords WHERE Id = $id";
+        command.Parameters.AddWithValue("$id", projectBuildRecordId);
+        var result = command.ExecuteScalar();
+        return result is DBNull ? null : result as string;
     }
 
     /// <summary>

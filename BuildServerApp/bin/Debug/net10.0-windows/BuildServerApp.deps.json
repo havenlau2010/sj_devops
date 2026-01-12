@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "BuildServerApp/1.0.0": {
         "dependencies": {
+          "BuildServer.Core": "1.0.0",
           "Microsoft.Data.Sqlite": "10.0.1"
         },
         "runtime": {
@@ -181,6 +182,17 @@
             "fileVersion": "2.1.11.2622"
           }
         }
+      },
+      "BuildServer.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "10.0.1"
+        },
+        "runtime": {
+          "BuildServer.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -231,6 +243,11 @@
       "sha512": "sha512-Y/0ZkR+r0Cg3DQFuCl1RBnv/tmxpIZRU3HUvelPw6MVaKHwYYR8YNvgs0vuNuXCMvlyJ+Fh88U1D4tah1tt6qw==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.11",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
+    },
+    "BuildServer.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

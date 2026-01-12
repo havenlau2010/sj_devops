@@ -1,3 +1,4 @@
+using BuildServer.Core;
 namespace BuildServerApp;
 
 public partial class ProjectForm : Form

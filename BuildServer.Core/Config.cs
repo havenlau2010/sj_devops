@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace BuildServerApp;
+namespace BuildServer.Core;
 
 public class ProjectConfig
 {

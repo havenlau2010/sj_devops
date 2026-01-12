@@ -42,3 +42,5 @@ E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServe
 E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\obj\Debug\net10.0-windows\BuildServerApp.csproj.AssemblyReference.cache
 E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\obj\Debug\net10.0-windows\BuildSer.AABB3219.Up2Date
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\BuildServer.Core.dll
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\BuildServer.Core.pdb

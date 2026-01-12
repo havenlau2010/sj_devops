@@ -1,0 +1,13 @@
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\bin\Debug\net8.0\BuildServer.Core.deps.json
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\bin\Debug\net8.0\BuildServer.Core.dll
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\bin\Debug\net8.0\BuildServer.Core.pdb
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.csproj.AssemblyReference.cache
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.AssemblyInfoInputs.cache
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.AssemblyInfo.cs
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.csproj.CoreCompileInputs.cache
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.sourcelink.json
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.dll
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\refint\BuildServer.Core.dll
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\BuildServer.Core.pdb
+E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServer.Core\obj\Debug\net8.0\ref\BuildServer.Core.dll

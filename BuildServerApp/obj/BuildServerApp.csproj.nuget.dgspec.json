@@ -4,6 +4,83 @@
     "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServerApp\\BuildServerApp.csproj": {}
   },
   "projects": {
+    "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj",
+        "projectName": "BuildServer.Core",
+        "projectPath": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj",
+        "packagesPath": "E:\\DevHome\\packages\\havenlau\\.nuget\\packages",
+        "outputPath": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Apps\\x32\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Apps\\x32\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Apps\\dotnet\\library-packs": {},
+          "D:\\Apps\\x32\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework\\v4.0": {},
+          "http://sjsrv:8081/nexus/service/local/nuget/sj-nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "D:\\Apps\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServerApp\\BuildServerApp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -33,7 +110,11 @@
         "frameworks": {
           "net10.0-windows7.0": {
             "targetAlias": "net10.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj": {
+                "projectPath": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

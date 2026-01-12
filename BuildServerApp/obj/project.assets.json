@@ -171,6 +171,19 @@
         "runtime": {
           "lib/net6.0-windows7.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
+      },
+      "BuildServer.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "10.0.1"
+        },
+        "compile": {
+          "bin/placeholder/BuildServer.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildServer.Core.dll": {}
+        }
       }
     }
   },
@@ -299,10 +312,16 @@
         "sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
+    },
+    "BuildServer.Core/1.0.0": {
+      "type": "project",
+      "path": "../BuildServer.Core/BuildServer.Core.csproj",
+      "msbuildProject": "../BuildServer.Core/BuildServer.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0-windows7.0": [
+      "BuildServer.Core >= 1.0.0",
       "Microsoft.Data.Sqlite >= 10.0.1"
     ]
   },
@@ -339,7 +358,11 @@
       "frameworks": {
         "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj": {
+              "projectPath": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServer.Core\\BuildServer.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

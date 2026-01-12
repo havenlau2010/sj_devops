@@ -1,13 +1,14 @@
 using System.Diagnostics;
 using System.Text.Json;
 
-namespace BuildServerApp;
+namespace BuildServer.Core;
 
 public class BuildManager
 {
     private ServerConfig _config;
     private Action<string> _logAction;
     private BuildDatabase _database;
+    public BuildDatabase Database => _database;
 
     public BuildManager(string configPath, Action<string> logAction)
     {

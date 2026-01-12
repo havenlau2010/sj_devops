@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "S2W+1KbJzZk=",
+  "success": true,
+  "projectFilePath": "E:\\DevHome\\sj-workbench\\sjhis\\2217急诊分诊专病中心\\build-test\\BuildServerApi\\BuildServerApi.csproj",
+  "expectedPackageFiles": [
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.22\\microsoft.aspnetcore.openapi.8.0.22.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.data.sqlite\\10.0.1\\microsoft.data.sqlite.10.0.1.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.1\\microsoft.data.sqlite.core.10.0.1.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\system.io.pipelines\\10.0.1\\system.io.pipelines.10.0.1.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\system.text.encodings.web\\10.0.1\\system.text.encodings.web.10.0.1.nupkg.sha512",
+    "E:\\DevHome\\packages\\havenlau\\.nuget\\packages\\system.text.json\\10.0.1\\system.text.json.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildServerApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3946581482acb3241e6b68c46fb3ee9631905aad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6eabb660a59f76e2acd448a141be8fdf5e7d006d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildServerApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildServerApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

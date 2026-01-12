@@ -1,7 +1,7 @@
 using Microsoft.Data.Sqlite;
 using System.Diagnostics;
 
-namespace BuildServerApp;
+namespace BuildServer.Core;
 
 /// <summary>
 /// Database service for storing build records and compilation status

@@ -1,0 +1,192 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutWestRecipe前端
+Time: 2026/1/12 11:34:25
+=========================================
+[OUT] 
+[OUT] > sj.cis.out.west.recipe@1.2.0 build
+[OUT] > node build/get-cdn-config.js build && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] (node:70376) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:67260) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:52620) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:75728) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[OUT]  ERROR  Failed to compile with 3 errors11:34:34
+[OUT] 
+[OUT]  error  in ./src/components/cis/cell_hint/mdc_light.vue?vue&type=style&index=0&lang=less&
+[OUT] 
+[OUT] Module build failed (from E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/node_modules/mini-css-extract-plugin/dist/loader.js):
+[OUT] ModuleBuildError: Module build failed (from E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/thread-loader/dist/cjs.js):
+[OUT] Thread Loader (Worker 0)
+[OUT] Cannot find module 'unicode-match-property-ecmascript'
+[OUT] Require stack:
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\node_modules\regexpu-core\rewrite-pattern.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\plugin-transform-dotall-regex\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\preset-env\lib\available-plugins.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\preset-env\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\transformation\file\options\option-manager.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\transformation\file\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\api\node.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\babel-loader\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\loadLoader.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\worker.js (While processing preset: "E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\node_modules\\@babel\\preset-env\\lib\\index.js")
+[OUT] 
+[OUT]     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+[OUT]     at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+[OUT]     at Module.require (node:internal/modules/cjs/loader:1100:19)
+[OUT]     at require (node:internal/modules/cjs/helpers:119:18)
+[OUT]     at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\node_modules\regexpu-core\rewrite-pattern.js:6:30)
+[OUT]     at Module._compile (node:internal/modules/cjs/loader:1198:14)
+[OUT]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+[OUT]     at Module.load (node:internal/modules/cjs/loader:1076:32)
+[OUT]     at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+[OUT]     at Module.require (node:internal/modules/cjs/loader:1100:19)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\webpack\lib\NormalModule.js:302:20
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:182:20
+[OUT]     at context.callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+[OUT]     at Object.callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\index.js:51:7)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\queue.js:101:31
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\onlyOnce.js:12:16
+[OUT]     at callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\WorkerPool.js:161:21)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\WorkerPool.js:187:17
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\map.js:32:9
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\once.js:12:16
+[OUT]     at replenish (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\eachOfLimit.js:61:25)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\eachOfLimit.js:71:9
+[OUT]     at _asyncMap (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\map.js:25:5)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\doParallelLimit.js:20:16
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\doLimit.js:9:16
+[OUT] 
+[OUT]  @ ./src/components/cis/cell_hint/mdc_light.vue?vue&type=style&index=0&lang=less& 1:0-685 1:701-704 1:706-1388 1:706-1388
+[OUT]  @ ./src/components/cis/cell_hint/mdc_light.vue
+[OUT]  @ E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/cache-loader/dist/cjs.js??ref--13-0!E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/thread-loader/dist/cjs.js!E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/babel-loader/lib!E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/ts-loader??ref--13-3!./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.ts?vue&type=script&lang=ts&
+[OUT]  @ ./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.ts?vue&type=script&lang=ts&
+[OUT]  @ ./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.vue
+[OUT]  @ ./src/pages/index.ts
+[OUT]  @ ./src/entry/cis/cis_out_west_recipe.ts
+[OUT]  @ multi ./src/entry/cis/cis_out_west_recipe
+[OUT] 
+[OUT]  error  in ./src/pages/cis/cis_out_west_recipe/style.less?vue&type=style&index=0&lang=less&
+[OUT] 
+[OUT] Module build failed (from E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/node_modules/mini-css-extract-plugin/dist/loader.js):
+[OUT] ModuleBuildError: Module build failed (from E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/thread-loader/dist/cjs.js):
+[OUT] Thread Loader (Worker 1)
+[OUT] Cannot find module 'unicode-match-property-ecmascript'
+[OUT] Require stack:
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\node_modules\regexpu-core\rewrite-pattern.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\plugin-transform-dotall-regex\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\preset-env\lib\available-plugins.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\preset-env\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\transformation\file\options\option-manager.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\transformation\file\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\api\node.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\babel-loader\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\loadLoader.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\worker.js (While processing preset: "E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\node_modules\\@babel\\preset-env\\lib\\index.js")
+[OUT] 
+[OUT]     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+[OUT]     at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+[OUT]     at Module.require (node:internal/modules/cjs/loader:1100:19)
+[OUT]     at require (node:internal/modules/cjs/helpers:119:18)
+[OUT]     at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\node_modules\regexpu-core\rewrite-pattern.js:6:30)
+[OUT]     at Module._compile (node:internal/modules/cjs/loader:1198:14)
+[OUT]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+[OUT]     at Module.load (node:internal/modules/cjs/loader:1076:32)
+[OUT]     at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+[OUT]     at Module.require (node:internal/modules/cjs/loader:1100:19)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\webpack\lib\NormalModule.js:302:20
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:182:20
+[OUT]     at context.callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+[OUT]     at Object.callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\index.js:51:7)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\queue.js:101:31
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\onlyOnce.js:12:16
+[OUT]     at callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\WorkerPool.js:161:21)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\WorkerPool.js:187:17
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\map.js:32:9
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\once.js:12:16
+[OUT]     at replenish (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\eachOfLimit.js:61:25)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\eachOfLimit.js:71:9
+[OUT]     at _asyncMap (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\map.js:25:5)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\doParallelLimit.js:20:16
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\doLimit.js:9:16
+[OUT] 
+[OUT]  @ ./src/pages/cis/cis_out_west_recipe/style.less?vue&type=style&index=0&lang=less& 1:0-507 1:523-526 1:528-1032 1:528-1032
+[OUT]  @ ./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.vue
+[OUT]  @ ./src/pages/index.ts
+[OUT]  @ ./src/entry/cis/cis_out_west_recipe.ts
+[OUT]  @ multi ./src/entry/cis/cis_out_west_recipe
+[OUT] 
+[OUT]  error  in ./src/components/cis/cis_out_west_recipe/drug_dict.vue?vue&type=style&index=0&id=6ee4a19d&lang=less&scoped=true&
+[OUT] 
+[OUT] Module build failed (from E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/node_modules/mini-css-extract-plugin/dist/loader.js):
+[OUT] ModuleBuildError: Module build failed (from E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/thread-loader/dist/cjs.js):
+[ERR]  ERROR  Build failed with errors.
+[OUT] Thread Loader (Worker 2)
+[OUT] Cannot find module 'unicode-match-property-ecmascript'
+[OUT] Require stack:
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\node_modules\regexpu-core\rewrite-pattern.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\plugin-transform-dotall-regex\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\preset-env\lib\available-plugins.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\preset-env\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\transformation\file\options\option-manager.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\transformation\file\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\lib\api\node.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\babel-core\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\babel-loader\lib\index.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\loadLoader.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js
+[OUT] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\worker.js (While processing preset: "E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\node_modules\\@babel\\preset-env\\lib\\index.js")
+[OUT] 
+[OUT]     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+[OUT]     at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+[OUT]     at Module.require (node:internal/modules/cjs/loader:1100:19)
+[OUT]     at require (node:internal/modules/cjs/helpers:119:18)
+[OUT]     at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\@babel\helper-create-regexp-features-plugin\node_modules\regexpu-core\rewrite-pattern.js:6:30)
+[OUT]     at Module._compile (node:internal/modules/cjs/loader:1198:14)
+[OUT]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+[OUT]     at Module.load (node:internal/modules/cjs/loader:1076:32)
+[OUT]     at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+[OUT]     at Module.require (node:internal/modules/cjs/loader:1100:19)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\webpack\lib\NormalModule.js:302:20
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:182:20
+[OUT]     at context.callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+[OUT]     at Object.callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\index.js:51:7)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\queue.js:101:31
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\onlyOnce.js:12:16
+[OUT]     at callback (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\WorkerPool.js:161:21)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\dist\WorkerPool.js:187:17
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\map.js:32:9
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\once.js:12:16
+[OUT]     at replenish (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\eachOfLimit.js:61:25)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\eachOfLimit.js:71:9
+[OUT]     at _asyncMap (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\map.js:25:5)
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\doParallelLimit.js:20:16
+[OUT]     at E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\thread-loader\node_modules\async\internal\doLimit.js:9:16
+[OUT] 
+[OUT]  @ ./src/components/cis/cis_out_west_recipe/drug_dict.vue?vue&type=style&index=0&id=6ee4a19d&lang=less&scoped=true& 1:0-709 1:725-728 1:730-1436 1:730-1436
+[OUT]  @ ./src/components/cis/cis_out_west_recipe/drug_dict.vue
+[OUT]  @ E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/cache-loader/dist/cjs.js??ref--13-0!E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/thread-loader/dist/cjs.js!E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/babel-loader/lib!E:/DevHome/sj-workbench/sjhis/Wx-NodeModules/ts-loader??ref--13-3!./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.ts?vue&type=script&lang=ts&
+[OUT]  @ ./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.ts?vue&type=script&lang=ts&
+[OUT]  @ ./src/pages/cis/cis_out_west_recipe/cis_out_west_recipe.vue
+[OUT]  @ ./src/pages/index.ts
+[OUT]  @ ./src/entry/cis/cis_out_west_recipe.ts
+[OUT]  @ multi ./src/entry/cis/cis_out_west_recipe
+[OUT] 

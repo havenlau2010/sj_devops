@@ -1,0 +1,21 @@
+﻿2026-01-12 09:50:57 - Build failures detected!
+2026-01-12 09:50:57 - Error in efacms_infrastructure: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for efacms_infrastructure with exit code 1
+2026-01-12 09:50:57 - Error in OutWestRecipe前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for OutWestRecipe前端 with exit code 1
+2026-01-12 09:50:57 - Error in LongOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for LongOrder前端 with exit code 1
+2026-01-12 09:50:57 - Error in TempOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for TempOrder前端 with exit code 1
+2026-01-12 09:50:57 - Error in OutTreatOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for OutTreatOrder前端 with exit code 1

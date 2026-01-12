@@ -1,0 +1,82 @@
+﻿2026-01-12 09:56:03 - Build failures detected!
+2026-01-12 09:56:03 - Error in efacms_infrastructure: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:56:03 - Build failed for efacms_infrastructure with exit code 1
+2026-01-12 09:56:03 - Error in OutWestRecipe前端: node:internal/modules/cjs/loader:959
+  throw err;
+  ^
+
+Error: Cannot find module '@vue/cli-plugin-babel'
+Require stack:
+- E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js
+- E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:956:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:804:27)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at idToPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:136:14)
+    at Array.map (<anonymous>)
+    at Service.resolvePlugins (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:162:10)
+    at new Service (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:33:25)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js:16:17)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\lib\\Service.js',
+    'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\bin\\vue-cli-service.js'
+  ]
+}
+
+2026-01-12 09:56:03 - Build failed for OutWestRecipe前端 with exit code 1
+2026-01-12 09:56:03 - Error in LongOrder前端:  ERROR  Error loading vue.config.js:
+ ERROR  TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Module.require (node:internal/modules/cjs/loader:1021:3)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at getResolver (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\get-resolver.js:12:12)
+    at new DynamicCdnWebpackPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\index.js:92:51)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\build\webpack.pro.conf.js:26:13)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+
+2026-01-12 09:56:03 - Build failed for LongOrder前端 with exit code 1
+2026-01-12 09:56:03 - Error in TempOrder前端:  ERROR  Error loading vue.config.js:
+ ERROR  TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Module.require (node:internal/modules/cjs/loader:1021:3)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at getResolver (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\get-resolver.js:12:12)
+    at new DynamicCdnWebpackPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\index.js:92:51)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\TempOrder前端\build\webpack.pro.conf.js:26:13)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+
+2026-01-12 09:56:03 - Build failed for TempOrder前端 with exit code 1
+2026-01-12 09:56:03 - Error in OutTreatOrder前端:  ERROR  Error loading vue.config.js:
+ ERROR  TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Module.require (node:internal/modules/cjs/loader:1021:3)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at getResolver (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\get-resolver.js:12:12)
+    at new DynamicCdnWebpackPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\index.js:92:51)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\build\webpack.pro.conf.js:27:13)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\vue.config.js:7:21)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+
+2026-01-12 09:56:03 - Build failed for OutTreatOrder前端 with exit code 1

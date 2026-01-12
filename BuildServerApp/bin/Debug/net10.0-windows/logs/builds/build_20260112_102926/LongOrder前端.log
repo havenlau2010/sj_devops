@@ -1,0 +1,22 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端
+Time: 2026/1/12 10:29:26
+=========================================
+[OUT] 
+[OUT] > sj.cis.long.order@1.0.0 build
+[OUT] > node build/get-cdn-config.js && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[ERR]  ERROR  Error loading vue.config.js:
+[ERR]  ERROR  TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+[ERR] TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+[ERR]     at new NodeError (node:internal/errors:387:5)
+[ERR]     at validateString (node:internal/validators:121:11)
+[ERR]     at Module.require (node:internal/modules/cjs/loader:1021:3)
+[ERR]     at require (node:internal/modules/cjs/helpers:102:18)
+[ERR]     at getResolver (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\get-resolver.js:12:12)
+[ERR]     at new DynamicCdnWebpackPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\index.js:92:51)
+[ERR]     at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\build\webpack.pro.conf.js:26:13)
+[ERR]     at Module._compile (node:internal/modules/cjs/loader:1126:14)
+[ERR]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+[ERR]     at Module.load (node:internal/modules/cjs/loader:1004:32)

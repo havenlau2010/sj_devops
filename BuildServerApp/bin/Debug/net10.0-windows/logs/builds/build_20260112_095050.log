@@ -1,0 +1,45 @@
+﻿2026-01-12 09:50:50 - Starting Workflow...
+2026-01-12 09:50:50 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_095050.log
+2026-01-12 09:50:50 - Step 1: SVN Update (Skipped)
+2026-01-12 09:50:50 - Step 1.5: Verify node_modules
+2026-01-12 09:50:50 - node_modules already exists for efacms_infrastructure
+2026-01-12 09:50:50 - node_modules already exists for OutWestRecipe前端
+2026-01-12 09:50:50 - node_modules already exists for LongOrder前端
+2026-01-12 09:50:50 - node_modules already exists for TempOrder前端
+2026-01-12 09:50:50 - node_modules already exists for OutTreatOrder前端
+2026-01-12 09:50:50 - Step 2: Build
+2026-01-12 09:50:50 - Switching to Node.js 14.19.0 for efacms_infrastructure
+2026-01-12 09:50:50 - Switching to Node.js 16.17.0 for OutWestRecipe前端
+2026-01-12 09:50:50 - Switching to Node.js 16.17.0 for LongOrder前端
+2026-01-12 09:50:50 - Switching to Node.js 16.17.0 for TempOrder前端
+2026-01-12 09:50:50 - Switching to Node.js 16.17.0 for OutTreatOrder前端
+2026-01-12 09:50:57 - Project build records saved to database
+2026-01-12 09:50:57 - Build failures detected. Proceeding to copy successful builds...
+2026-01-12 09:50:57 - Step 3: Copy Artifacts
+2026-01-12 09:50:57 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/efacms_infrastructure\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\efacms_infrastructure
+2026-01-12 09:50:57 - Warning: Dist directory not found: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutWestRecipe前端\dist
+2026-01-12 09:50:57 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\LongOrder前端
+2026-01-12 09:50:57 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\TempOrder前端
+2026-01-12 09:50:57 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\OutTreatOrder前端
+2026-01-12 09:50:57 - Workflow Completed.
+2026-01-12 09:50:57 - Build failures detected!
+2026-01-12 09:50:57 - Error in efacms_infrastructure: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for efacms_infrastructure with exit code 1
+2026-01-12 09:50:57 - Error in OutWestRecipe前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for OutWestRecipe前端 with exit code 1
+2026-01-12 09:50:57 - Error in LongOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for LongOrder前端 with exit code 1
+2026-01-12 09:50:57 - Error in TempOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for TempOrder前端 with exit code 1
+2026-01-12 09:50:57 - Error in OutTreatOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:50:57 - Build failed for OutTreatOrder前端 with exit code 1

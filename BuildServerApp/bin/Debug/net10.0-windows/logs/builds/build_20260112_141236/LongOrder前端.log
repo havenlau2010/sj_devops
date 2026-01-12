@@ -1,0 +1,76 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端
+Time: 2026/1/12 14:12:36
+=========================================
+[OUT] 
+[OUT] > sj.cis.long.order@1.0.0 build
+[OUT] > node build/get-cdn-config.js && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] Browserslist: caniuse-lite is outdated. Please run:
+[ERR]   npx update-browserslist-db@latest
+[ERR]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[OUT]  WARNING  Compiled with 3 warnings14:13:24
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+[OUT] This can impact web performance.
+[OUT] Assets: 
+[OUT]   static/js/./pages/cis/cis_long_order.ab856a4d.js (953 KiB)
+[OUT]   static/js/./pages/cis/cis_long_order_demo.78707f99.js (971 KiB)
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+[OUT] Entrypoints:
+[OUT]   ./pages/cis/cis_long_order (979 KiB)
+[OUT]       static/css/./pages/cis/cis_long_order.73e0dee7.css
+[OUT]       static/js/./pages/cis/cis_long_order.ab856a4d.js
+[OUT]   ./pages/cis/cis_long_order_demo (997 KiB)
+[OUT]       static/css/./pages/cis/cis_long_order_demo.73e0dee7.css
+[OUT]       static/js/./pages/cis/cis_long_order_demo.78707f99.js
+[OUT] 
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] webpack performance recommendations: 
+[OUT] You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+[OUT] For more info visit https://webpack.js.org/guides/code-splitting/
+[OUT] 
+[OUT]   File                                      Size             Gzipped
+[OUT] 
+[OUT]   dist\static\js\pages\cis\cis_long_orde    971.02 kb        171.19 kb
+[OUT]   r_demo.78707f99.js
+[OUT]   dist\static\js\pages\cis\cis_long_orde    953.46 kb        167.69 kb
+[OUT]   r.ab856a4d.js
+[OUT]   dist\static\js\index.5f729f80.js          12.52 kb         3.62 kb
+[OUT]   dist\static\css\pages\cis\cis_long_ord    25.74 kb         3.57 kb
+[OUT]   er.73e0dee7.css
+[OUT]   dist\static\css\pages\cis\cis_long_ord    25.74 kb         3.57 kb
+[OUT]   er_demo.73e0dee7.css
+[OUT] 
+[OUT]   Images and other types of assets omitted.
+[OUT] 
+[OUT]  DONE  Build complete. The dist directory is ready to be deployed.
+[OUT]  INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+[OUT]       
+[OUT] 
+[OUT] > sj.cis.long.order@1.0.0 postbuild
+[OUT] > node build/afterbuild.js && node build/svn.info.js
+[OUT] 
+[OUT] 
+[OUT] 项目部署成功！
+[OUT] 
+[OUT] 维护：wyd
+[OUT] 
+[OUT] 名称：sj.cis.long.order
+[OUT] 
+[OUT] 版本：1.0.0
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\dist\pages\cis\cis_long_order.ab856a4d.js
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\dist\pages\cis\cis_long_order_demo.78707f99.js
+[ERR] [SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\cdn\sj\cis

@@ -1,0 +1,27 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端
+Time: 2026/1/12 11:19:18
+=========================================
+[OUT] 
+[OUT] > sj.cis.temp.order@1.0.0 build
+[OUT] > node build/get-cdn-config.js && vue-cli-service build --mode build
+[OUT] 
+[ERR] node:internal/fs/utils:347
+[ERR]     throw err;
+[ERR]     ^
+[ERR] 
+[ERR] Error: ENOENT: no such file or directory, open './node_modules/sj.dynamic.cdn-2/cdn-resolver.js'
+[ERR]     at Object.openSync (node:fs:594:3)
+[ERR]     at Object.readFileSync (node:fs:462:35)
+[ERR]     at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\TempOrder前端\build\get-cdn-config.js:11:18)
+[ERR]     at Module._compile (node:internal/modules/cjs/loader:1126:14)
+[ERR]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+[ERR]     at Module.load (node:internal/modules/cjs/loader:1004:32)
+[ERR]     at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+[ERR]     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+[ERR]     at node:internal/main/run_main_module:17:47 {
+[ERR]   errno: -4058,
+[ERR]   syscall: 'open',
+[ERR]   code: 'ENOENT',
+[ERR]   path: './node_modules/sj.dynamic.cdn-2/cdn-resolver.js'
+[ERR] }

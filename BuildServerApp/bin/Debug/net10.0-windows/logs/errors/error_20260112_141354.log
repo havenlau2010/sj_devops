@@ -1,0 +1,23 @@
+﻿2026-01-12 14:15:26 - Error in efacms_infrastructure: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\efacms_infrastructure\cdn\sj\cis
+
+2026-01-12 14:15:26 - Error in LongOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\cdn\sj\cis
+
+2026-01-12 14:15:26 - Error in TempOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+2026-01-12 14:15:26 - Error in OutTreatOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\cdn\sj\cis
+

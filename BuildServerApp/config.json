@@ -10,7 +10,7 @@
       "NodeModulesDir": "/Lwz-NodeModules",
       "BuildCmd": "npm run build",
       "DistDir": "dist",
-      "IsPublish": true,
+      "IsPublish": false,
       "NodeVersion": "14.19.0"
     },
     {
@@ -20,7 +20,7 @@
       "NodeModulesDir": "/Lwz-NodeModules",
       "BuildCmd": "npm run build",
       "DistDir": "dist",
-      "IsPublish": true,
+      "IsPublish": false,
       "NodeVersion": "14.19.0"
     },
     {
@@ -40,8 +40,8 @@
       "NodeModulesDir": "/Wx-NodeModules",
       "BuildCmd": "npm run build",
       "DistDir": "dist",
-      "IsPublish": false,
-      "NodeVersion": "16.20.2"
+      "IsPublish": true,
+      "NodeVersion": "16.17.0"
     },
     {
       "Name": "LongOrder\u524D\u7AEF",
@@ -51,7 +51,7 @@
       "BuildCmd": "npm run build",
       "DistDir": "dist",
       "IsPublish": true,
-      "NodeVersion": "16.20.2"
+      "NodeVersion": "16.17.0"
     },
     {
       "Name": "TempOrder\u524D\u7AEF",
@@ -61,7 +61,7 @@
       "BuildCmd": "npm run build",
       "DistDir": "dist",
       "IsPublish": true,
-      "NodeVersion": "16.20.2"
+      "NodeVersion": "16.17.0"
     },
     {
       "Name": "OutTreatOrder\u524D\u7AEF",

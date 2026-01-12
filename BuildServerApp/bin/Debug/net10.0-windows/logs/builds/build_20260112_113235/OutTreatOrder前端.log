@@ -1,0 +1,81 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端
+Time: 2026/1/12 11:32:35
+=========================================
+[OUT] 
+[OUT] > sj.cis.out.treat.order@0.1.2 build
+[OUT] > node build/get-cdn-config.js build && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] (node:73256) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:57888) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:49056) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:50092) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:10588) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:49372) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:40248) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:60036) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:69152) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:60552) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:74056) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:73468) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:59572) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:54408) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:17456) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] (node:42020) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+[ERR] Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+[OUT]  DONE  Compiled successfully in 15773ms11:32:57
+[OUT] 
+[OUT]   File                                      Size             Gzipped
+[OUT] 
+[OUT]   dist\static\js\pages\cis\cis_out_treat    208.50 kb        62.44 kb
+[OUT]   _order.ea8b7a27.js
+[OUT]   dist\static\js\index.d97db793.js          6.06 kb          2.67 kb
+[OUT]   dist\static\css\pages\cis\cis_out_trea    9.31 kb          1.92 kb
+[OUT]   t_order.9d25d98b.css
+[OUT] 
+[OUT]   Images and other types of assets omitted.
+[OUT] 
+[OUT]  DONE  Build complete. The dist directory is ready to be deployed.
+[OUT]  INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+[OUT]       
+[OUT] 
+[OUT] > sj.cis.out.treat.order@0.1.2 postbuild
+[OUT] > node build/afterbuild.js && node build/svn.info.js
+[OUT] 
+[OUT] cis_out_treat_order.html
+[OUT] ./dist/static/css/pages/cis/cis_out_treat_order.9d25d98b.css
+[OUT] ./dist/static/js/index.d97db793.js
+[OUT] ./dist/static/js/index.d97db793.js.map
+[OUT] ./dist/static/js/pages/cis/cis_out_treat_order.ea8b7a27.js
+[OUT] ./dist/static/js/pages/cis/cis_out_treat_order.ea8b7a27.js.map
+[OUT] [32m
+[OUT] 项目部署成功！[39m
+[OUT] [32m
+[OUT] 维护：王映东[39m
+[OUT] [32m
+[OUT] 名称：sj.cis.out.treat.order[39m
+[OUT] [32m
+[OUT] 版本：0.1.2[39m
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\dist\pages\cis\cis_out_treat_order.ea8b7a27.js
+[ERR] [SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\cdn\sj\cis

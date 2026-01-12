@@ -1,0 +1,68 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/efacms_infrastructure
+Time: 2026/1/12 10:29:26
+=========================================
+[OUT] 
+[OUT] > sj.cis.efacms@0.0.1 build
+[OUT] > node build/get-cdn-config.js build && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] Browserslist: caniuse-lite is outdated. Please run:
+[ERR]   npx update-browserslist-db@latest
+[ERR]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[OUT]  WARNING  Compiled with 3 warnings10:29:58
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+[OUT] This can impact web performance.
+[OUT] Assets: 
+[OUT]   static/js/./pages/cis/efacms_system_manage_parameters_settings.fd1274a5.js (2.32 MiB)
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+[OUT] Entrypoints:
+[OUT]   ./pages/cis/efacms_system_manage_parameters_settings (2.4 MiB)
+[OUT]       static/css/./pages/cis/efacms_system_manage_parameters_settings.0ba1275e.css
+[OUT]       static/js/./pages/cis/efacms_system_manage_parameters_settings.fd1274a5.js
+[OUT] 
+[OUT] 
+[OUT]  warning  
+[OUT] 
+[OUT] webpack performance recommendations: 
+[OUT] You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+[OUT] For more info visit https://webpack.js.org/guides/code-splitting/
+[OUT] 
+[OUT]   File                                      Size             Gzipped
+[OUT] 
+[OUT]   dist\static\js\pages\cis\efacms_system    2371.79 kb       578.60 kb
+[OUT]   _manage_parameters_settings.fd1274a5.j
+[OUT]   s
+[OUT]   dist\static\js\index.16ab73fb.js          67.99 kb         20.34 kb
+[OUT]   dist\static\css\pages\cis\efacms_syste    86.28 kb         11.61 kb
+[OUT]   m_manage_parameters_settings.0ba1275e.
+[OUT]   css
+[OUT]   dist\static\css\index.b3e39b74.css        0.37 kb          0.20 kb
+[OUT] 
+[OUT]   Images and other types of assets omitted.
+[OUT] 
+[OUT]  DONE  Build complete. The dist directory is ready to be deployed.
+[OUT]  INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+[OUT]       
+[OUT] 
+[OUT] > sj.cis.efacms@0.0.1 postbuild
+[OUT] > node build/afterbuild.js && node build/svn.info.js
+[OUT] 
+[OUT] 
+[OUT] 维护：刘文洲
+[OUT] 
+[OUT] 名称：sj.cis.efacms
+[OUT] 
+[OUT] 版本：0.0.1
+[OUT] [SVN INFO] 已更新 E:\DevHome\sj-workbench\sjhis\0201门诊医生\efacms_infrastructure\dist\pages\cis\efacms_system_manage_parameters_settings.fd1274a5.js
+[ERR] [SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\efacms_infrastructure\cdn\sj\cis

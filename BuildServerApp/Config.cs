@@ -19,5 +19,6 @@ public class ServerConfig
     public int Port { get; set; } = 3000;
     public string SvnRoot { get; set; }
     public string OutputDir { get; set; }
+    public string NvmRoot { get; set; } = @"D:\Apps\nvm"; // Default guessed path
     public List<ProjectConfig> Projects { get; set; } = new List<ProjectConfig>();
 }

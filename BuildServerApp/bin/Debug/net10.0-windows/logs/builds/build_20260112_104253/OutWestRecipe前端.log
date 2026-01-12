@@ -1,0 +1,33 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutWestRecipe前端
+Time: 2026/1/12 10:42:53
+=========================================
+[OUT] 
+[OUT] > sj.cis.out.west.recipe@1.2.0 build
+[OUT] > node build/get-cdn-config.js build && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置成功
+[ERR] node:internal/modules/cjs/loader:959
+[ERR]   throw err;
+[ERR]   ^
+[ERR] 
+[ERR] Error: Cannot find module '@vue/cli-plugin-babel'
+[ERR] Require stack:
+[ERR] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js
+[ERR] - E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js
+[ERR]     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:956:15)
+[ERR]     at Function.Module._load (node:internal/modules/cjs/loader:804:27)
+[ERR]     at Module.require (node:internal/modules/cjs/loader:1028:19)
+[ERR]     at require (node:internal/modules/cjs/helpers:102:18)
+[ERR]     at idToPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:136:14)
+[ERR]     at Array.map (<anonymous>)
+[ERR]     at Service.resolvePlugins (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:162:10)
+[ERR]     at new Service (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:33:25)
+[ERR]     at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js:16:17)
+[ERR]     at Module._compile (node:internal/modules/cjs/loader:1126:14) {
+[ERR]   code: 'MODULE_NOT_FOUND',
+[ERR]   requireStack: [
+[ERR]     'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\lib\\Service.js',
+[ERR]     'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\bin\\vue-cli-service.js'
+[ERR]   ]
+[ERR] }

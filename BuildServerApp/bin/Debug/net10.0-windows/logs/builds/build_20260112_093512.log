@@ -1,0 +1,62 @@
+﻿2026-01-12 09:35:12 - Starting Workflow...
+2026-01-12 09:35:12 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_093512.log
+2026-01-12 09:35:12 - Step 1: SVN Update (Skipped)
+2026-01-12 09:35:12 - Step 1.5: Verify node_modules
+2026-01-12 09:35:12 - node_modules already exists for OutWestRecipe前端
+2026-01-12 09:35:12 - node_modules already exists for LongOrder前端
+2026-01-12 09:35:12 - node_modules already exists for TempOrder前端
+2026-01-12 09:35:12 - node_modules already exists for OutTreatOrder前端
+2026-01-12 09:35:12 - Step 2: Build
+2026-01-12 09:35:12 - Switching to Node.js 16.20.2 for OutWestRecipe前端
+2026-01-12 09:35:12 - Switching to Node.js 16.20.2 for LongOrder前端
+2026-01-12 09:35:12 - Switching to Node.js 16.20.2 for TempOrder前端
+2026-01-12 09:35:12 - Switching to Node.js 16.17.0 for OutTreatOrder前端
+2026-01-12 09:36:24 - Project build records saved to database
+2026-01-12 09:36:24 - Build failures detected. Proceeding to copy successful builds...
+2026-01-12 09:36:24 - Step 3: Copy Artifacts
+2026-01-12 09:36:24 - Warning: Dist directory not found: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutWestRecipe前端\dist
+2026-01-12 09:36:24 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\LongOrder前端
+2026-01-12 09:36:24 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\TempOrder前端
+2026-01-12 09:36:24 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\OutTreatOrder前端
+2026-01-12 09:36:24 - Workflow Completed.
+2026-01-12 09:36:24 - Build failures detected!
+2026-01-12 09:36:24 - Error in OutWestRecipe前端: node:internal/modules/cjs/loader:1031
+  throw err;
+  ^
+
+Error: Cannot find module '@vue/cli-plugin-babel'
+Require stack:
+- E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js
+- E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at Module.require (node:internal/modules/cjs/loader:1100:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at idToPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:136:14)
+    at Array.map (<anonymous>)
+    at Service.resolvePlugins (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:162:10)
+    at new Service (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:33:25)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js:16:17)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\lib\\Service.js',
+    'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\bin\\vue-cli-service.js'
+  ]
+}
+
+2026-01-12 09:36:24 - Build failed for OutWestRecipe前端 with exit code 1
+2026-01-12 09:36:24 - Error in LongOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\cdn\sj\cis
+
+2026-01-12 09:36:24 - Error in TempOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+2026-01-12 09:36:24 - Error in OutTreatOrder前端: ϵͳ�Ҳ���ָ����·����
+
+2026-01-12 09:36:24 - Build failed for OutTreatOrder前端 with exit code 1

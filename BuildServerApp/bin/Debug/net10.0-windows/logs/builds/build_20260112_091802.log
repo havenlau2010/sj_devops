@@ -1,0 +1,17 @@
+﻿2026-01-12 09:18:02 - Starting Workflow...
+2026-01-12 09:18:02 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_091802.log
+2026-01-12 09:18:02 - Step 1: SVN Update (Skipped)
+2026-01-12 09:18:02 - Step 1.5: Verify node_modules
+2026-01-12 09:18:02 - node_modules already exists for pre_examination_triage_upgrade
+2026-01-12 09:18:02 - Step 2: Build
+2026-01-12 09:18:02 - Switching to Node.js 14.19.0 for pre_examination_triage_upgrade
+2026-01-12 09:22:00 - Project build records saved to database
+2026-01-12 09:22:00 - Step 3: Copy Artifacts
+2026-01-12 09:22:00 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/pre_examination_triage_upgrade\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\pre_examination_triage_upgrade
+2026-01-12 09:22:00 - Workflow Completed.
+2026-01-12 09:22:00 - Error in pre_examination_triage_upgrade: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\pre_examination_triage_upgrade\cdn\sj\cis
+

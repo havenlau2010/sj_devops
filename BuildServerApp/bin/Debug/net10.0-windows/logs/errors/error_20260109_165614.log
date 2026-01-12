@@ -1,0 +1,36 @@
+﻿2026-01-09 16:56:16 - Build failures detected!
+2026-01-09 16:56:16 - Error in efacms_infrastructure: ϵͳ�Ҳ���ָ����·����
+
+2026-01-09 16:56:16 - Build failed for efacms_infrastructure with exit code 1
+2026-01-09 16:56:16 - Error in pre_examination_triage_upgrade: ϵͳ�Ҳ���ָ����·����
+
+2026-01-09 16:56:16 - Build failed for pre_examination_triage_upgrade with exit code 1
+2026-01-09 16:56:16 - Error in LongOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-09 16:56:16 - Build failed for LongOrder前端 with exit code 1
+2026-01-09 16:56:16 - Error in TempOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-09 16:56:16 - Build failed for TempOrder前端 with exit code 1
+2026-01-09 16:56:16 - Error in OutTreatOrder前端: node:internal/fs/utils:347
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, open './node_modules/sj.dynamic.cdn-2/cdn-resolver.js'
+    at Object.openSync (node:fs:594:3)
+    at Object.readFileSync (node:fs:462:35)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\build\get-cdn-config.js:11:18)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:17:47 {
+  errno: -4058,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: './node_modules/sj.dynamic.cdn-2/cdn-resolver.js'
+}
+
+2026-01-09 16:56:16 - Build failed for OutTreatOrder前端 with exit code 1

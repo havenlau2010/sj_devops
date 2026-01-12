@@ -1,0 +1,87 @@
+﻿2026-01-12 09:22:54 - Starting Workflow...
+2026-01-12 09:22:54 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_092254.log
+2026-01-12 09:22:54 - Step 1: SVN Update (Skipped)
+2026-01-12 09:22:54 - Step 1.5: Verify node_modules
+2026-01-12 09:22:54 - node_modules already exists for efacms_infrastructure
+2026-01-12 09:22:54 - node_modules already exists for pre_examination_triage_upgrade
+2026-01-12 09:22:54 - node_modules already exists for OutWestRecipe前端
+2026-01-12 09:22:55 - node_modules already exists for LongOrder前端
+2026-01-12 09:22:55 - node_modules already exists for TempOrder前端
+2026-01-12 09:22:55 - node_modules already exists for OutTreatOrder前端
+2026-01-12 09:22:55 - Step 2: Build
+2026-01-12 09:22:55 - Switching to Node.js 14.19.0 for efacms_infrastructure
+2026-01-12 09:22:55 - Switching to Node.js 14.19.0 for pre_examination_triage_upgrade
+2026-01-12 09:22:55 - Switching to Node.js 16.20.2 for OutWestRecipe前端
+2026-01-12 09:22:55 - Switching to Node.js 16.20.2 for LongOrder前端
+2026-01-12 09:22:55 - Switching to Node.js 16.20.2 for TempOrder前端
+2026-01-12 09:22:55 - Switching to Node.js 16.17.0 for OutTreatOrder前端
+2026-01-12 09:23:29 - Project build records saved to database
+2026-01-12 09:23:29 - Build failures detected. Proceeding to copy successful builds...
+2026-01-12 09:23:29 - Step 3: Copy Artifacts
+2026-01-12 09:23:29 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/efacms_infrastructure\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\efacms_infrastructure
+2026-01-12 09:23:29 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/pre_examination_triage_upgrade\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\pre_examination_triage_upgrade
+2026-01-12 09:23:30 - Warning: Dist directory not found: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutWestRecipe前端\dist
+2026-01-12 09:23:30 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\LongOrder前端
+2026-01-12 09:23:30 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\TempOrder前端
+2026-01-12 09:23:30 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\OutTreatOrder前端
+2026-01-12 09:23:30 - Workflow Completed.
+2026-01-12 09:23:30 - Build failures detected!
+2026-01-12 09:23:30 - Error in efacms_infrastructure: 'node' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! sj.cis.efacms@0.0.1 build: `node build/get-cdn-config.js build && vue-cli-service build --mode build`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the sj.cis.efacms@0.0.1 build script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     E:\DevHome\packages\npm\_logs\2026-01-12T01_22_56_175Z-debug.log
+
+2026-01-12 09:23:30 - Build failed for efacms_infrastructure with exit code 1
+2026-01-12 09:23:30 - Error in pre_examination_triage_upgrade: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:23:30 - Build failed for pre_examination_triage_upgrade with exit code 1
+2026-01-12 09:23:30 - Error in OutWestRecipe前端: node:internal/modules/cjs/loader:1031
+  throw err;
+  ^
+
+Error: Cannot find module '@vue/cli-plugin-babel'
+Require stack:
+- E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js
+- E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at Module.require (node:internal/modules/cjs/loader:1100:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at idToPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:136:14)
+    at Array.map (<anonymous>)
+    at Service.resolvePlugins (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:162:10)
+    at new Service (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\lib\Service.js:33:25)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\@vue\cli-service\bin\vue-cli-service.js:16:17)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\lib\\Service.js',
+    'E:\\DevHome\\sj-workbench\\sjhis\\Wx-NodeModules\\@vue\\cli-service\\bin\\vue-cli-service.js'
+  ]
+}
+
+2026-01-12 09:23:30 - Build failed for OutWestRecipe前端 with exit code 1
+2026-01-12 09:23:30 - Error in LongOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[SVN INFO] 目录不存在: E:\DevHome\sj-workbench\sjhis\0201门诊医生\LongOrder前端\cdn\sj\cis
+
+2026-01-12 09:23:30 - Error in TempOrder前端: -  Building for build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+2026-01-12 09:23:30 - Error in OutTreatOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 09:23:30 - Build failed for OutTreatOrder前端 with exit code 1

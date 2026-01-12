@@ -1,6 +1,6 @@
 namespace BuildServerApp;
 
-public partial class Form1 : Form
+public partial class MainForm : Form
 {
     private HttpServer _server;
     private BuildManager _manager;
@@ -9,7 +9,7 @@ public partial class Form1 : Form
     private TabControl tabControl;
     private BuildLogsForm logsForm;
 
-    public Form1()
+    public MainForm()
     {
         InitializeComponent();
         SetupBasicUI(); // Initialize basic controls like txtLogs

@@ -1,0 +1,2074 @@
+﻿=== Build Log for cmd /c npm run build ===
+Dir: E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端
+Time: 2026/1/12 11:34:25
+=========================================
+[OUT] 
+[OUT] > sj.cis.long.order@1.0.0 build
+[OUT] > node build/get-cdn-config.js && vue-cli-service build --mode build
+[OUT] 
+[OUT] 请求cdn配置失败
+[ERR] 报错: socket hang up
+[OUT] 
+[ERR] -  Building for build...
+[OUT] Starting type checking service...
+[OUT] Using 1 worker with 2048MB memory limit
+[ERR] Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+[OUT]  ERROR  Failed to compile with 337 errors11:34:46
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@progress/kendo-ui/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@progress/kendo-ui/index.d.ts
+[OUT] 5:1 Definitions of the following identifiers conflict with those in another file: Class, Observable, View, ViewContainer, Layout, History, Route, Router, Binding, BindingTarget, EventBinding, TemplateBinding, Binder, ObservableObject, Model, SchedulerEvent, TreeListModel, TreeListDataSource, GanttTask, GanttDependency, Node, SchedulerDataSource, GanttDataSource, GanttDependencyDataSource, HierarchicalDataSource, PivotDataSource, ObservableArray, DataSource, Query, Widget, Draggable, DropTarget, DropTargetArea, Alert, AutoComplete, Button, Calendar, ColorPalette, ColorPicker, ComboBox, Confirm, ContextMenu, DateInput, DatePicker, DateTimePicker, Dialog, DropDownList, Editor, FilterMenu, FlatColorPicker, Gantt, Grid, ListBox, ListView, MaskedTextBox, MediaPlayer, Menu, MultiSelect, Notification, NumericTextBox, Pager, PanelBar, PivotConfigurator, PivotGrid, Popup, ProgressBar, Prompt, RangeSlider, ResponsivePanel, Scheduler, Slider, Sortable, Splitter, Spreadsheet, TabStrip, TimePicker, ToolBar, Tooltip, Touch, TreeList, TreeView, Upload, Validator, Window, Application, ActionSheet, BackButton, ButtonGroup, Collapsible, DetailButton, Drawer, Loader, ModalView, NavBar, Pane, PopOver, ScrollView, Scroller, SplitView, Switch, Barcode, Chart, Diagram, LinearGauge, Map, QRCode, RadialGauge, Sparkline, StockChart, TreeMap, Shape, BingLayer, Extent, Layer, Location, Marker, MarkerLayer, ShapeLayer, TileLayer, ChartAxis, ChartPane, ChartPlotArea, ChartPoint, ChartSeries, Navigator, Circle, Connection, Connector, Group, Image, Line, Path, Point, Polyline, Rect, Rectangle, TextBlock, Arc, Matrix, Size, Transformation, Element, Gradient, GradientStop, LinearGradient, MultiPath, OptionsStore, RadialGradient, Segment, Surface, Text, Color, CustomFilter, DynamicFilter, Range, Sheet, TopFilter, ValueFilter, Workbook
+[OUT]     3 | // Definitions by: Telerik <https://github.com/telerik/>
+[OUT]     4 | 
+[OUT]   > 5 | declare namespace kendo {
+[OUT]       | ^
+[OUT]     6 |     function culture(): {
+[OUT]     7 |         name: string;
+[OUT]     8 |         calendar: {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/jquery/misc.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/jquery/misc.d.ts
+[OUT] 5:1 Definitions of the following identifiers conflict with those in another file: TypeOrArray, Node, htmlString, Selector, SuccessTextStatus, ErrorTextStatus, TextStatus, SuccessCallback, ErrorCallback, CompleteCallback, StatusCodeCallbacks, CSSHook, CallbackBase, Callback, Duration, Tweener, PropHook, EasingMethod, AnimationHook, Queue, QueueFunction, SpeedSettings, EventHandlerBase, EventHandler, TypeEventHandler, _TypeEventHandlers, SpecialEventHook, CoordinatesPartial, ValHook, _Falsy, jQuery, $, _Event, _UIEvent, _MouseEvent, _KeyboardEvent, _TouchEvent, _FocusEvent
+[OUT]     3 | // tslint:disable:no-irregular-whitespace
+[OUT]     4 | 
+[OUT]   > 5 | declare namespace JQuery {
+[OUT]       | ^
+[OUT]     6 |     type TypeOrArray<T> = T | T[];
+[OUT]     7 |     type Node = Element | Text | Comment | DocumentFragment;
+[OUT]     8 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/assert.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/assert.d.ts
+[OUT] 51:14 Duplicate identifier 'internal'.
+[OUT]     49 |     }
+[OUT]     50 | 
+[OUT]   > 51 |     export = internal;
+[OUT]        |              ^
+[OUT]     52 | }
+[OUT]     53 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/async_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/async_hooks.d.ts
+[OUT] 92:11 Duplicate identifier 'AsyncResource'.
+[OUT]     90 |      * Using this users can easily trigger the lifetime events of their own resources.
+[OUT]     91 |      */
+[OUT]   > 92 |     class AsyncResource {
+[OUT]        |           ^
+[OUT]     93 |         /**
+[OUT]     94 |          * AsyncResource() is meant to be extended. Instantiating a
+[OUT]     95 |          * new AsyncResource() also triggers init. If triggerAsyncId is omitted then
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 2:18 Cannot redeclare block-scoped variable 'INSPECT_MAX_BYTES'.
+[OUT]     1 | declare module "buffer" {
+[OUT]   > 2 |     export const INSPECT_MAX_BYTES: number;
+[OUT]       |                  ^
+[OUT]     3 |     const BuffType: typeof Buffer;
+[OUT]     4 | 
+[OUT]     5 |     export type TranscodeEncoding = "ascii" | "utf8" | "utf16le" | "ucs2" | "latin1" | "binary";
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 5:17 Duplicate identifier 'TranscodeEncoding'.
+[OUT]     3 |     const BuffType: typeof Buffer;
+[OUT]     4 | 
+[OUT]   > 5 |     export type TranscodeEncoding = "ascii" | "utf8" | "utf16le" | "ucs2" | "latin1" | "binary";
+[OUT]       |                 ^
+[OUT]     6 | 
+[OUT]     7 |     export function transcode(source: Buffer | Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer;
+[OUT]     8 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 9:18 Cannot redeclare block-scoped variable 'SlowBuffer'.
+[OUT]      7 |     export function transcode(source: Buffer | Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer;
+[OUT]      8 | 
+[OUT]   >  9 |     export const SlowBuffer: {
+[OUT]        |                  ^
+[OUT]     10 |         /** @deprecated since v6.0.0, use Buffer.allocUnsafeSlow() */
+[OUT]     11 |         new(size: number): Buffer;
+[OUT]     12 |         prototype: Buffer;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/buffer.d.ts
+[OUT] 15:26 Duplicate identifier 'Buffer'.
+[OUT]     13 |     };
+[OUT]     14 | 
+[OUT]   > 15 |     export { BuffType as Buffer };
+[OUT]        |                          ^
+[OUT]     16 | }
+[OUT]     17 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/child_process.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/child_process.d.ts
+[OUT] 99:10 Duplicate identifier 'StdioOptions'.
+[OUT]      97 |     }
+[OUT]      98 | 
+[OUT]   >  99 |     type StdioOptions = "pipe" | "ignore" | "inherit" | Array<("pipe" | "ipc" | "ignore" | "inherit" | Stream | number | null | undefined)>;
+[OUT]         |          ^
+[OUT]     100 | 
+[OUT]     101 |     interface ProcessEnvOptions {
+[OUT]     102 |         uid?: number;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 24:11 Duplicate identifier 'Worker'.
+[OUT]     22 |     }
+[OUT]     23 | 
+[OUT]   > 24 |     class Worker extends events.EventEmitter {
+[OUT]        |           ^
+[OUT]     25 |         id: number;
+[OUT]     26 |         process: child.ChildProcess;
+[OUT]     27 |         send(message: any, sendHandle?: any, callback?: (error: Error | null) => void): boolean;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 175:11 Cannot redeclare block-scoped variable 'isMaster'.
+[OUT]     173 |     function disconnect(callback?: () => void): void;
+[OUT]     174 |     function fork(env?: any): Worker;
+[OUT]   > 175 |     const isMaster: boolean;
+[OUT]         |           ^
+[OUT]     176 |     const isWorker: boolean;
+[OUT]     177 |     // TODO: cluster.schedulingPolicy
+[OUT]     178 |     const settings: ClusterSettings;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 176:11 Cannot redeclare block-scoped variable 'isWorker'.
+[OUT]     174 |     function fork(env?: any): Worker;
+[OUT]     175 |     const isMaster: boolean;
+[OUT]   > 176 |     const isWorker: boolean;
+[OUT]         |           ^
+[OUT]     177 |     // TODO: cluster.schedulingPolicy
+[OUT]     178 |     const settings: ClusterSettings;
+[OUT]     179 |     function setupMaster(settings?: ClusterSettings): void;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 178:11 Cannot redeclare block-scoped variable 'settings'.
+[OUT]     176 |     const isWorker: boolean;
+[OUT]     177 |     // TODO: cluster.schedulingPolicy
+[OUT]   > 178 |     const settings: ClusterSettings;
+[OUT]         |           ^
+[OUT]     179 |     function setupMaster(settings?: ClusterSettings): void;
+[OUT]     180 |     const worker: Worker;
+[OUT]     181 |     const workers: {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 180:11 Cannot redeclare block-scoped variable 'worker'.
+[OUT]     178 |     const settings: ClusterSettings;
+[OUT]     179 |     function setupMaster(settings?: ClusterSettings): void;
+[OUT]   > 180 |     const worker: Worker;
+[OUT]         |           ^
+[OUT]     181 |     const workers: {
+[OUT]     182 |         [index: string]: Worker | undefined
+[OUT]     183 |     };
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/cluster.d.ts
+[OUT] 181:11 Cannot redeclare block-scoped variable 'workers'.
+[OUT]     179 |     function setupMaster(settings?: ClusterSettings): void;
+[OUT]     180 |     const worker: Worker;
+[OUT]   > 181 |     const workers: {
+[OUT]         |           ^
+[OUT]     182 |         [index: string]: Worker | undefined
+[OUT]     183 |     };
+[OUT]     184 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/console.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/console.d.ts
+[OUT] 2:14 Duplicate identifier 'console'.
+[OUT]     1 | declare module "console" {
+[OUT]   > 2 |     export = console;
+[OUT]       |              ^
+[OUT]     3 | }
+[OUT]     4 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/constants.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/constants.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: E2BIG, EACCES, EADDRINUSE, EADDRNOTAVAIL, EAFNOSUPPORT, EAGAIN, EALREADY, EBADF, EBADMSG, EBUSY, ECANCELED, ECHILD, ECONNABORTED, ECONNREFUSED, ECONNRESET, EDEADLK, EDESTADDRREQ, EDOM, EEXIST, EFAULT, EFBIG, EHOSTUNREACH, EIDRM, EILSEQ, EINPROGRESS, EINTR, EINVAL, EIO, EISCONN, EISDIR, ELOOP, EMFILE, EMLINK, EMSGSIZE, ENAMETOOLONG, ENETDOWN, ENETRESET, ENETUNREACH, ENFILE, ENOBUFS, ENODATA, ENODEV, ENOENT, ENOEXEC, ENOLCK, ENOLINK, ENOMEM, ENOMSG, ENOPROTOOPT, ENOSPC, ENOSR, ENOSTR, ENOSYS, ENOTCONN, ENOTDIR, ENOTEMPTY, ENOTSOCK, ENOTSUP, ENOTTY, ENXIO, EOPNOTSUPP, EOVERFLOW, EPERM, EPIPE, EPROTO, EPROTONOSUPPORT, EPROTOTYPE, ERANGE, EROFS, ESPIPE, ESRCH, ETIME, ETIMEDOUT, ETXTBSY, EWOULDBLOCK, EXDEV, WSAEINTR, WSAEBADF, WSAEACCES, WSAEFAULT, WSAEINVAL, WSAEMFILE, WSAEWOULDBLOCK, WSAEINPROGRESS, WSAEALREADY, WSAENOTSOCK, WSAEDESTADDRREQ, WSAEMSGSIZE, WSAEPROTOTYPE, WSAENOPROTOOPT, WSAEPROTONOSUPPORT, WSAESOCKTNOSUPPORT, WSAEOPNOTSUPP, WSAEPFNOSUPPORT, WSAEAFNOSUPPORT, WSAEADDRINUSE, WSAEADDRNOTAVAIL, WSAENETDOWN, WSAENETUNREACH, WSAENETRESET, WSAECONNABORTED, WSAECONNRESET, WSAENOBUFS, WSAEISCONN, WSAENOTCONN, WSAESHUTDOWN, WSAETOOMANYREFS, WSAETIMEDOUT, WSAECONNREFUSED, WSAELOOP, WSAENAMETOOLONG, WSAEHOSTDOWN, WSAEHOSTUNREACH, WSAENOTEMPTY, WSAEPROCLIM, WSAEUSERS, WSAEDQUOT, WSAESTALE, WSAEREMOTE, WSASYSNOTREADY, WSAVERNOTSUPPORTED, WSANOTINITIALISED, WSAEDISCON, WSAENOMORE, WSAECANCELLED, WSAEINVALIDPROCTABLE, WSAEINVALIDPROVIDER, WSAEPROVIDERFAILEDINIT, WSASYSCALLFAILURE, WSASERVICE_NOT_FOUND, WSATYPE_NOT_FOUND, WSA_E_NO_MORE, WSA_E_CANCELLED, WSAEREFUSED, SIGHUP, SIGINT, SIGILL, SIGABRT, SIGFPE, SIGKILL, SIGSEGV, SIGTERM, SIGBREAK, SIGWINCH, SSL_OP_ALL, SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION, SSL_OP_CIPHER_SERVER_PREFERENCE, SSL_OP_CISCO_ANYCONNECT, SSL_OP_COOKIE_EXCHANGE, SSL_OP_CRYPTOPRO_TLSEXT_BUG, SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS, SSL_OP_EPHEMERAL_RSA, SSL_OP_LEGACY_SERVER_CONNECT, SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER, SSL_OP_MICROSOFT_SESS_ID_BUG, SSL_OP_MSIE_SSLV2_RSA_PADDING, SSL_OP_NETSCAPE_CA_DN_BUG, SSL_OP_NETSCAPE_CHALLENGE_BUG, SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG, SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG, SSL_OP_NO_COMPRESSION, SSL_OP_NO_QUERY_MTU, SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION, SSL_OP_NO_SSLv2, SSL_OP_NO_SSLv3, SSL_OP_NO_TICKET, SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2, SSL_OP_PKCS1_CHECK_1, SSL_OP_PKCS1_CHECK_2, SSL_OP_SINGLE_DH_USE, SSL_OP_SINGLE_ECDH_USE, SSL_OP_SSLEAY_080_CLIENT_DH_BUG, SSL_OP_SSLREF2_REUSE_CERT_TYPE_BUG, SSL_OP_TLS_BLOCK_PADDING_BUG, SSL_OP_TLS_D5_BUG, SSL_OP_TLS_ROLLBACK_BUG, ENGINE_METHOD_DSA, ENGINE_METHOD_DH, ENGINE_METHOD_RAND, ENGINE_METHOD_ECDH, ENGINE_METHOD_ECDSA, ENGINE_METHOD_CIPHERS, ENGINE_METHOD_DIGESTS, ENGINE_METHOD_STORE, ENGINE_METHOD_PKEY_METHS, ENGINE_METHOD_PKEY_ASN1_METHS, ENGINE_METHOD_ALL, ENGINE_METHOD_NONE, DH_CHECK_P_NOT_SAFE_PRIME, DH_CHECK_P_NOT_PRIME, DH_UNABLE_TO_CHECK_GENERATOR, DH_NOT_SUITABLE_GENERATOR, NPN_ENABLED, RSA_PKCS1_PADDING, RSA_SSLV23_PADDING, RSA_NO_PADDING, RSA_PKCS1_OAEP_PADDING, RSA_X931_PADDING, RSA_PKCS1_PSS_PADDING, POINT_CONVERSION_COMPRESSED, POINT_CONVERSION_UNCOMPRESSED, POINT_CONVERSION_HYBRID, O_RDONLY, O_WRONLY, O_RDWR, S_IFMT, S_IFREG, S_IFDIR, S_IFCHR, S_IFBLK, S_IFIFO, S_IFSOCK, S_IRWXU, S_IRUSR, S_IWUSR, S_IXUSR, S_IRWXG, S_IRGRP, S_IWGRP, S_IXGRP, S_IRWXO, S_IROTH, S_IWOTH, S_IXOTH, S_IFLNK, O_CREAT, O_EXCL, O_NOCTTY, O_DIRECTORY, O_NOATIME, O_NOFOLLOW, O_SYNC, O_DSYNC, O_SYMLINK, O_DIRECT, O_NONBLOCK, O_TRUNC, O_APPEND, F_OK, R_OK, W_OK, X_OK, COPYFILE_EXCL, COPYFILE_FICLONE, COPYFILE_FICLONE_FORCE, UV_UDP_REUSEADDR, SIGQUIT, SIGTRAP, SIGIOT, SIGBUS, SIGUSR1, SIGUSR2, SIGPIPE, SIGALRM, SIGCHLD, SIGSTKFLT, SIGCONT, SIGSTOP, SIGTSTP, SIGTTIN, SIGTTOU, SIGURG, SIGXCPU, SIGXFSZ, SIGVTALRM, SIGPROF, SIGIO, SIGPOLL, SIGPWR, SIGSYS, SIGUNUSED, defaultCoreCipherList, defaultCipherList, ENGINE_METHOD_RSA, ALPN_ENABLED
+[OUT]   > 1 | declare module "constants" {
+[OUT]       | ^
+[OUT]     2 |     const E2BIG: number;
+[OUT]     3 |     const EACCES: number;
+[OUT]     4 |     const EADDRINUSE: number;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/crypto.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/crypto.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: Certificate, OPENSSL_VERSION_NUMBER, SSL_OP_ALL, SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION, SSL_OP_CIPHER_SERVER_PREFERENCE, SSL_OP_CISCO_ANYCONNECT, SSL_OP_COOKIE_EXCHANGE, SSL_OP_CRYPTOPRO_TLSEXT_BUG, SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS, SSL_OP_EPHEMERAL_RSA, SSL_OP_LEGACY_SERVER_CONNECT, SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER, SSL_OP_MICROSOFT_SESS_ID_BUG, SSL_OP_MSIE_SSLV2_RSA_PADDING, SSL_OP_NETSCAPE_CA_DN_BUG, SSL_OP_NETSCAPE_CHALLENGE_BUG, SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG, SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG, SSL_OP_NO_COMPRESSION, SSL_OP_NO_QUERY_MTU, SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION, SSL_OP_NO_SSLv2, SSL_OP_NO_SSLv3, SSL_OP_NO_TICKET, SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2, SSL_OP_PKCS1_CHECK_1, SSL_OP_PKCS1_CHECK_2, SSL_OP_SINGLE_DH_USE, SSL_OP_SINGLE_ECDH_USE, SSL_OP_SSLEAY_080_CLIENT_DH_BUG, SSL_OP_SSLREF2_REUSE_CERT_TYPE_BUG, SSL_OP_TLS_BLOCK_PADDING_BUG, SSL_OP_TLS_D5_BUG, SSL_OP_TLS_ROLLBACK_BUG, ENGINE_METHOD_RSA, ENGINE_METHOD_DSA, ENGINE_METHOD_DH, ENGINE_METHOD_RAND, ENGINE_METHOD_EC, ENGINE_METHOD_CIPHERS, ENGINE_METHOD_DIGESTS, ENGINE_METHOD_PKEY_METHS, ENGINE_METHOD_PKEY_ASN1_METHS, ENGINE_METHOD_ALL, ENGINE_METHOD_NONE, DH_CHECK_P_NOT_SAFE_PRIME, DH_CHECK_P_NOT_PRIME, DH_UNABLE_TO_CHECK_GENERATOR, DH_NOT_SUITABLE_GENERATOR, ALPN_ENABLED, RSA_PKCS1_PADDING, RSA_SSLV23_PADDING, RSA_NO_PADDING, RSA_PKCS1_OAEP_PADDING, RSA_X931_PADDING, RSA_PKCS1_PSS_PADDING, RSA_PSS_SALTLEN_DIGEST, RSA_PSS_SALTLEN_MAX_SIGN, RSA_PSS_SALTLEN_AUTO, POINT_CONVERSION_COMPRESSED, POINT_CONVERSION_UNCOMPRESSED, POINT_CONVERSION_HYBRID, defaultCoreCipherList, defaultCipherList, fips, Utf8AsciiLatin1Encoding, HexBase64Latin1Encoding, Utf8AsciiBinaryEncoding, HexBase64BinaryEncoding, ECDHKeyFormat, Hash, Hmac, KeyObjectType, KeyObject, CipherCCMTypes, CipherGCMTypes, Binary, BinaryLike, CipherKey, Cipher, Decipher, KeyLike, Signer, Verify, DiffieHellman, ECDH, DEFAULT_ENCODING, KeyType, KeyFormat
+[OUT]   > 1 | declare module "crypto" {
+[OUT]       | ^
+[OUT]     2 |     import * as stream from "stream";
+[OUT]     3 | 
+[OUT]     4 |     interface Certificate {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/dgram.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/dgram.d.ts
+[OUT] 19:10 Duplicate identifier 'SocketType'.
+[OUT]     17 |     }
+[OUT]     18 | 
+[OUT]   > 19 |     type SocketType = "udp4" | "udp6";
+[OUT]        |          ^
+[OUT]     20 | 
+[OUT]     21 |     interface SocketOptions {
+[OUT]     22 |         type: SocketType;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/dgram.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/dgram.d.ts
+[OUT] 36:11 Duplicate identifier 'Socket'.
+[OUT]     34 |     function createSocket(options: SocketOptions, callback?: (msg: Buffer, rinfo: RemoteInfo) => void): Socket;
+[OUT]     35 | 
+[OUT]   > 36 |     class Socket extends events.EventEmitter {
+[OUT]        |           ^
+[OUT]     37 |         send(msg: Buffer | string | Uint8Array | any[], port: number, address?: string, callback?: (error: Error | null, bytes: number) => void): void;
+[OUT]     38 |         send(msg: Buffer | string | Uint8Array, offset: number, length: number, port: number, address?: string, callback?: (error: Error | null, bytes: number) => void): void;
+[OUT]     39 |         bind(port?: number, address?: string, callback?: () => void): void;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/dns.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/dns.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: ADDRCONFIG, V4MAPPED, AnyRecordWithTtl, AnyRecord, NODATA, FORMERR, SERVFAIL, NOTFOUND, NOTIMP, REFUSED, BADQUERY, BADNAME, BADFAMILY, BADRESP, CONNREFUSED, TIMEOUT, EOF, FILE, NOMEM, DESTRUCTION, BADSTR, BADFLAGS, NONAME, BADHINTS, NOTINITIALIZED, LOADIPHLPAPI, ADDRGETNETWORKPARAMS, CANCELLED, Resolver
+[OUT]   > 1 | declare module "dns" {
+[OUT]       | ^
+[OUT]     2 |     // Supported getaddrinfo flags.
+[OUT]     3 |     const ADDRCONFIG: number;
+[OUT]     4 |     const V4MAPPED: number;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/domain.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/domain.d.ts
+[OUT] 4:11 Duplicate identifier 'Domain'.
+[OUT]     2 |     import * as events from "events";
+[OUT]     3 | 
+[OUT]   > 4 |     class Domain extends events.EventEmitter implements NodeJS.Domain {
+[OUT]       |           ^
+[OUT]     5 |         run<T>(fn: (...args: any[]) => T, ...args: any[]): T;
+[OUT]     6 |         add(emitter: events.EventEmitter | NodeJS.Timer): void;
+[OUT]     7 |         remove(emitter: events.EventEmitter | NodeJS.Timer): void;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/events.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/events.d.ts
+[OUT] 29:14 Duplicate identifier 'internal'.
+[OUT]     27 |     }
+[OUT]     28 | 
+[OUT]   > 29 |     export = internal;
+[OUT]        |              ^
+[OUT]     30 | }
+[OUT]     31 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/fs.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/fs.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: Type, PathLike, BinaryData, Stats, Dirent, ReadStream, WriteStream, WriteFileOptions, F_OK, R_OK, W_OK, X_OK, COPYFILE_EXCL, COPYFILE_FICLONE, COPYFILE_FICLONE_FORCE, O_RDONLY, O_WRONLY, O_RDWR, O_CREAT, O_EXCL, O_NOCTTY, O_TRUNC, O_APPEND, O_DIRECTORY, O_NOATIME, O_NOFOLLOW, O_SYNC, O_DSYNC, O_SYMLINK, O_DIRECT, O_NONBLOCK, S_IFMT, S_IFREG, S_IFDIR, S_IFCHR, S_IFBLK, S_IFIFO, S_IFLNK, S_IFSOCK, S_IRWXU, S_IRUSR, S_IWUSR, S_IXUSR, S_IRWXG, S_IRGRP, S_IWGRP, S_IXGRP, S_IRWXO, S_IROTH, S_IWOTH, S_IXOTH
+[OUT]   > 1 | declare module "fs" {
+[OUT]       | ^
+[OUT]     2 |     import * as stream from "stream";
+[OUT]     3 |     import * as events from "events";
+[OUT]     4 |     import { URL } from "url";
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/globals.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/globals.d.ts
+[OUT] 2:1 Definitions of the following identifiers conflict with those in another file: BufferEncoding, Buffer, EventEmitter, Platform, Signals, MultipleResolveType, BeforeExitListener, DisconnectListener, ExitListener, RejectionHandledListener, UncaughtExceptionListener, UnhandledRejectionListener, WarningListener, MessageListener, SignalsListener, NewListenerListener, RemoveListenerListener, MultipleResolveListener, Immediate, Timeout, Module, TypedArray
+[OUT]     1 | // This needs to be global to avoid TS2403 in case lib.dom.d.ts is present in the same build
+[OUT]   > 2 | interface Console {
+[OUT]       | ^
+[OUT]     3 |     Console: NodeJS.ConsoleConstructor;
+[OUT]     4 |     /**
+[OUT]     5 |      * A simple assertion test that verifies whether `value` is truthy.
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/globals.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/globals.d.ts
+[OUT] 214:5 Duplicate string index signature.
+[OUT]     212 |     '.json': (m: NodeModule, filename: string) => any;
+[OUT]     213 |     '.node': (m: NodeModule, filename: string) => any;
+[OUT]   > 214 |     [ext: string]: (m: NodeModule, filename: string) => any;
+[OUT]         |     ^
+[OUT]     215 | }
+[OUT]     216 | 
+[OUT]     217 | declare var require: NodeRequire;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/globals.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/globals.d.ts
+[OUT] 721:9 Duplicate string index signature.
+[OUT]     719 | 
+[OUT]     720 |     interface ProcessEnv {
+[OUT]   > 721 |         [key: string]: string | undefined;
+[OUT]         |         ^
+[OUT]     722 |     }
+[OUT]     723 | 
+[OUT]     724 |     interface WriteStream extends Socket {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: RequestListener, Server, OutgoingMessage, ServerResponse, ClientRequest, IncomingMessage, Agent, METHODS, STATUS_CODES, globalAgent, maxHeaderSize
+[OUT]   > 1 | declare module "http" {
+[OUT]       | ^
+[OUT]     2 |     import * as events from "events";
+[OUT]     3 |     import * as stream from "stream";
+[OUT]     4 |     import { URL } from "url";
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http.d.ts
+[OUT] 63:9 Duplicate string index signature.
+[OUT]     61 |         'warning'?: string;
+[OUT]     62 |         'www-authenticate'?: string;
+[OUT]   > 63 |         [header: string]: string | string[] | undefined;
+[OUT]        |         ^
+[OUT]     64 |     }
+[OUT]     65 | 
+[OUT]     66 |     // outgoing headers allows numbers (as they are converted internally to strings)
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http.d.ts
+[OUT] 68:9 Duplicate string index signature.
+[OUT]     66 |     // outgoing headers allows numbers (as they are converted internally to strings)
+[OUT]     67 |     interface OutgoingHttpHeaders {
+[OUT]   > 68 |         [header: string]: number | string | string[] | undefined;
+[OUT]        |         ^
+[OUT]     69 |     }
+[OUT]     70 | 
+[OUT]     71 |     interface ClientRequestArgs {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http2.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/http2.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: OutgoingHttpHeaders, Http2Stream, ClientHttp2Stream, ServerHttp2Stream, Http2Session, ClientHttp2Session, ServerHttp2Session, Http2Server, Http2SecureServer, Http2ServerRequest, Http2ServerResponse, NGHTTP2_SESSION_SERVER, NGHTTP2_SESSION_CLIENT, NGHTTP2_STREAM_STATE_IDLE, NGHTTP2_STREAM_STATE_OPEN, NGHTTP2_STREAM_STATE_RESERVED_LOCAL, NGHTTP2_STREAM_STATE_RESERVED_REMOTE, NGHTTP2_STREAM_STATE_HALF_CLOSED_LOCAL, NGHTTP2_STREAM_STATE_HALF_CLOSED_REMOTE, NGHTTP2_STREAM_STATE_CLOSED, NGHTTP2_NO_ERROR, NGHTTP2_PROTOCOL_ERROR, NGHTTP2_INTERNAL_ERROR, NGHTTP2_FLOW_CONTROL_ERROR, NGHTTP2_SETTINGS_TIMEOUT, NGHTTP2_STREAM_CLOSED, NGHTTP2_FRAME_SIZE_ERROR, NGHTTP2_REFUSED_STREAM, NGHTTP2_CANCEL, NGHTTP2_COMPRESSION_ERROR, NGHTTP2_CONNECT_ERROR, NGHTTP2_ENHANCE_YOUR_CALM, NGHTTP2_INADEQUATE_SECURITY, NGHTTP2_HTTP_1_1_REQUIRED, NGHTTP2_ERR_FRAME_SIZE_ERROR, NGHTTP2_FLAG_NONE, NGHTTP2_FLAG_END_STREAM, NGHTTP2_FLAG_END_HEADERS, NGHTTP2_FLAG_ACK, NGHTTP2_FLAG_PADDED, NGHTTP2_FLAG_PRIORITY, DEFAULT_SETTINGS_HEADER_TABLE_SIZE, DEFAULT_SETTINGS_ENABLE_PUSH, DEFAULT_SETTINGS_INITIAL_WINDOW_SIZE, DEFAULT_SETTINGS_MAX_FRAME_SIZE, MAX_MAX_FRAME_SIZE, MIN_MAX_FRAME_SIZE, MAX_INITIAL_WINDOW_SIZE, NGHTTP2_DEFAULT_WEIGHT, NGHTTP2_SETTINGS_HEADER_TABLE_SIZE, NGHTTP2_SETTINGS_ENABLE_PUSH, NGHTTP2_SETTINGS_MAX_CONCURRENT_STREAMS, NGHTTP2_SETTINGS_INITIAL_WINDOW_SIZE, NGHTTP2_SETTINGS_MAX_FRAME_SIZE, NGHTTP2_SETTINGS_MAX_HEADER_LIST_SIZE, PADDING_STRATEGY_NONE, PADDING_STRATEGY_MAX, PADDING_STRATEGY_CALLBACK, HTTP2_HEADER_STATUS, HTTP2_HEADER_METHOD, HTTP2_HEADER_AUTHORITY, HTTP2_HEADER_SCHEME, HTTP2_HEADER_PATH, HTTP2_HEADER_ACCEPT_CHARSET, HTTP2_HEADER_ACCEPT_ENCODING, HTTP2_HEADER_ACCEPT_LANGUAGE, HTTP2_HEADER_ACCEPT_RANGES, HTTP2_HEADER_ACCEPT, HTTP2_HEADER_ACCESS_CONTROL_ALLOW_ORIGIN, HTTP2_HEADER_AGE, HTTP2_HEADER_ALLOW, HTTP2_HEADER_AUTHORIZATION, HTTP2_HEADER_CACHE_CONTROL, HTTP2_HEADER_CONNECTION, HTTP2_HEADER_CONTENT_DISPOSITION, HTTP2_HEADER_CONTENT_ENCODING, HTTP2_HEADER_CONTENT_LANGUAGE, HTTP2_HEADER_CONTENT_LENGTH, HTTP2_HEADER_CONTENT_LOCATION, HTTP2_HEADER_CONTENT_MD5, HTTP2_HEADER_CONTENT_RANGE, HTTP2_HEADER_CONTENT_TYPE, HTTP2_HEADER_COOKIE, HTTP2_HEADER_DATE, HTTP2_HEADER_ETAG, HTTP2_HEADER_EXPECT, HTTP2_HEADER_EXPIRES, HTTP2_HEADER_FROM, HTTP2_HEADER_HOST, HTTP2_HEADER_IF_MATCH, HTTP2_HEADER_IF_MODIFIED_SINCE, HTTP2_HEADER_IF_NONE_MATCH, HTTP2_HEADER_IF_RANGE, HTTP2_HEADER_IF_UNMODIFIED_SINCE, HTTP2_HEADER_LAST_MODIFIED, HTTP2_HEADER_LINK, HTTP2_HEADER_LOCATION, HTTP2_HEADER_MAX_FORWARDS, HTTP2_HEADER_PREFER, HTTP2_HEADER_PROXY_AUTHENTICATE, HTTP2_HEADER_PROXY_AUTHORIZATION, HTTP2_HEADER_RANGE, HTTP2_HEADER_REFERER, HTTP2_HEADER_REFRESH, HTTP2_HEADER_RETRY_AFTER, HTTP2_HEADER_SERVER, HTTP2_HEADER_SET_COOKIE, HTTP2_HEADER_STRICT_TRANSPORT_SECURITY, HTTP2_HEADER_TRANSFER_ENCODING, HTTP2_HEADER_TE, HTTP2_HEADER_UPGRADE, HTTP2_HEADER_USER_AGENT, HTTP2_HEADER_VARY, HTTP2_HEADER_VIA, HTTP2_HEADER_WWW_AUTHENTICATE, HTTP2_HEADER_HTTP2_SETTINGS, HTTP2_HEADER_KEEP_ALIVE, HTTP2_HEADER_PROXY_CONNECTION, HTTP2_METHOD_ACL, HTTP2_METHOD_BASELINE_CONTROL, HTTP2_METHOD_BIND, HTTP2_METHOD_CHECKIN, HTTP2_METHOD_CHECKOUT, HTTP2_METHOD_CONNECT, HTTP2_METHOD_COPY, HTTP2_METHOD_DELETE, HTTP2_METHOD_GET, HTTP2_METHOD_HEAD, HTTP2_METHOD_LABEL, HTTP2_METHOD_LINK, HTTP2_METHOD_LOCK, HTTP2_METHOD_MERGE, HTTP2_METHOD_MKACTIVITY, HTTP2_METHOD_MKCALENDAR, HTTP2_METHOD_MKCOL, HTTP2_METHOD_MKREDIRECTREF, HTTP2_METHOD_MKWORKSPACE, HTTP2_METHOD_MOVE, HTTP2_METHOD_OPTIONS, HTTP2_METHOD_ORDERPATCH, HTTP2_METHOD_PATCH, HTTP2_METHOD_POST, HTTP2_METHOD_PRI, HTTP2_METHOD_PROPFIND, HTTP2_METHOD_PROPPATCH, HTTP2_METHOD_PUT, HTTP2_METHOD_REBIND, HTTP2_METHOD_REPORT, HTTP2_METHOD_SEARCH, HTTP2_METHOD_TRACE, HTTP2_METHOD_UNBIND, HTTP2_METHOD_UNCHECKOUT, HTTP2_METHOD_UNLINK, HTTP2_METHOD_UNLOCK, HTTP2_METHOD_UPDATE, HTTP2_METHOD_UPDATEREDIRECTREF, HTTP2_METHOD_VERSION_CONTROL, HTTP_STATUS_CONTINUE, HTTP_STATUS_SWITCHING_PROTOCOLS, HTTP_STATUS_PROCESSING, HTTP_STATUS_OK, HTTP_STATUS_CREATED, HTTP_STATUS_ACCEPTED, HTTP_STATUS_NON_AUTHORITATIVE_INFORMATION, HTTP_STATUS_NO_CONTENT, HTTP_STATUS_RESET_CONTENT, HTTP_STATUS_PARTIAL_CONTENT, HTTP_STATUS_MULTI_STATUS, HTTP_STATUS_ALREADY_REPORTED, HTTP_STATUS_IM_USED, HTTP_STATUS_MULTIPLE_CHOICES, HTTP_STATUS_MOVED_PERMANENTLY, HTTP_STATUS_FOUND, HTTP_STATUS_SEE_OTHER, HTTP_STATUS_NOT_MODIFIED, HTTP_STATUS_USE_PROXY, HTTP_STATUS_TEMPORARY_REDIRECT, HTTP_STATUS_PERMANENT_REDIRECT, HTTP_STATUS_BAD_REQUEST, HTTP_STATUS_UNAUTHORIZED, HTTP_STATUS_PAYMENT_REQUIRED, HTTP_STATUS_FORBIDDEN, HTTP_STATUS_NOT_FOUND, HTTP_STATUS_METHOD_NOT_ALLOWED, HTTP_STATUS_NOT_ACCEPTABLE, HTTP_STATUS_PROXY_AUTHENTICATION_REQUIRED, HTTP_STATUS_REQUEST_TIMEOUT, HTTP_STATUS_CONFLICT, HTTP_STATUS_GONE, HTTP_STATUS_LENGTH_REQUIRED, HTTP_STATUS_PRECONDITION_FAILED, HTTP_STATUS_PAYLOAD_TOO_LARGE, HTTP_STATUS_URI_TOO_LONG, HTTP_STATUS_UNSUPPORTED_MEDIA_TYPE, HTTP_STATUS_RANGE_NOT_SATISFIABLE, HTTP_STATUS_EXPECTATION_FAILED, HTTP_STATUS_TEAPOT, HTTP_STATUS_MISDIRECTED_REQUEST, HTTP_STATUS_UNPROCESSABLE_ENTITY, HTTP_STATUS_LOCKED, HTTP_STATUS_FAILED_DEPENDENCY, HTTP_STATUS_UNORDERED_COLLECTION, HTTP_STATUS_UPGRADE_REQUIRED, HTTP_STATUS_PRECONDITION_REQUIRED, HTTP_STATUS_TOO_MANY_REQUESTS, HTTP_STATUS_REQUEST_HEADER_FIELDS_TOO_LARGE, HTTP_STATUS_UNAVAILABLE_FOR_LEGAL_REASONS, HTTP_STATUS_INTERNAL_SERVER_ERROR, HTTP_STATUS_NOT_IMPLEMENTED, HTTP_STATUS_BAD_GATEWAY, HTTP_STATUS_SERVICE_UNAVAILABLE, HTTP_STATUS_GATEWAY_TIMEOUT, HTTP_STATUS_HTTP_VERSION_NOT_SUPPORTED, HTTP_STATUS_VARIANT_ALSO_NEGOTIATES, HTTP_STATUS_INSUFFICIENT_STORAGE, HTTP_STATUS_LOOP_DETECTED, HTTP_STATUS_BANDWIDTH_LIMIT_EXCEEDED, HTTP_STATUS_NOT_EXTENDED, HTTP_STATUS_NETWORK_AUTHENTICATION_REQUIRED
+[OUT]   > 1 | declare module "http2" {
+[OUT]       | ^
+[OUT]     2 |     import * as events from "events";
+[OUT]     3 |     import * as fs from "fs";
+[OUT]     4 |     import * as net from "net";
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 7:10 Duplicate identifier 'ServerOptions'.
+[OUT]      5 |     import { URL } from "url";
+[OUT]      6 | 
+[OUT]   >  7 |     type ServerOptions = tls.SecureContextOptions & tls.TlsOptions & http.ServerOptions;
+[OUT]        |          ^
+[OUT]      8 | 
+[OUT]      9 |     type RequestOptions = http.RequestOptions & tls.SecureContextOptions & {
+[OUT]     10 |         rejectUnauthorized?: boolean; // Defaults to true
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 9:10 Duplicate identifier 'RequestOptions'.
+[OUT]      7 |     type ServerOptions = tls.SecureContextOptions & tls.TlsOptions & http.ServerOptions;
+[OUT]      8 | 
+[OUT]   >  9 |     type RequestOptions = http.RequestOptions & tls.SecureContextOptions & {
+[OUT]        |          ^
+[OUT]     10 |         rejectUnauthorized?: boolean; // Defaults to true
+[OUT]     11 |         servername?: string; // SNI TLS Extension
+[OUT]     12 |     };
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 19:11 Duplicate identifier 'Agent'.
+[OUT]     17 |     }
+[OUT]     18 | 
+[OUT]   > 19 |     class Agent extends http.Agent {
+[OUT]        |           ^
+[OUT]     20 |         constructor(options?: AgentOptions);
+[OUT]     21 |         options: AgentOptions;
+[OUT]     22 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 24:11 Duplicate identifier 'Server'.
+[OUT]     22 |     }
+[OUT]     23 | 
+[OUT]   > 24 |     class Server extends tls.Server {
+[OUT]        |           ^
+[OUT]     25 |         constructor(requestListener?: http.RequestListener);
+[OUT]     26 |         constructor(options: ServerOptions, requestListener?: http.RequestListener);
+[OUT]     27 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/https.d.ts
+[OUT] 52:9 Cannot redeclare block-scoped variable 'globalAgent'.
+[OUT]     50 |     function get(options: RequestOptions | string | URL, callback?: (res: http.IncomingMessage) => void): http.ClientRequest;
+[OUT]     51 |     function get(url: string | URL, options: RequestOptions, callback?: (res: http.IncomingMessage) => void): http.ClientRequest;
+[OUT]   > 52 |     let globalAgent: Agent;
+[OUT]        |         ^
+[OUT]     53 | }
+[OUT]     54 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/index.d.ts
+[OUT] 90:15 Cannot redeclare block-scoped variable 'custom'.
+[OUT]     88 | declare module "util" {
+[OUT]     89 |     namespace inspect {
+[OUT]   > 90 |         const custom: symbol;
+[OUT]        |               ^
+[OUT]     91 |     }
+[OUT]     92 |     namespace promisify {
+[OUT]     93 |         const custom: symbol;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/index.d.ts
+[OUT] 93:15 Cannot redeclare block-scoped variable 'custom'.
+[OUT]     91 |     }
+[OUT]     92 |     namespace promisify {
+[OUT]   > 93 |         const custom: symbol;
+[OUT]        |               ^
+[OUT]     94 |     }
+[OUT]     95 |     namespace types {
+[OUT]     96 |         function isBigInt64Array(value: any): boolean;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/inspector.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/inspector.d.ts
+[OUT] 11:1 Definitions of the following identifiers conflict with those in another file: BreakpointId, CallFrameId, HeapSnapshotObjectId, ScriptId, RemoteObjectId, UnserializableValue, ExecutionContextId, Timestamp, TimeDelta, UniqueDebuggerId, WorkerID, SessionID, Session
+[OUT]      9 |  * The inspector module provides an API for interacting with the V8 inspector.
+[OUT]     10 |  */
+[OUT]   > 11 | declare module "inspector" {
+[OUT]        | ^
+[OUT]     12 |     import { EventEmitter } from 'events';
+[OUT]     13 | 
+[OUT]     14 |     interface InspectorNotification<T> {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/module.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/module.d.ts
+[OUT] 2:5 Duplicate identifier 'export='.
+[OUT]     1 | declare module "module" {
+[OUT]   > 2 |     export = NodeJS.Module;
+[OUT]       |     ^
+[OUT]     3 | }
+[OUT]     4 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 6:10 Duplicate identifier 'LookupFunction'.
+[OUT]     4 |     import * as dns from "dns";
+[OUT]     5 | 
+[OUT]   > 6 |     type LookupFunction = (hostname: string, options: dns.LookupOneOptions, callback: (err: NodeJS.ErrnoException | null, address: string, family: number) => void) => void;
+[OUT]       |          ^
+[OUT]     7 | 
+[OUT]     8 |     interface AddressInfo {
+[OUT]     9 |         address: string;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 35:10 Duplicate identifier 'SocketConnectOpts'.
+[OUT]     33 |     }
+[OUT]     34 | 
+[OUT]   > 35 |     type SocketConnectOpts = TcpSocketConnectOpts | IpcSocketConnectOpts;
+[OUT]        |          ^
+[OUT]     36 | 
+[OUT]     37 |     class Socket extends stream.Duplex {
+[OUT]     38 |         constructor(options?: SocketConstructorOpts);
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 37:11 Duplicate identifier 'Socket'.
+[OUT]     35 |     type SocketConnectOpts = TcpSocketConnectOpts | IpcSocketConnectOpts;
+[OUT]     36 | 
+[OUT]   > 37 |     class Socket extends stream.Duplex {
+[OUT]        |           ^
+[OUT]     38 |         constructor(options?: SocketConstructorOpts);
+[OUT]     39 | 
+[OUT]     40 |         // Extended base methods
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 162:11 Duplicate identifier 'Server'.
+[OUT]     160 | 
+[OUT]     161 |     // https://github.com/nodejs/node/blob/master/lib/net.js
+[OUT]   > 162 |     class Server extends events.EventEmitter {
+[OUT]         |           ^
+[OUT]     163 |         constructor(connectionListener?: (socket: Socket) => void);
+[OUT]     164 |         constructor(options?: { allowHalfOpen?: boolean, pauseOnConnect?: boolean }, connectionListener?: (socket: Socket) => void);
+[OUT]     165 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/net.d.ts
+[OUT] 236:10 Duplicate identifier 'NetConnectOpts'.
+[OUT]     234 |     }
+[OUT]     235 | 
+[OUT]   > 236 |     type NetConnectOpts = TcpNetConnectOpts | IpcNetConnectOpts;
+[OUT]         |          ^
+[OUT]     237 | 
+[OUT]     238 |     function createServer(connectionListener?: (socket: Socket) => void): Server;
+[OUT]     239 |     function createServer(options?: { allowHalfOpen?: boolean, pauseOnConnect?: boolean }, connectionListener?: (socket: Socket) => void): Server;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/os.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/os.d.ts
+[OUT] 39:10 Duplicate identifier 'NetworkInterfaceInfo'.
+[OUT]     37 |     }
+[OUT]     38 | 
+[OUT]   > 39 |     type NetworkInterfaceInfo = NetworkInterfaceInfoIPv4 | NetworkInterfaceInfoIPv6;
+[OUT]        |          ^
+[OUT]     40 | 
+[OUT]     41 |     function hostname(): string;
+[OUT]     42 |     function loadavg(): number[];
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/os.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/os.d.ts
+[OUT] 53:11 Cannot redeclare block-scoped variable 'constants'.
+[OUT]     51 |     function userInfo(options: { encoding: 'buffer' }): UserInfo<Buffer>;
+[OUT]     52 |     function userInfo(options?: { encoding: string }): UserInfo<string>;
+[OUT]   > 53 |     const constants: {
+[OUT]        |           ^
+[OUT]     54 |         UV_UDP_REUSEADDR: number;
+[OUT]     55 |         signals: {
+[OUT]     56 |             SIGHUP: number;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/os.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/os.d.ts
+[OUT] 184:11 Cannot redeclare block-scoped variable 'EOL'.
+[OUT]     182 |     function platform(): NodeJS.Platform;
+[OUT]     183 |     function tmpdir(): string;
+[OUT]   > 184 |     const EOL: string;
+[OUT]         |           ^
+[OUT]     185 |     function endianness(): "BE" | "LE";
+[OUT]     186 |     /**
+[OUT]     187 |      * Gets the priority of a process.
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 112:11 Cannot redeclare block-scoped variable 'sep'.
+[OUT]     110 |      * The platform-specific file separator. '\\' or '/'.
+[OUT]     111 |      */
+[OUT]   > 112 |     const sep: '\\' | '/';
+[OUT]         |           ^
+[OUT]     113 |     /**
+[OUT]     114 |      * The platform-specific file delimiter. ';' or ':'.
+[OUT]     115 |      */
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 116:11 Cannot redeclare block-scoped variable 'delimiter'.
+[OUT]     114 |      * The platform-specific file delimiter. ';' or ':'.
+[OUT]     115 |      */
+[OUT]   > 116 |     const delimiter: ';' | ':';
+[OUT]         |           ^
+[OUT]     117 |     /**
+[OUT]     118 |      * Returns an object from a path string - the opposite of format().
+[OUT]     119 |      *
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 139:15 Cannot redeclare block-scoped variable 'sep'.
+[OUT]     137 |         function basename(p: string, ext?: string): string;
+[OUT]     138 |         function extname(p: string): string;
+[OUT]   > 139 |         const sep: string;
+[OUT]         |               ^
+[OUT]     140 |         const delimiter: string;
+[OUT]     141 |         function parse(p: string): ParsedPath;
+[OUT]     142 |         function format(pP: FormatInputPathObject): string;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 140:15 Cannot redeclare block-scoped variable 'delimiter'.
+[OUT]     138 |         function extname(p: string): string;
+[OUT]     139 |         const sep: string;
+[OUT]   > 140 |         const delimiter: string;
+[OUT]         |               ^
+[OUT]     141 |         function parse(p: string): ParsedPath;
+[OUT]     142 |         function format(pP: FormatInputPathObject): string;
+[OUT]     143 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 154:15 Cannot redeclare block-scoped variable 'sep'.
+[OUT]     152 |         function basename(p: string, ext?: string): string;
+[OUT]     153 |         function extname(p: string): string;
+[OUT]   > 154 |         const sep: string;
+[OUT]         |               ^
+[OUT]     155 |         const delimiter: string;
+[OUT]     156 |         function parse(p: string): ParsedPath;
+[OUT]     157 |         function format(pP: FormatInputPathObject): string;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/path.d.ts
+[OUT] 155:15 Cannot redeclare block-scoped variable 'delimiter'.
+[OUT]     153 |         function extname(p: string): string;
+[OUT]     154 |         const sep: string;
+[OUT]   > 155 |         const delimiter: string;
+[OUT]         |               ^
+[OUT]     156 |         function parse(p: string): ParsedPath;
+[OUT]     157 |         function format(pP: FormatInputPathObject): string;
+[OUT]     158 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 214:10 Duplicate identifier 'PerformanceObserverCallback'.
+[OUT]     212 |     }
+[OUT]     213 | 
+[OUT]   > 214 |     type PerformanceObserverCallback = (list: PerformanceObserverEntryList, observer: PerformanceObserver) => void;
+[OUT]         |          ^
+[OUT]     215 | 
+[OUT]     216 |     class PerformanceObserver extends AsyncResource {
+[OUT]     217 |         constructor(callback: PerformanceObserverCallback);
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 216:11 Duplicate identifier 'PerformanceObserver'.
+[OUT]     214 |     type PerformanceObserverCallback = (list: PerformanceObserverEntryList, observer: PerformanceObserver) => void;
+[OUT]     215 | 
+[OUT]   > 216 |     class PerformanceObserver extends AsyncResource {
+[OUT]         |           ^
+[OUT]     217 |         constructor(callback: PerformanceObserverCallback);
+[OUT]     218 | 
+[OUT]     219 |         /**
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 234:15 Cannot redeclare block-scoped variable 'NODE_PERFORMANCE_GC_MAJOR'.
+[OUT]     232 | 
+[OUT]     233 |     namespace constants {
+[OUT]   > 234 |         const NODE_PERFORMANCE_GC_MAJOR: number;
+[OUT]         |               ^
+[OUT]     235 |         const NODE_PERFORMANCE_GC_MINOR: number;
+[OUT]     236 |         const NODE_PERFORMANCE_GC_INCREMENTAL: number;
+[OUT]     237 |         const NODE_PERFORMANCE_GC_WEAKCB: number;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 235:15 Cannot redeclare block-scoped variable 'NODE_PERFORMANCE_GC_MINOR'.
+[OUT]     233 |     namespace constants {
+[OUT]     234 |         const NODE_PERFORMANCE_GC_MAJOR: number;
+[OUT]   > 235 |         const NODE_PERFORMANCE_GC_MINOR: number;
+[OUT]         |               ^
+[OUT]     236 |         const NODE_PERFORMANCE_GC_INCREMENTAL: number;
+[OUT]     237 |         const NODE_PERFORMANCE_GC_WEAKCB: number;
+[OUT]     238 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 236:15 Cannot redeclare block-scoped variable 'NODE_PERFORMANCE_GC_INCREMENTAL'.
+[OUT]     234 |         const NODE_PERFORMANCE_GC_MAJOR: number;
+[OUT]     235 |         const NODE_PERFORMANCE_GC_MINOR: number;
+[OUT]   > 236 |         const NODE_PERFORMANCE_GC_INCREMENTAL: number;
+[OUT]         |               ^
+[OUT]     237 |         const NODE_PERFORMANCE_GC_WEAKCB: number;
+[OUT]     238 |     }
+[OUT]     239 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 237:15 Cannot redeclare block-scoped variable 'NODE_PERFORMANCE_GC_WEAKCB'.
+[OUT]     235 |         const NODE_PERFORMANCE_GC_MINOR: number;
+[OUT]     236 |         const NODE_PERFORMANCE_GC_INCREMENTAL: number;
+[OUT]   > 237 |         const NODE_PERFORMANCE_GC_WEAKCB: number;
+[OUT]         |               ^
+[OUT]     238 |     }
+[OUT]     239 | 
+[OUT]     240 |     const performance: Performance;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/perf_hooks.d.ts
+[OUT] 240:11 Cannot redeclare block-scoped variable 'performance'.
+[OUT]     238 |     }
+[OUT]     239 | 
+[OUT]   > 240 |     const performance: Performance;
+[OUT]         |           ^
+[OUT]     241 | 
+[OUT]     242 |     interface EventLoopMonitorOptions {
+[OUT]     243 |         /**
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/process.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/process.d.ts
+[OUT] 2:14 Duplicate identifier 'process'.
+[OUT]     1 | declare module "process" {
+[OUT]   > 2 |     export = process;
+[OUT]       |              ^
+[OUT]     3 | }
+[OUT]     4 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/punycode.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/punycode.d.ts
+[OUT] 6:11 Cannot redeclare block-scoped variable 'ucs2'.
+[OUT]     4 |     function toUnicode(domain: string): string;
+[OUT]     5 |     function toASCII(domain: string): string;
+[OUT]   > 6 |     const ucs2: ucs2;
+[OUT]       |           ^
+[OUT]     7 |     interface ucs2 {
+[OUT]     8 |         decode(string: string): number[];
+[OUT]     9 |         encode(codePoints: number[]): string;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/punycode.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/punycode.d.ts
+[OUT] 7:15 Cannot redeclare block-scoped variable 'ucs2'.
+[OUT]      5 |     function toASCII(domain: string): string;
+[OUT]      6 |     const ucs2: ucs2;
+[OUT]   >  7 |     interface ucs2 {
+[OUT]        |               ^
+[OUT]      8 |         decode(string: string): number[];
+[OUT]      9 |         encode(codePoints: number[]): string;
+[OUT]     10 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/punycode.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/punycode.d.ts
+[OUT] 11:11 Cannot redeclare block-scoped variable 'version'.
+[OUT]      9 |         encode(codePoints: number[]): string;
+[OUT]     10 |     }
+[OUT]   > 11 |     const version: string;
+[OUT]        |           ^
+[OUT]     12 | }
+[OUT]     13 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 11:32 Duplicate string index signature.
+[OUT]      9 |     }
+[OUT]     10 | 
+[OUT]   > 11 |     interface ParsedUrlQuery { [key: string]: string | string[]; }
+[OUT]        |                                ^
+[OUT]     12 | 
+[OUT]     13 |     interface ParsedUrlQueryInput {
+[OUT]     14 |         [key: string]:
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 14:9 Duplicate string index signature.
+[OUT]     12 | 
+[OUT]     13 |     interface ParsedUrlQueryInput {
+[OUT]   > 14 |         [key: string]:
+[OUT]        |         ^
+[OUT]     15 |         // The value type here is a "poor man's `unknown`". When these types support TypeScript
+[OUT]     16 |         // 3.0+, we can replace this with `unknown`.
+[OUT]     17 |         {} | null | undefined;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 25:11 Cannot redeclare block-scoped variable 'encode'.
+[OUT]     23 |      * The querystring.encode() function is an alias for querystring.stringify().
+[OUT]     24 |      */
+[OUT]   > 25 |     const encode: typeof stringify;
+[OUT]        |           ^
+[OUT]     26 |     /**
+[OUT]     27 |      * The querystring.decode() function is an alias for querystring.parse().
+[OUT]     28 |      */
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/querystring.d.ts
+[OUT] 29:11 Cannot redeclare block-scoped variable 'decode'.
+[OUT]     27 |      * The querystring.decode() function is an alias for querystring.parse().
+[OUT]     28 |      */
+[OUT]   > 29 |     const decode: typeof parse;
+[OUT]        |           ^
+[OUT]     30 |     function escape(str: string): string;
+[OUT]     31 |     function unescape(str: string): string;
+[OUT]     32 | }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 13:11 Duplicate identifier 'Interface'.
+[OUT]     11 |     }
+[OUT]     12 | 
+[OUT]   > 13 |     class Interface extends events.EventEmitter {
+[OUT]        |           ^
+[OUT]     14 |         readonly terminal: boolean;
+[OUT]     15 | 
+[OUT]     16 |         /**
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 110:10 Duplicate identifier 'ReadLine'.
+[OUT]     108 |     }
+[OUT]     109 | 
+[OUT]   > 110 |     type ReadLine = Interface; // type forwarded for backwards compatiblity
+[OUT]         |          ^
+[OUT]     111 | 
+[OUT]     112 |     type Completer = (line: string) => CompleterResult;
+[OUT]     113 |     type AsyncCompleter = (line: string, callback: (err?: null | Error, result?: CompleterResult) => void) => any;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 112:10 Duplicate identifier 'Completer'.
+[OUT]     110 |     type ReadLine = Interface; // type forwarded for backwards compatiblity
+[OUT]     111 | 
+[OUT]   > 112 |     type Completer = (line: string) => CompleterResult;
+[OUT]         |          ^
+[OUT]     113 |     type AsyncCompleter = (line: string, callback: (err?: null | Error, result?: CompleterResult) => void) => any;
+[OUT]     114 | 
+[OUT]     115 |     type CompleterResult = [string[], string];
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 113:10 Duplicate identifier 'AsyncCompleter'.
+[OUT]     111 | 
+[OUT]     112 |     type Completer = (line: string) => CompleterResult;
+[OUT]   > 113 |     type AsyncCompleter = (line: string, callback: (err?: null | Error, result?: CompleterResult) => void) => any;
+[OUT]         |          ^
+[OUT]     114 | 
+[OUT]     115 |     type CompleterResult = [string[], string];
+[OUT]     116 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/readline.d.ts
+[OUT] 115:10 Duplicate identifier 'CompleterResult'.
+[OUT]     113 |     type AsyncCompleter = (line: string, callback: (err?: null | Error, result?: CompleterResult) => void) => any;
+[OUT]     114 | 
+[OUT]   > 115 |     type CompleterResult = [string[], string];
+[OUT]         |          ^
+[OUT]     116 | 
+[OUT]     117 |     interface ReadLineOptions {
+[OUT]     118 |         input: NodeJS.ReadableStream;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/repl.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/repl.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: REPLEval, REPLWriter, writer, REPLCommandAction, REPLServer, REPL_MODE_SLOPPY, REPL_MODE_STRICT, Recoverable
+[OUT]   > 1 | declare module "repl" {
+[OUT]       | ^
+[OUT]     2 |     import { Interface, Completer, AsyncCompleter } from "readline";
+[OUT]     3 |     import { Context } from "vm";
+[OUT]     4 |     import { InspectOptions } from "util";
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/stream.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/stream.d.ts
+[OUT] 299:14 Duplicate identifier 'internal'.
+[OUT]     297 |     }
+[OUT]     298 | 
+[OUT]   > 299 |     export = internal;
+[OUT]         |              ^
+[OUT]     300 | }
+[OUT]     301 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/string_decoder.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/string_decoder.d.ts
+[OUT] 6:11 Cannot redeclare block-scoped variable 'StringDecoder'.
+[OUT]     4 |         end(buffer?: Buffer): string;
+[OUT]     5 |     }
+[OUT]   > 6 |     const StringDecoder: {
+[OUT]       |           ^
+[OUT]     7 |         new(encoding?: string): NodeStringDecoder;
+[OUT]     8 |     };
+[OUT]     9 | }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 7:11 Cannot redeclare block-scoped variable 'CLIENT_RENEG_LIMIT'.
+[OUT]      5 |     import * as stream from "stream";
+[OUT]      6 | 
+[OUT]   >  7 |     const CLIENT_RENEG_LIMIT: number;
+[OUT]        |           ^
+[OUT]      8 |     const CLIENT_RENEG_WINDOW: number;
+[OUT]      9 | 
+[OUT]     10 |     interface Certificate {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 8:11 Cannot redeclare block-scoped variable 'CLIENT_RENEG_WINDOW'.
+[OUT]      6 | 
+[OUT]      7 |     const CLIENT_RENEG_LIMIT: number;
+[OUT]   >  8 |     const CLIENT_RENEG_WINDOW: number;
+[OUT]        |           ^
+[OUT]      9 | 
+[OUT]     10 |     interface Certificate {
+[OUT]     11 |         /**
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 67:11 Duplicate identifier 'TLSSocket'.
+[OUT]     65 |     }
+[OUT]     66 | 
+[OUT]   > 67 |     class TLSSocket extends net.Socket {
+[OUT]        |           ^
+[OUT]     68 |         /**
+[OUT]     69 |          * Construct a new tls.TLSSocket object from an existing TCP socket.
+[OUT]     70 |          */
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 278:11 Duplicate identifier 'Server'.
+[OUT]     276 |     }
+[OUT]     277 | 
+[OUT]   > 278 |     class Server extends net.Server {
+[OUT]         |           ^
+[OUT]     279 |         addContext(hostName: string, credentials: SecureContextOptions): void;
+[OUT]     280 | 
+[OUT]     281 |         /**
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 337:10 Duplicate identifier 'SecureVersion'.
+[OUT]     335 |     }
+[OUT]     336 | 
+[OUT]   > 337 |     type SecureVersion = 'TLSv1.3' | 'TLSv1.2' | 'TLSv1.1' | 'TLSv1';
+[OUT]         |          ^
+[OUT]     338 | 
+[OUT]     339 |     interface SecureContextOptions {
+[OUT]     340 |         pfx?: string | Buffer | Array<string | Buffer | Object>;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tls.d.ts
+[OUT] 400:11 Cannot redeclare block-scoped variable 'DEFAULT_ECDH_CURVE'.
+[OUT]     398 |     function getCiphers(): string[];
+[OUT]     399 | 
+[OUT]   > 400 |     const DEFAULT_ECDH_CURVE: string;
+[OUT]         |           ^
+[OUT]     401 | }
+[OUT]     402 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/ts3.2/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/ts3.2/util.d.ts
+[OUT] 6:15 Cannot redeclare block-scoped variable 'custom'.
+[OUT]     4 | declare module "util" {
+[OUT]     5 |     namespace inspect {
+[OUT]   > 6 |         const custom: unique symbol;
+[OUT]       |               ^
+[OUT]     7 |     }
+[OUT]     8 |     namespace promisify {
+[OUT]     9 |         const custom: unique symbol;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/ts3.2/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/ts3.2/util.d.ts
+[OUT] 9:15 Cannot redeclare block-scoped variable 'custom'.
+[OUT]      7 |     }
+[OUT]      8 |     namespace promisify {
+[OUT]   >  9 |         const custom: unique symbol;
+[OUT]        |               ^
+[OUT]     10 |     }
+[OUT]     11 |     namespace types {
+[OUT]     12 |         function isBigInt64Array(value: any): value is BigInt64Array;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tty.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tty.d.ts
+[OUT] 5:11 Duplicate identifier 'ReadStream'.
+[OUT]     3 | 
+[OUT]     4 |     function isatty(fd: number): boolean;
+[OUT]   > 5 |     class ReadStream extends net.Socket {
+[OUT]       |           ^
+[OUT]     6 |         isRaw: boolean;
+[OUT]     7 |         setRawMode(mode: boolean): void;
+[OUT]     8 |         isTTY: boolean;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tty.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tty.d.ts
+[OUT] 15:10 Duplicate identifier 'Direction'.
+[OUT]     13 |      *  1 - to the right from cursor
+[OUT]     14 |      */
+[OUT]   > 15 |     type Direction = -1 | 0 | 1;
+[OUT]        |          ^
+[OUT]     16 |     class WriteStream extends net.Socket {
+[OUT]     17 |         addListener(event: string, listener: (...args: any[]) => void): this;
+[OUT]     18 |         addListener(event: "resize", listener: () => void): this;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tty.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/tty.d.ts
+[OUT] 16:11 Duplicate identifier 'WriteStream'.
+[OUT]     14 |      */
+[OUT]     15 |     type Direction = -1 | 0 | 1;
+[OUT]   > 16 |     class WriteStream extends net.Socket {
+[OUT]        |           ^
+[OUT]     17 |         addListener(event: string, listener: (...args: any[]) => void): this;
+[OUT]     18 |         addListener(event: "resize", listener: () => void): this;
+[OUT]     19 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/url.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/url.d.ts
+[OUT] 70:11 Duplicate identifier 'URL'.
+[OUT]     68 |     }
+[OUT]     69 | 
+[OUT]   > 70 |     class URL {
+[OUT]        |           ^
+[OUT]     71 |         constructor(input: string, base?: string | URL);
+[OUT]     72 |         hash: string;
+[OUT]     73 |         host: string;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/url.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/url.d.ts
+[OUT] 88:11 Duplicate identifier 'URLSearchParams'.
+[OUT]     86 |     }
+[OUT]     87 | 
+[OUT]   > 88 |     class URLSearchParams implements Iterable<[string, string]> {
+[OUT]        |           ^
+[OUT]     89 |         constructor(init?: URLSearchParams | string | { [key: string]: string | string[] | undefined } | Iterable<[string, string]> | Array<[string, string]>);
+[OUT]     90 |         append(name: string, value: string): void;
+[OUT]     91 |         delete(name: string): void;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 10:13 Cannot redeclare block-scoped variable 'colors'.
+[OUT]      8 |     function inspect(object: any, options: InspectOptions): string;
+[OUT]      9 |     namespace inspect {
+[OUT]   > 10 |         let colors: {
+[OUT]        |             ^
+[OUT]     11 |             [color: string]: [number, number] | undefined
+[OUT]     12 |         };
+[OUT]     13 |         let styles: {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 13:13 Cannot redeclare block-scoped variable 'styles'.
+[OUT]     11 |             [color: string]: [number, number] | undefined
+[OUT]     12 |         };
+[OUT]   > 13 |         let styles: {
+[OUT]        |             ^
+[OUT]     14 |             [style: string]: string | undefined
+[OUT]     15 |         };
+[OUT]     16 |         let defaultOptions: InspectOptions;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 16:13 Cannot redeclare block-scoped variable 'defaultOptions'.
+[OUT]     14 |             [style: string]: string | undefined
+[OUT]     15 |         };
+[OUT]   > 16 |         let defaultOptions: InspectOptions;
+[OUT]        |             ^
+[OUT]     17 |         /**
+[OUT]     18 |          * Allows changing inspect settings from the repl.
+[OUT]     19 |          */
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 20:13 Cannot redeclare block-scoped variable 'replDefaults'.
+[OUT]     18 |          * Allows changing inspect settings from the repl.
+[OUT]     19 |          */
+[OUT]   > 20 |         let replDefaults: InspectOptions;
+[OUT]        |             ^
+[OUT]     21 |     }
+[OUT]     22 |     /** @deprecated since v4.0.0 - use `Array.isArray()` instead. */
+[OUT]     23 |     function isArray(object: any): object is any[];
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 147:11 Duplicate identifier 'TextDecoder'.
+[OUT]     145 |     }
+[OUT]     146 | 
+[OUT]   > 147 |     class TextDecoder {
+[OUT]         |           ^
+[OUT]     148 |         readonly encoding: string;
+[OUT]     149 |         readonly fatal: boolean;
+[OUT]     150 |         readonly ignoreBOM: boolean;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/util.d.ts
+[OUT] 161:11 Duplicate identifier 'TextEncoder'.
+[OUT]     159 |     }
+[OUT]     160 | 
+[OUT]   > 161 |     class TextEncoder {
+[OUT]         |           ^
+[OUT]     162 |         readonly encoding: string;
+[OUT]     163 |         encode(input?: string): Uint8Array;
+[OUT]     164 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/v8.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/v8.d.ts
+[OUT] 13:10 Duplicate identifier 'DoesZapCodeSpaceFlag'.
+[OUT]     11 | 
+[OUT]     12 |     // ** Signifies if the --zap_code_space option is enabled or not.  1 == enabled, 0 == disabled. */
+[OUT]   > 13 |     type DoesZapCodeSpaceFlag = 0 | 1;
+[OUT]        |          ^
+[OUT]     14 | 
+[OUT]     15 |     interface HeapInfo {
+[OUT]     16 |         total_heap_size: number;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/vm.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/vm.d.ts
+[OUT] 3:9 Duplicate string index signature.
+[OUT]     1 | declare module "vm" {
+[OUT]     2 |     interface Context {
+[OUT]   > 3 |         [key: string]: any;
+[OUT]       |         ^
+[OUT]     4 |     }
+[OUT]     5 |     interface BaseOptions {
+[OUT]     6 |         /**
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/vm.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/vm.d.ts
+[OUT] 52:11 Duplicate identifier 'Script'.
+[OUT]     50 |         contextExtensions?: Object[];
+[OUT]     51 |     }
+[OUT]   > 52 |     class Script {
+[OUT]        |           ^
+[OUT]     53 |         constructor(code: string, options?: ScriptOptions);
+[OUT]     54 |         runInContext(contextifiedSandbox: Context, options?: RunningScriptOptions): any;
+[OUT]     55 |         runInNewContext(sandbox?: Context, options?: RunningScriptOptions): any;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 6:11 Cannot redeclare block-scoped variable 'isMainThread'.
+[OUT]     4 |     import { Readable, Writable } from "stream";
+[OUT]     5 | 
+[OUT]   > 6 |     const isMainThread: boolean;
+[OUT]       |           ^
+[OUT]     7 |     const parentPort: null | MessagePort;
+[OUT]     8 |     const threadId: number;
+[OUT]     9 |     const workerData: any;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 7:11 Cannot redeclare block-scoped variable 'parentPort'.
+[OUT]      5 | 
+[OUT]      6 |     const isMainThread: boolean;
+[OUT]   >  7 |     const parentPort: null | MessagePort;
+[OUT]        |           ^
+[OUT]      8 |     const threadId: number;
+[OUT]      9 |     const workerData: any;
+[OUT]     10 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 8:11 Cannot redeclare block-scoped variable 'threadId'.
+[OUT]      6 |     const isMainThread: boolean;
+[OUT]      7 |     const parentPort: null | MessagePort;
+[OUT]   >  8 |     const threadId: number;
+[OUT]        |           ^
+[OUT]      9 |     const workerData: any;
+[OUT]     10 | 
+[OUT]     11 |     class MessageChannel {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 9:11 Cannot redeclare block-scoped variable 'workerData'.
+[OUT]      7 |     const parentPort: null | MessagePort;
+[OUT]      8 |     const threadId: number;
+[OUT]   >  9 |     const workerData: any;
+[OUT]        |           ^
+[OUT]     10 | 
+[OUT]     11 |     class MessageChannel {
+[OUT]     12 |         readonly port1: MessagePort;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 11:11 Duplicate identifier 'MessageChannel'.
+[OUT]      9 |     const workerData: any;
+[OUT]     10 | 
+[OUT]   > 11 |     class MessageChannel {
+[OUT]        |           ^
+[OUT]     12 |         readonly port1: MessagePort;
+[OUT]     13 |         readonly port2: MessagePort;
+[OUT]     14 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 16:11 Duplicate identifier 'MessagePort'.
+[OUT]     14 |     }
+[OUT]     15 | 
+[OUT]   > 16 |     class MessagePort extends EventEmitter {
+[OUT]        |           ^
+[OUT]     17 |         close(): void;
+[OUT]     18 |         postMessage(value: any, transferList?: Array<ArrayBuffer | MessagePort>): void;
+[OUT]     19 |         ref(): void;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/worker_threads.d.ts
+[OUT] 65:11 Duplicate identifier 'Worker'.
+[OUT]     63 |     }
+[OUT]     64 | 
+[OUT]   > 65 |     class Worker extends EventEmitter {
+[OUT]        |           ^
+[OUT]     66 |         readonly stdin: Writable | null;
+[OUT]     67 |         readonly stdout: Readable;
+[OUT]     68 |         readonly stderr: Readable;
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/zlib.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/node/zlib.d.ts
+[OUT] 1:1 Definitions of the following identifiers conflict with those in another file: InputType, CompressCallback, BROTLI_DECODE, BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES, BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP, BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES, BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1, BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2, BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS, BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET, BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1, BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2, BROTLI_DECODER_ERROR_FORMAT_CL_SPACE, BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT, BROTLI_DECODER_ERROR_FORMAT_DICTIONARY, BROTLI_DECODER_ERROR_FORMAT_DISTANCE, BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE, BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE, BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE, BROTLI_DECODER_ERROR_FORMAT_PADDING_1, BROTLI_DECODER_ERROR_FORMAT_PADDING_2, BROTLI_DECODER_ERROR_FORMAT_RESERVED, BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET, BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME, BROTLI_DECODER_ERROR_FORMAT_TRANSFORM, BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS, BROTLI_DECODER_ERROR_INVALID_ARGUMENTS, BROTLI_DECODER_ERROR_UNREACHABLE, BROTLI_DECODER_NEEDS_MORE_INPUT, BROTLI_DECODER_NEEDS_MORE_OUTPUT, BROTLI_DECODER_NO_ERROR, BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION, BROTLI_DECODER_PARAM_LARGE_WINDOW, BROTLI_DECODER_RESULT_ERROR, BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT, BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT, BROTLI_DECODER_RESULT_SUCCESS, BROTLI_DECODER_SUCCESS, BROTLI_DEFAULT_MODE, BROTLI_DEFAULT_QUALITY, BROTLI_DEFAULT_WINDOW, BROTLI_ENCODE, BROTLI_LARGE_MAX_WINDOW_BITS, BROTLI_MAX_INPUT_BLOCK_BITS, BROTLI_MAX_QUALITY, BROTLI_MAX_WINDOW_BITS, BROTLI_MIN_INPUT_BLOCK_BITS, BROTLI_MIN_QUALITY, BROTLI_MIN_WINDOW_BITS, BROTLI_MODE_FONT, BROTLI_MODE_GENERIC, BROTLI_MODE_TEXT, BROTLI_OPERATION_EMIT_METADATA, BROTLI_OPERATION_FINISH, BROTLI_OPERATION_FLUSH, BROTLI_OPERATION_PROCESS, BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING, BROTLI_PARAM_LARGE_WINDOW, BROTLI_PARAM_LGBLOCK, BROTLI_PARAM_LGWIN, BROTLI_PARAM_MODE, BROTLI_PARAM_NDIRECT, BROTLI_PARAM_NPOSTFIX, BROTLI_PARAM_QUALITY, BROTLI_PARAM_SIZE_HINT, DEFLATE, DEFLATERAW, GUNZIP, GZIP, INFLATE, INFLATERAW, UNZIP, Z_BEST_COMPRESSION, Z_BEST_SPEED, Z_BLOCK, Z_BUF_ERROR, Z_DATA_ERROR, Z_DEFAULT_CHUNK, Z_DEFAULT_COMPRESSION, Z_DEFAULT_LEVEL, Z_DEFAULT_MEMLEVEL, Z_DEFAULT_STRATEGY, Z_DEFAULT_WINDOWBITS, Z_ERRNO, Z_FILTERED, Z_FINISH, Z_FIXED, Z_FULL_FLUSH, Z_HUFFMAN_ONLY, Z_MAX_CHUNK, Z_MAX_LEVEL, Z_MAX_MEMLEVEL, Z_MAX_WINDOWBITS, Z_MEM_ERROR, Z_MIN_CHUNK, Z_MIN_LEVEL, Z_MIN_MEMLEVEL, Z_MIN_WINDOWBITS, Z_NEED_DICT, Z_NO_COMPRESSION, Z_NO_FLUSH, Z_OK, Z_PARTIAL_FLUSH, Z_RLE, Z_STREAM_END, Z_STREAM_ERROR, Z_SYNC_FLUSH, Z_VERSION_ERROR, ZLIB_VERNUM, Z_TREES, Z_BINARY, Z_TEXT, Z_ASCII, Z_UNKNOWN, Z_DEFLATED
+[OUT]   > 1 | declare module "zlib" {
+[OUT]       | ^
+[OUT]     2 |     import * as stream from "stream";
+[OUT]     3 | 
+[OUT]     4 |     interface ZlibOptions {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 14:9 Duplicate identifier 'Connecting'.
+[OUT]     12 |     
+[OUT]     13 |     const enum ConnectionState {
+[OUT]   > 14 |         Connecting = 0,
+[OUT]        |         ^
+[OUT]     15 |         Connected = 1,
+[OUT]     16 |         Reconnecting = 2,
+[OUT]     17 |         Disconnected = 4
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 15:9 Duplicate identifier 'Connected'.
+[OUT]     13 |     const enum ConnectionState {
+[OUT]     14 |         Connecting = 0,
+[OUT]   > 15 |         Connected = 1,
+[OUT]        |         ^
+[OUT]     16 |         Reconnecting = 2,
+[OUT]     17 |         Disconnected = 4
+[OUT]     18 |     }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 16:9 Duplicate identifier 'Reconnecting'.
+[OUT]     14 |         Connecting = 0,
+[OUT]     15 |         Connected = 1,
+[OUT]   > 16 |         Reconnecting = 2,
+[OUT]        |         ^
+[OUT]     17 |         Disconnected = 4
+[OUT]     18 |     }
+[OUT]     19 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/signalr/index.d.ts
+[OUT] 17:9 Duplicate identifier 'Disconnected'.
+[OUT]     15 |         Connected = 1,
+[OUT]     16 |         Reconnecting = 2,
+[OUT]   > 17 |         Disconnected = 4
+[OUT]        |         ^
+[OUT]     18 |     }
+[OUT]     19 | 
+[OUT]     20 |     interface AvailableEvents {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 70:10 Duplicate identifier 'ModuleId'.
+[OUT]     68 |         hot?: Hot;
+[OUT]     69 |     }
+[OUT]   > 70 |     type ModuleId = string|number;
+[OUT]        |          ^
+[OUT]     71 | 
+[OUT]     72 |     interface HotNotifierInfo {
+[OUT]     73 |         type:
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 271:10 Duplicate identifier '__Require1'.
+[OUT]     269 |     }
+[OUT]     270 | 
+[OUT]   > 271 |     type __Require1 = (id: string) => any;
+[OUT]         |          ^
+[OUT]     272 |     type __Require2 = <T>(id: string) => T;
+[OUT]     273 |     type RequireLambda = __Require1 & __Require2;
+[OUT]     274 | }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 272:10 Duplicate identifier '__Require2'.
+[OUT]     270 | 
+[OUT]     271 |     type __Require1 = (id: string) => any;
+[OUT]   > 272 |     type __Require2 = <T>(id: string) => T;
+[OUT]         |          ^
+[OUT]     273 |     type RequireLambda = __Require1 & __Require2;
+[OUT]     274 | }
+[OUT]     275 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@types/webpack-env/index.d.ts
+[OUT] 273:10 Duplicate identifier 'RequireLambda'.
+[OUT]     271 |     type __Require1 = (id: string) => any;
+[OUT]     272 |     type __Require2 = <T>(id: string) => T;
+[OUT]   > 273 |     type RequireLambda = __Require1 & __Require2;
+[OUT]         |          ^
+[OUT]     274 | }
+[OUT]     275 | 
+[OUT]     276 | interface NodeRequire extends __WebpackModuleApi.RequireFunction {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 5:2 Expression expected.
+[OUT]     3 | replace:
+[OUT]     4 |   - !!js/regexp /Welcome to Your Vue\.js App/g
+[OUT]   > 5 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |  ^
+[OUT]     6 | ---
+[OUT]     7 | 
+[OUT]     8 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 5:3 Expression expected.
+[OUT]     3 | replace:
+[OUT]     4 |   - !!js/regexp /Welcome to Your Vue\.js App/g
+[OUT]   > 5 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |   ^
+[OUT]     6 | ---
+[OUT]     7 | 
+[OUT]     8 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 5:5 Expression expected.
+[OUT]     3 | replace:
+[OUT]     4 |   - !!js/regexp /Welcome to Your Vue\.js App/g
+[OUT]   > 5 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |     ^
+[OUT]     6 | ---
+[OUT]     7 | 
+[OUT]     8 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 5:6 Expression expected.
+[OUT]     3 | replace:
+[OUT]     4 |   - !!js/regexp /Welcome to Your Vue\.js App/g
+[OUT]   > 5 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |      ^
+[OUT]     6 | ---
+[OUT]     7 | 
+[OUT]     8 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 5:7 Invalid character.
+[OUT]     3 | replace:
+[OUT]     4 |   - !!js/regexp /Welcome to Your Vue\.js App/g
+[OUT]   > 5 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |       ^
+[OUT]     6 | ---
+[OUT]     7 | 
+[OUT]     8 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 6:3 Expression expected.
+[OUT]     4 |   - !!js/regexp /Welcome to Your Vue\.js App/g
+[OUT]     5 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]   > 6 | ---
+[OUT]       |   ^
+[OUT]     7 | 
+[OUT]     8 | <%# REPLACE %>
+[OUT]     9 | Welcome to Your Vue.js + TypeScript App
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 8:1 Expression expected.
+[OUT]      6 | ---
+[OUT]      7 | 
+[OUT]   >  8 | <%# REPLACE %>
+[OUT]        | ^
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 8:2 Expression expected.
+[OUT]      6 | ---
+[OUT]      7 | 
+[OUT]   >  8 | <%# REPLACE %>
+[OUT]        |  ^
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 8:3 Invalid character.
+[OUT]      6 | ---
+[OUT]      7 | 
+[OUT]   >  8 | <%# REPLACE %>
+[OUT]        |   ^
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 8:14 Expression expected.
+[OUT]      6 | ---
+[OUT]      7 | 
+[OUT]   >  8 | <%# REPLACE %>
+[OUT]        |              ^
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 9:9 ';' expected.
+[OUT]      7 | 
+[OUT]      8 | <%# REPLACE %>
+[OUT]   >  9 | Welcome to Your Vue.js + TypeScript App
+[OUT]        |         ^
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 9:12 ';' expected.
+[OUT]      7 | 
+[OUT]      8 | <%# REPLACE %>
+[OUT]   >  9 | Welcome to Your Vue.js + TypeScript App
+[OUT]        |            ^
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 9:17 ';' expected.
+[OUT]      7 | 
+[OUT]      8 | <%# REPLACE %>
+[OUT]   >  9 | Welcome to Your Vue.js + TypeScript App
+[OUT]        |                 ^
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 9:37 ';' expected.
+[OUT]      7 | 
+[OUT]      8 | <%# REPLACE %>
+[OUT]   >  9 | Welcome to Your Vue.js + TypeScript App
+[OUT]        |                                     ^
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 10:2 Expression expected.
+[OUT]      8 | <%# REPLACE %>
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]   > 10 | <%# END_REPLACE %>
+[OUT]        |  ^
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT]     13 | <script lang="ts">
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 10:3 Invalid character.
+[OUT]      8 | <%# REPLACE %>
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]   > 10 | <%# END_REPLACE %>
+[OUT]        |   ^
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT]     13 | <script lang="ts">
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 10:18 Expression expected.
+[OUT]      8 | <%# REPLACE %>
+[OUT]      9 | Welcome to Your Vue.js + TypeScript App
+[OUT]   > 10 | <%# END_REPLACE %>
+[OUT]        |                  ^
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT]     13 | <script lang="ts">
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 12:1 Expression expected.
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]   > 12 | <%# REPLACE %>
+[OUT]        | ^
+[OUT]     13 | <script lang="ts">
+[OUT]     14 | <%_ if (!options.classComponent) { _%>
+[OUT]     15 | import Vue from 'vue';
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 12:2 Expression expected.
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]   > 12 | <%# REPLACE %>
+[OUT]        |  ^
+[OUT]     13 | <script lang="ts">
+[OUT]     14 | <%_ if (!options.classComponent) { _%>
+[OUT]     15 | import Vue from 'vue';
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 12:3 Invalid character.
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]   > 12 | <%# REPLACE %>
+[OUT]        |   ^
+[OUT]     13 | <script lang="ts">
+[OUT]     14 | <%_ if (!options.classComponent) { _%>
+[OUT]     15 | import Vue from 'vue';
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 12:14 Expression expected.
+[OUT]     10 | <%# END_REPLACE %>
+[OUT]     11 | 
+[OUT]   > 12 | <%# REPLACE %>
+[OUT]        |              ^
+[OUT]     13 | <script lang="ts">
+[OUT]     14 | <%_ if (!options.classComponent) { _%>
+[OUT]     15 | import Vue from 'vue';
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 13:2 JSX element 'script' has no corresponding closing tag.
+[OUT]     11 | 
+[OUT]     12 | <%# REPLACE %>
+[OUT]   > 13 | <script lang="ts">
+[OUT]        |  ^
+[OUT]     14 | <%_ if (!options.classComponent) { _%>
+[OUT]     15 | import Vue from 'vue';
+[OUT]     16 | import HelloWorld from './components/HelloWorld.vue';
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 14:2 Identifier expected.
+[OUT]     12 | <%# REPLACE %>
+[OUT]     13 | <script lang="ts">
+[OUT]   > 14 | <%_ if (!options.classComponent) { _%>
+[OUT]        |  ^
+[OUT]     15 | import Vue from 'vue';
+[OUT]     16 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     17 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 14:38 Expression expected.
+[OUT]     12 | <%# REPLACE %>
+[OUT]     13 | <script lang="ts">
+[OUT]   > 14 | <%_ if (!options.classComponent) { _%>
+[OUT]        |                                      ^
+[OUT]     15 | import Vue from 'vue';
+[OUT]     16 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     17 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 15:1 Expression expected.
+[OUT]     13 | <script lang="ts">
+[OUT]     14 | <%_ if (!options.classComponent) { _%>
+[OUT]   > 15 | import Vue from 'vue';
+[OUT]        | ^
+[OUT]     16 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     17 | 
+[OUT]     18 | export default Vue.extend({
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 19:7 '}' expected.
+[OUT]     17 | 
+[OUT]     18 | export default Vue.extend({
+[OUT]   > 19 |   name: 'app',
+[OUT]        |       ^
+[OUT]     20 |   components: {
+[OUT]     21 |     HelloWorld
+[OUT]     22 |   }
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 24:2 Identifier expected.
+[OUT]     22 |   }
+[OUT]     23 | });
+[OUT]   > 24 | <%_ } else { _%>
+[OUT]        |  ^
+[OUT]     25 | import { Component, Vue } from 'vue-property-decorator';
+[OUT]     26 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     27 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 24:16 Expression expected.
+[OUT]     22 |   }
+[OUT]     23 | });
+[OUT]   > 24 | <%_ } else { _%>
+[OUT]        |                ^
+[OUT]     25 | import { Component, Vue } from 'vue-property-decorator';
+[OUT]     26 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     27 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 25:1 Expression expected.
+[OUT]     23 | });
+[OUT]     24 | <%_ } else { _%>
+[OUT]   > 25 | import { Component, Vue } from 'vue-property-decorator';
+[OUT]        | ^
+[OUT]     26 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     27 | 
+[OUT]     28 | @Component({
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 25:19 '}' expected.
+[OUT]     23 | });
+[OUT]     24 | <%_ } else { _%>
+[OUT]   > 25 | import { Component, Vue } from 'vue-property-decorator';
+[OUT]        |                   ^
+[OUT]     26 | import HelloWorld from './components/HelloWorld.vue';
+[OUT]     27 | 
+[OUT]     28 | @Component({
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 29:13 '}' expected.
+[OUT]     27 | 
+[OUT]     28 | @Component({
+[OUT]   > 29 |   components: {
+[OUT]        |             ^
+[OUT]     30 |     HelloWorld,
+[OUT]     31 |   },
+[OUT]     32 | })
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 30:15 '}' expected.
+[OUT]     28 | @Component({
+[OUT]     29 |   components: {
+[OUT]   > 30 |     HelloWorld,
+[OUT]        |               ^
+[OUT]     31 |   },
+[OUT]     32 | })
+[OUT]     33 | export default class App extends Vue {}
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 34:2 Identifier expected.
+[OUT]     32 | })
+[OUT]     33 | export default class App extends Vue {}
+[OUT]   > 34 | <%_ } _%>
+[OUT]        |  ^
+[OUT]     35 | </script>
+[OUT]     36 | <%# END_REPLACE %>
+[OUT]     37 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/App.vue
+[OUT] 35:1 '</' expected.
+[OUT]     33 | export default class App extends Vue {}
+[OUT]     34 | <%_ } _%>
+[OUT]   > 35 | </script>
+[OUT]        | ^
+[OUT]     36 | <%# END_REPLACE %>
+[OUT]     37 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 3:2 Expression expected.
+[OUT]     1 | ---
+[OUT]     2 | extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
+[OUT]   > 3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |  ^
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 3:3 Expression expected.
+[OUT]     1 | ---
+[OUT]     2 | extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
+[OUT]   > 3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |   ^
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 3:5 Expression expected.
+[OUT]     1 | ---
+[OUT]     2 | extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
+[OUT]   > 3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |     ^
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 3:6 Expression expected.
+[OUT]     1 | ---
+[OUT]     2 | extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
+[OUT]   > 3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |      ^
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 3:7 Invalid character.
+[OUT]     1 | ---
+[OUT]     2 | extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
+[OUT]   > 3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |       ^
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 4:3 Expression expected.
+[OUT]     2 | extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
+[OUT]     3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]   > 4 | ---
+[OUT]       |   ^
+[OUT]     5 | <script lang="ts">
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT]     7 | import Vue from 'vue';
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 5:2 JSX element 'script' has no corresponding closing tag.
+[OUT]     3 | replace: !!js/regexp /<script>[^]*?<\/script>/
+[OUT]     4 | ---
+[OUT]   > 5 | <script lang="ts">
+[OUT]       |  ^
+[OUT]     6 | <%_ if (!options.classComponent) { _%>
+[OUT]     7 | import Vue from 'vue';
+[OUT]     8 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 6:2 Identifier expected.
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]   > 6 | <%_ if (!options.classComponent) { _%>
+[OUT]       |  ^
+[OUT]     7 | import Vue from 'vue';
+[OUT]     8 | 
+[OUT]     9 | export default Vue.extend({
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 6:38 Expression expected.
+[OUT]     4 | ---
+[OUT]     5 | <script lang="ts">
+[OUT]   > 6 | <%_ if (!options.classComponent) { _%>
+[OUT]       |                                      ^
+[OUT]     7 | import Vue from 'vue';
+[OUT]     8 | 
+[OUT]     9 | export default Vue.extend({
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 7:1 Expression expected.
+[OUT]      5 | <script lang="ts">
+[OUT]      6 | <%_ if (!options.classComponent) { _%>
+[OUT]   >  7 | import Vue from 'vue';
+[OUT]        | ^
+[OUT]      8 | 
+[OUT]      9 | export default Vue.extend({
+[OUT]     10 |   name: 'HelloWorld',
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 10:7 '}' expected.
+[OUT]      8 | 
+[OUT]      9 | export default Vue.extend({
+[OUT]   > 10 |   name: 'HelloWorld',
+[OUT]        |       ^
+[OUT]     11 |   props: {
+[OUT]     12 |     msg: String,
+[OUT]     13 |   },
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 12:8 '}' expected.
+[OUT]     10 |   name: 'HelloWorld',
+[OUT]     11 |   props: {
+[OUT]   > 12 |     msg: String,
+[OUT]        |        ^
+[OUT]     13 |   },
+[OUT]     14 | });
+[OUT]     15 | <%_ } else { _%>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 15:2 Identifier expected.
+[OUT]     13 |   },
+[OUT]     14 | });
+[OUT]   > 15 | <%_ } else { _%>
+[OUT]        |  ^
+[OUT]     16 | import { Component, Prop, Vue } from 'vue-property-decorator';
+[OUT]     17 | 
+[OUT]     18 | @Component
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 15:16 Expression expected.
+[OUT]     13 |   },
+[OUT]     14 | });
+[OUT]   > 15 | <%_ } else { _%>
+[OUT]        |                ^
+[OUT]     16 | import { Component, Prop, Vue } from 'vue-property-decorator';
+[OUT]     17 | 
+[OUT]     18 | @Component
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 16:1 Expression expected.
+[OUT]     14 | });
+[OUT]     15 | <%_ } else { _%>
+[OUT]   > 16 | import { Component, Prop, Vue } from 'vue-property-decorator';
+[OUT]        | ^
+[OUT]     17 | 
+[OUT]     18 | @Component
+[OUT]     19 | export default class HelloWorld extends Vue {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 16:19 '}' expected.
+[OUT]     14 | });
+[OUT]     15 | <%_ } else { _%>
+[OUT]   > 16 | import { Component, Prop, Vue } from 'vue-property-decorator';
+[OUT]        |                   ^
+[OUT]     17 | 
+[OUT]     18 | @Component
+[OUT]     19 | export default class HelloWorld extends Vue {
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 20:3 Expression expected.
+[OUT]     18 | @Component
+[OUT]     19 | export default class HelloWorld extends Vue {
+[OUT]   > 20 |   @Prop() private msg!: string;
+[OUT]        |   ^
+[OUT]     21 | }
+[OUT]     22 | <%_ } _%>
+[OUT]     23 | </script>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 22:2 Identifier expected.
+[OUT]     20 |   @Prop() private msg!: string;
+[OUT]     21 | }
+[OUT]   > 22 | <%_ } _%>
+[OUT]        |  ^
+[OUT]     23 | </script>
+[OUT]     24 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/components/HelloWorld.vue
+[OUT] 23:1 '</' expected.
+[OUT]     21 | }
+[OUT]     22 | <%_ } _%>
+[OUT]   > 23 | </script>
+[OUT]        | ^
+[OUT]     24 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/shims-vue.d.ts
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/shims-vue.d.ts
+[OUT] 3:18 Duplicate identifier 'Vue'.
+[OUT]     1 | declare module '*.vue' {
+[OUT]     2 |   import Vue from 'vue'
+[OUT]   > 3 |   export default Vue
+[OUT]       |                  ^
+[OUT]     4 | }
+[OUT]     5 | 
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 6:2 Expression expected.
+[OUT]     4 | replace:
+[OUT]     5 |   - !!js/regexp /Welcome to Your Vue\.js App/
+[OUT]   > 6 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |  ^
+[OUT]     7 | ---
+[OUT]     8 | 
+[OUT]     9 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 6:3 Expression expected.
+[OUT]     4 | replace:
+[OUT]     5 |   - !!js/regexp /Welcome to Your Vue\.js App/
+[OUT]   > 6 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |   ^
+[OUT]     7 | ---
+[OUT]     8 | 
+[OUT]     9 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 6:5 Expression expected.
+[OUT]     4 | replace:
+[OUT]     5 |   - !!js/regexp /Welcome to Your Vue\.js App/
+[OUT]   > 6 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |     ^
+[OUT]     7 | ---
+[OUT]     8 | 
+[OUT]     9 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 6:6 Expression expected.
+[OUT]     4 | replace:
+[OUT]     5 |   - !!js/regexp /Welcome to Your Vue\.js App/
+[OUT]   > 6 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |      ^
+[OUT]     7 | ---
+[OUT]     8 | 
+[OUT]     9 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 6:7 Invalid character.
+[OUT]     4 | replace:
+[OUT]     5 |   - !!js/regexp /Welcome to Your Vue\.js App/
+[OUT]   > 6 |   - !!js/regexp /<script>[^]*?<\/script>/
+[OUT]       |       ^
+[OUT]     7 | ---
+[OUT]     8 | 
+[OUT]     9 | <%# REPLACE %>
+[OUT] 
+[OUT]  error  in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 
+[OUT] ERROR in E:/DevHome/sj-workbench/sjhis/0201门诊医生/LongOrder前端/node_modules_bak/@vue/cli-plugin-typescript/generator/template/src/views/Home.vue
+[OUT] 7:3 Expression expected.
+[OUT]      5 |   - !!js/regexp /Welcome to Your Vue\.js App/

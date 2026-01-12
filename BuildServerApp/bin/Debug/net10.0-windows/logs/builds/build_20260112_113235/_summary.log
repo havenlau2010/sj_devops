@@ -1,0 +1,13 @@
+﻿2026-01-12 11:32:35 - Starting Workflow...
+2026-01-12 11:32:35 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_113235\_summary.log
+2026-01-12 11:32:35 - Step 1: SVN Update (Skipped)
+2026-01-12 11:32:35 - Step 1.5: Verify node_modules
+2026-01-12 11:32:35 - node_modules already exists for OutWestRecipe前端
+2026-01-12 11:32:35 - node_modules already exists for LongOrder前端
+2026-01-12 11:32:35 - node_modules already exists for TempOrder前端
+2026-01-12 11:32:35 - node_modules already exists for OutTreatOrder前端
+2026-01-12 11:32:35 - Step 2: Build
+2026-01-12 11:32:35 - [OutWestRecipe前端] Using specific Node: D:\Apps\nvm\v16.20.2
+2026-01-12 11:32:35 - [LongOrder前端] Using specific Node: D:\Apps\nvm\v16.20.2
+2026-01-12 11:32:35 - [TempOrder前端] Using specific Node: D:\Apps\nvm\v16.20.2
+2026-01-12 11:32:35 - [OutTreatOrder前端] Using specific Node: D:\Apps\nvm\v16.20.2

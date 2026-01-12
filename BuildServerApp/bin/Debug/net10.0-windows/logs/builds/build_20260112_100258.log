@@ -1,0 +1,62 @@
+﻿2026-01-12 10:02:58 - Starting Workflow...
+2026-01-12 10:02:58 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260112_100258.log
+2026-01-12 10:02:58 - Step 1: SVN Update (Skipped)
+2026-01-12 10:02:58 - Step 1.5: Verify node_modules
+2026-01-12 10:02:58 - node_modules already exists for efacms_infrastructure
+2026-01-12 10:02:58 - node_modules already exists for OutWestRecipe前端
+2026-01-12 10:02:58 - node_modules already exists for LongOrder前端
+2026-01-12 10:02:58 - node_modules already exists for TempOrder前端
+2026-01-12 10:02:58 - node_modules already exists for OutTreatOrder前端
+2026-01-12 10:02:58 - Step 2: Build
+2026-01-12 10:02:58 - Switching to Node.js 14.19.0 for efacms_infrastructure
+2026-01-12 10:02:58 - Switching to Node.js 16.17.0 for OutWestRecipe前端
+2026-01-12 10:02:58 - Switching to Node.js 16.17.0 for LongOrder前端
+2026-01-12 10:02:58 - Switching to Node.js 16.17.0 for TempOrder前端
+2026-01-12 10:02:58 - Switching to Node.js 16.17.0 for OutTreatOrder前端
+2026-01-12 10:03:07 - Project build records saved to database
+2026-01-12 10:03:07 - Build failures detected. Proceeding to copy successful builds...
+2026-01-12 10:03:07 - Step 3: Copy Artifacts
+2026-01-12 10:03:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/efacms_infrastructure\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\efacms_infrastructure
+2026-01-12 10:03:07 - Warning: Dist directory not found: E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutWestRecipe前端\dist
+2026-01-12 10:03:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/LongOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\LongOrder前端
+2026-01-12 10:03:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/TempOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\TempOrder前端
+2026-01-12 10:03:07 - Copying E:/DevHome/sj-workbench/sjhis\0201门诊医生/OutTreatOrder前端\dist to e:/DevHome/sj-workbench/sjhis/build-output\CIS\OutTreatOrder前端
+2026-01-12 10:03:07 - Workflow Completed.
+2026-01-12 10:03:07 - Build failures detected!
+2026-01-12 10:03:07 - Error in efacms_infrastructure: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 10:03:07 - Build failed for efacms_infrastructure with exit code 1
+2026-01-12 10:03:07 - Error in OutWestRecipe前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 10:03:07 - Build failed for OutWestRecipe前端 with exit code 1
+2026-01-12 10:03:07 - Error in LongOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 10:03:07 - Build failed for LongOrder前端 with exit code 1
+2026-01-12 10:03:07 - Error in TempOrder前端: 'npm' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2026-01-12 10:03:07 - Build failed for TempOrder前端 with exit code 1
+2026-01-12 10:03:07 - Error in OutTreatOrder前端:  ERROR  Error loading vue.config.js:
+ ERROR  TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received an instance of Object
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Module.require (node:internal/modules/cjs/loader:1021:3)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at getResolver (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\get-resolver.js:12:12)
+    at new DynamicCdnWebpackPlugin (E:\DevHome\sj-workbench\sjhis\Wx-NodeModules\sj.dynamic.cdn-2\lib\index.js:92:51)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\build\webpack.pro.conf.js:27:13)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (E:\DevHome\sj-workbench\sjhis\0201门诊医生\OutTreatOrder前端\vue.config.js:7:21)
+    at Module._compile (node:internal/modules/cjs/loader:1126:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+
+2026-01-12 10:03:07 - Build failed for OutTreatOrder前端 with exit code 1

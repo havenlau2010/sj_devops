@@ -53,6 +53,23 @@ public class BuildDatabase : IDisposable
                 FOREIGN KEY (BuildRecordId) REFERENCES BuildRecords(Id)
             );
 
+            CREATE TABLE IF NOT EXISTS ServerSettings (
+                Key TEXT PRIMARY KEY,
+                Value TEXT
+            );
+
+            CREATE TABLE IF NOT EXISTS Projects (
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                Name TEXT NOT NULL,
+                Path TEXT NOT NULL,
+                GroupName TEXT,
+                NodeModulesDir TEXT,
+                BuildCmd TEXT,
+                DistDir TEXT,
+                IsPublish INTEGER NOT NULL DEFAULT 1,
+                NodeVersion TEXT
+            );
+
             CREATE INDEX IF NOT EXISTS idx_build_time ON BuildRecords(BuildTime);
             CREATE INDEX IF NOT EXISTS idx_build_success ON BuildRecords(Success);
             CREATE INDEX IF NOT EXISTS idx_project_build_record ON ProjectBuildRecords(BuildRecordId);
@@ -254,6 +271,123 @@ public class BuildDatabase : IDisposable
     {
         // SQLite connections are disposed in using statements
         // This method is here for future cleanup if needed
+    }
+
+    // --- Configuration Configuration Methods ---
+
+    public ServerConfig? LoadServerConfig()
+    {
+        using var connection = new SqliteConnection(_connectionString);
+        connection.Open();
+
+        // Check if settings exist
+        var checkCmd = connection.CreateCommand();
+        checkCmd.CommandText = "SELECT COUNT(*) FROM ServerSettings";
+        var count = (long)checkCmd.ExecuteScalar();
+
+        if (count == 0) return null;
+
+        var config = new ServerConfig();
+        
+        // Load Settings
+        var settingsCmd = connection.CreateCommand();
+        settingsCmd.CommandText = "SELECT Key, Value FROM ServerSettings";
+        using (var reader = settingsCmd.ExecuteReader())
+        {
+            while (reader.Read())
+            {
+                string key = reader.GetString(0);
+                string value = reader.GetString(1);
+
+                switch (key)
+                {
+                    case "Port": config.Port = int.Parse(value); break;
+                    case "SvnRoot": config.SvnRoot = value; break;
+                    case "OutputDir": config.OutputDir = value; break;
+                    case "NvmRoot": config.NvmRoot = value; break;
+                }
+            }
+        }
+
+        // Load Projects
+        var projectsCmd = connection.CreateCommand();
+        projectsCmd.CommandText = "SELECT Name, Path, GroupName, NodeModulesDir, BuildCmd, DistDir, IsPublish, NodeVersion FROM Projects";
+        using (var reader = projectsCmd.ExecuteReader())
+        {
+            while (reader.Read())
+            {
+                config.Projects.Add(new ProjectConfig
+                {
+                    Name = reader.GetString(0),
+                    Path = reader.GetString(1),
+                    Group = reader.IsDBNull(2) ? null : reader.GetString(2),
+                    NodeModulesDir = reader.IsDBNull(3) ? null : reader.GetString(3),
+                    BuildCmd = reader.IsDBNull(4) ? null : reader.GetString(4),
+                    DistDir = reader.IsDBNull(5) ? null : reader.GetString(5),
+                    IsPublish = reader.GetInt32(6) == 1,
+                    NodeVersion = reader.IsDBNull(7) ? null : reader.GetString(7)
+                });
+            }
+        }
+
+        return config;
+    }
+
+    public void SaveServerConfig(ServerConfig config)
+    {
+        using var connection = new SqliteConnection(_connectionString);
+        connection.Open();
+        using var transaction = connection.BeginTransaction();
+
+        try
+        {
+            // Save Settings
+            var cmd = connection.CreateCommand();
+            cmd.Transaction = transaction;
+            cmd.CommandText = @"
+                INSERT OR REPLACE INTO ServerSettings (Key, Value) VALUES ('Port', $port);
+                INSERT OR REPLACE INTO ServerSettings (Key, Value) VALUES ('SvnRoot', $svnRoot);
+                INSERT OR REPLACE INTO ServerSettings (Key, Value) VALUES ('OutputDir', $outputDir);
+                INSERT OR REPLACE INTO ServerSettings (Key, Value) VALUES ('NvmRoot', $nvmRoot);
+            ";
+            cmd.Parameters.AddWithValue("$port", config.Port.ToString());
+            cmd.Parameters.AddWithValue("$svnRoot", config.SvnRoot ?? "");
+            cmd.Parameters.AddWithValue("$outputDir", config.OutputDir ?? "");
+            cmd.Parameters.AddWithValue("$nvmRoot", config.NvmRoot ?? "");
+            cmd.ExecuteNonQuery();
+
+            // Save Projects (Full Replace for simplicity)
+            var delCmd = connection.CreateCommand();
+            delCmd.Transaction = transaction;
+            delCmd.CommandText = "DELETE FROM Projects";
+            delCmd.ExecuteNonQuery();
+
+            foreach (var p in config.Projects)
+            {
+                var insertCmd = connection.CreateCommand();
+                insertCmd.Transaction = transaction;
+                insertCmd.CommandText = @"
+                    INSERT INTO Projects (Name, Path, GroupName, NodeModulesDir, BuildCmd, DistDir, IsPublish, NodeVersion)
+                    VALUES ($name, $path, $group, $nodeModules, $buildCmd, $distDir, $isPublish, $nodeVersion)
+                ";
+                insertCmd.Parameters.AddWithValue("$name", p.Name);
+                insertCmd.Parameters.AddWithValue("$path", p.Path);
+                insertCmd.Parameters.AddWithValue("$group", p.Group ?? (object)DBNull.Value);
+                insertCmd.Parameters.AddWithValue("$nodeModules", p.NodeModulesDir ?? (object)DBNull.Value);
+                insertCmd.Parameters.AddWithValue("$buildCmd", p.BuildCmd ?? (object)DBNull.Value);
+                insertCmd.Parameters.AddWithValue("$distDir", p.DistDir ?? (object)DBNull.Value);
+                insertCmd.Parameters.AddWithValue("$isPublish", p.IsPublish ? 1 : 0);
+                insertCmd.Parameters.AddWithValue("$nodeVersion", p.NodeVersion ?? (object)DBNull.Value);
+                insertCmd.ExecuteNonQuery();
+            }
+
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
     }
 }
 

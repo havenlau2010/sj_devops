@@ -12,24 +12,8 @@ public class BuildManager
     public BuildManager(string configPath, Action<string> logAction)
     {
         _logAction = logAction;
-        try
-        {
-            if (!File.Exists(configPath))
-            {
-                _logAction($"Config file not found: {configPath}");
-                return;
-            }
-            string json = File.ReadAllText(configPath);
-            _config = JsonSerializer.Deserialize<ServerConfig>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-            _logAction($"Loaded config. OutputDir: {_config.OutputDir}");
-            _logAction($"SvnRoot: {_config.SvnRoot}");
-        }
-        catch (Exception ex)
-        {
-            _logAction($"Error loading config: {ex.Message}");
-        }
-
-        // Initialize database
+        
+        // Initialize database first
         try
         {
             _database = new BuildDatabase();
@@ -37,7 +21,68 @@ public class BuildManager
         }
         catch (Exception ex)
         {
-            _logAction($"Warning: Failed to initialize database: {ex.Message}");
+            _logAction($"Error: Failed to initialize database: {ex.Message}");
+            _config = new ServerConfig(); // Fallback empty
+            return;
+        }
+
+        try
+        {
+            // Try load from DB
+            var dbConfig = _database.LoadServerConfig();
+            
+            if (dbConfig != null)
+            {
+                _config = dbConfig;
+                _logAction($"Loaded configuration from Database. OutputDir: {_config.OutputDir}");
+            }
+            else
+            {
+                // DB empty, try migrate from file
+                if (File.Exists(configPath))
+                {
+                    _logAction("Database configuration empty. Migrating from config.json...");
+                    string json = File.ReadAllText(configPath);
+                    _config = JsonSerializer.Deserialize<ServerConfig>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                    
+                    if (_config != null)
+                    {
+                        _database.SaveServerConfig(_config);
+                        _logAction("Migration to Database complete.");
+                    }
+                    else
+                    {
+                         _config = new ServerConfig();
+                         _logAction("Warning: config.json was empty or invalid.");
+                    }
+                }
+                else
+                {
+                    _logAction("No configuration found in DB or file. Starting with empty config.");
+                    _config = new ServerConfig();
+                }
+            }
+            
+            _logAction($"SvnRoot: {_config.SvnRoot}");
+            
+            // Auto-correct NvmRoot if invalid/default but D:\Apps\nvm exists
+            if (!Directory.Exists(_config.NvmRoot) || _config.NvmRoot.Contains("AppData"))
+            {
+                 string potentialPath = @"D:\Apps\nvm";
+                 // We can't easily check Directory.Exists for D: inside the agent if restricted, 
+                 // but the APP running on the user's machine CAN access D:.
+                 if (Directory.Exists(potentialPath))
+                 {
+                     _config.NvmRoot = potentialPath;
+                     SaveConfig();
+                     _logAction($"Auto-corrected NvmRoot to: {potentialPath}");
+                 }
+            }
+        }
+        catch (Exception ex)
+        {
+            _logAction($"Error loading config: {ex.Message}");
+            _config ??= new ServerConfig();
         }
     }
 
@@ -55,14 +100,17 @@ public class BuildManager
     {
         try
         {
-            string json = JsonSerializer.Serialize(_config, new JsonSerializerOptions { WriteIndented = true });
-            // Assume configPath was stored or we hardcode it back to where we loaded it. 
-            // We need to store the path passed in ctor.
-            File.WriteAllText("config.json", json); // Reusing hardcoded relative path for now or we need a field.
+            if (_database != null)
+            {
+                _database.SaveServerConfig(_config);
+                 // Optional: Keep syncing to file for backup, or strictly follow "store in DB".
+                 // User said "No longer read from local file", implying DB is the source of truth.
+                 // We will NOT write to file to avoid confusion.
+            }
         }
         catch (Exception ex)
         {
-            _logAction($"Error saving config: {ex.Message}");
+            _logAction($"Error saving config to DB: {ex.Message}");
         }
     }
 
@@ -76,13 +124,18 @@ public class BuildManager
         // Setup file logging
         string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
         string logsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
-        string buildsDir = Path.Combine(logsDir, "builds");
+        string buildsRootDir = Path.Combine(logsDir, "builds"); // Renamed to avoid confusion with specific build dir
         string errorsDir = Path.Combine(logsDir, "errors");
         
-        Directory.CreateDirectory(buildsDir);
+        Directory.CreateDirectory(buildsRootDir);
         Directory.CreateDirectory(errorsDir);
         
-        string buildLogPath = Path.Combine(buildsDir, $"build_{timestamp}.log");
+        // New: Create a directory for this specific build session
+        string currentBuildDir = Path.Combine(buildsRootDir, $"build_{timestamp}");
+        Directory.CreateDirectory(currentBuildDir);
+        
+        // The main log file becomes _summary.log inside that folder
+        string buildLogPath = Path.Combine(currentBuildDir, "_summary.log");
         string errorLogPath = Path.Combine(errorsDir, $"error_{timestamp}.log");
         
         StreamWriter buildLogWriter = null;
@@ -206,19 +259,43 @@ public class BuildManager
 
             // 2. Build
             Log("Step 2: Build");
-            var buildTasks = _config.Projects.Where(p => p.IsPublish).Select(async p => 
+            
+            var publishProjects = _config.Projects.Where(p => p.IsPublish).ToList();
+            var buildTasks = publishProjects.Select(async p => 
             {
                 string projectPath = p.Path.TrimStart('/', '\\');
                 string absPath = Path.Combine(_config.SvnRoot, projectPath);
 
-                // Switch Node version if specified
+                // Default path env
+                string pathEnv = Environment.GetEnvironmentVariable("PATH"); // We might need to fetch this later in RunCommandAsync?
+                // Actually, RunCommandAsync signature needs update or we pass env dict.
+                
+                Dictionary<string, string> customEnv = null;
+                
                 if (!string.IsNullOrEmpty(p.NodeVersion))
                 {
-                    Log($"Switching to Node.js {p.NodeVersion} for {p.Name}");
-                    var nvmResult = await RunCommandAsync("cmd", $"/c nvm use {p.NodeVersion}", absPath);
-                    if (nvmResult.ExitCode != 0)
+                    if (!string.IsNullOrEmpty(_config.NvmRoot))
                     {
-                        Log($"Warning: Failed to switch Node version for {p.Name}: {nvmResult.Stderr}");
+                         // Strategy: Inject specific Node version path to PATH
+                         string specificNodePath = Path.Combine(_config.NvmRoot, $"v{p.NodeVersion}");
+                         if (Directory.Exists(specificNodePath))
+                         {
+                             Log($"[{p.Name}] Using specific Node: {specificNodePath}");
+                             customEnv = new Dictionary<string, string>();
+                             // Prepend to PATH
+                             // We need to get current PATH, prepend ours.
+                             string currentPath = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Process);
+                             string newPath = $"{specificNodePath};{currentPath}";
+                             customEnv["PATH"] = newPath;
+                         }
+                         else
+                         {
+                             Log($"Warning: Node version v{p.NodeVersion} not found in NVM root: {specificNodePath}");
+                         }
+                    }
+                    else
+                    {
+                        Log($"Warning: NodeVersion specified ({p.NodeVersion}) but NvmRoot is not configured.");
                     }
                 }
 
@@ -233,10 +310,14 @@ public class BuildManager
                     args = $"/c npm {args}";
                 }
 
-                return await RunCommandAsync(fileName, args, absPath);
+                string projectLogFile = Path.Combine(currentBuildDir, $"{p.Name}.log");
+
+                return await RunCommandAsync(fileName, args, absPath, customEnv, projectLogFile);
             });
 
             var buildResults = await Task.WhenAll(buildTasks);
+            
+            // Reconstruct logic is simple now since we didn't group
             result["build"] = buildResults;
             
             // Record project build results in database
@@ -244,9 +325,10 @@ public class BuildManager
             {
                 try
                 {
-                    var publishProjects = _config.Projects.Where(p => p.IsPublish).ToList();
+                    // var publishProjects = ... already defined above
                     for (int i = 0; i < buildResults.Length; i++)
                     {
+
                         var buildResult = buildResults[i];
                         var project = publishProjects[i];
                         
@@ -360,6 +442,29 @@ public class BuildManager
                 {
                     Log($"Build failed for {p.Name} with exit code {r.ExitCode}", true);
                 }
+                
+                // Log to database
+                if (_database != null && buildRecordId > 0)
+                {
+                    try
+                    {
+                        _database.AddProjectBuildRecord(
+                            buildRecordId,
+                            p.Name,
+                            p.Path,
+                            r.ExitCode == 0,
+                            r.ExitCode,
+                            r.Command,
+                            string.IsNullOrEmpty(r.Stderr) ? null : r.Stderr,
+                            p.NodeVersion
+                        );
+                    }
+                    catch (Exception ex)
+                    {
+                        Log($"Warning: Failed to log project record to DB: {ex.Message}", true);
+                    }
+                }
+
                 fullLogBuilder.AppendLine();
             }
             
@@ -433,13 +538,28 @@ public class BuildManager
         return result;
     }
 
-    private async Task<ProcessResult> RunCommandAsync(string fileName, string args, string workingDir)
+    private async Task<ProcessResult> RunCommandAsync(string fileName, string args, string workingDir, Dictionary<string, string> envVars = null, string logFilePath = null)
     {
         return await Task.Run(() =>
         {
             var r = new ProcessResult { Command = $"{fileName} {args}" };
             var stdoutBuilder = new System.Text.StringBuilder();
             var stderrBuilder = new System.Text.StringBuilder();
+
+            // Setup dedicated log writer if path is provided
+            StreamWriter logWriter = null;
+            if (!string.IsNullOrEmpty(logFilePath))
+            {
+                try
+                {
+                    logWriter = new StreamWriter(logFilePath, false, System.Text.Encoding.UTF8) { AutoFlush = true };
+                    logWriter.WriteLine($"=== Build Log for {fileName} {args} ===");
+                    logWriter.WriteLine($"Dir: {workingDir}");
+                    logWriter.WriteLine($"Time: {DateTime.Now}");
+                    logWriter.WriteLine("=========================================");
+                }
+                catch { /* Ignore log creation errors */ }
+            }
 
             try
             {
@@ -457,20 +577,42 @@ public class BuildManager
                     StandardErrorEncoding = System.Text.Encoding.UTF8
                 };
 
+                if (envVars != null)
+                {
+                    foreach (var kvp in envVars)
+                    {
+                        psi.EnvironmentVariables[kvp.Key] = kvp.Value;
+                    }
+                }
+
                 using var proc = new Process();
                 proc.StartInfo = psi;
                 
                 proc.OutputDataReceived += (s, e) => {
                     if (e.Data != null) {
-                        _logAction($"[{fileName}] {e.Data}");
-                        lock(stdoutBuilder) stdoutBuilder.AppendLine(e.Data);
+                        string line = e.Data;
+                        _logAction($"[{fileName}] {line}");
+                        
+                        lock(stdoutBuilder) stdoutBuilder.AppendLine(line);
+                        
+                        if (logWriter != null)
+                        {
+                             lock(logWriter) logWriter.WriteLine($"[OUT] {line}");
+                        }
                     }
                 };
                 
                 proc.ErrorDataReceived += (s, e) => {
                     if (e.Data != null) {
-                        _logAction($"[{fileName} ERR] {e.Data}");
-                        lock(stderrBuilder) stderrBuilder.AppendLine(e.Data);
+                        string line = e.Data;
+                        _logAction($"[{fileName} ERR] {line}");
+                        
+                        lock(stderrBuilder) stderrBuilder.AppendLine(line);
+                        
+                        if (logWriter != null)
+                        {
+                             lock(logWriter) logWriter.WriteLine($"[ERR] {line}");
+                        }
                     }
                 };
 
@@ -491,6 +633,12 @@ public class BuildManager
                 r.ExitCode = -1;
                 r.Stderr = ex.Message;
                 _logAction($"Error running {fileName}: {ex.Message}");
+                if (logWriter != null) logWriter.WriteLine($"EXCEPTION: {ex.Message}");
+            }
+            finally
+            {
+                logWriter?.Close();
+                logWriter?.Dispose();
             }
             return r;
         });

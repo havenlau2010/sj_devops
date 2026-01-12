@@ -1,0 +1,15 @@
+﻿2026-01-09 16:52:46 - Starting Workflow...
+2026-01-09 16:52:46 - Build log: E:\DevHome\sj-workbench\sjhis\2217急诊分诊专病中心\build-test\BuildServerApp\bin\Debug\net10.0-windows\logs\builds\build_20260109_165246.log
+2026-01-09 16:52:46 - Step 1: SVN Update (Skipped)
+2026-01-09 16:52:46 - Step 1.5: Verify node_modules
+2026-01-09 16:52:46 - node_modules already exists for efacms_infrastructure
+2026-01-09 16:52:46 - node_modules already exists for pre_examination_triage_upgrade
+2026-01-09 16:52:46 - node_modules already exists for LongOrder前端
+2026-01-09 16:52:46 - node_modules already exists for TempOrder前端
+2026-01-09 16:52:46 - node_modules already exists for OutTreatOrder前端
+2026-01-09 16:52:46 - Step 2: Build
+2026-01-09 16:52:46 - Switching to Node.js 14.19.0 for efacms_infrastructure
+2026-01-09 16:52:46 - Switching to Node.js 14.19.0 for pre_examination_triage_upgrade
+2026-01-09 16:52:46 - Switching to Node.js 16.20.2 for LongOrder前端
+2026-01-09 16:52:46 - Switching to Node.js 16.20.2 for TempOrder前端
+2026-01-09 16:52:46 - Switching to Node.js 16.17.0 for OutTreatOrder前端
